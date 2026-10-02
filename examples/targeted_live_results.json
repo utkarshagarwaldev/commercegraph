@@ -1,0 +1,802 @@
+{
+  "scope": "selected cases only",
+  "passed": true,
+  "runs": [
+    {
+      "question": "Which products from NovaTech are supplied by MetroSupply?",
+      "mode": "live",
+      "timestamp": "2026-10-01T16:59:43.257726+00:00",
+      "model": "gemini-3.5-flash-lite",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "3",
+      "raw_plan": {
+        "decision": "query",
+        "operation": "find_products",
+        "parameters": {
+          "brand_name": "NovaTech",
+          "vendor_name": "MetroSupply",
+          "category_name": null,
+          "customer_name": null,
+          "product_name": null,
+          "order_id": null,
+          "price_lt_inr": null,
+          "value": null,
+          "output_mode": "list",
+          "order_status": null
+        },
+        "clarification_code": null,
+        "unsupported_code": null
+      },
+      "resolved_plan": {
+        "operation": "find_products",
+        "brand_id": "B01",
+        "vendor_id": "V01",
+        "output_mode": "list"
+      },
+      "status": "ok",
+      "evidence": {
+        "query": {
+          "operation": "find_products",
+          "brand_id": "B01",
+          "vendor_id": "V01",
+          "category_id": null,
+          "customer_id": null,
+          "product_id": null,
+          "order_id": null,
+          "price_lt_paise": null,
+          "value": null,
+          "output_mode": "list",
+          "order_status": null
+        },
+        "status": "ok",
+        "records": [
+          {
+            "record_id": "R001",
+            "kind": "Product",
+            "fields": {
+              "id": "P01",
+              "name": "Wireless Headphones",
+              "brand": "NovaTech",
+              "category": "Electronics",
+              "price_paise": 399900
+            },
+            "node_ids": [
+              "brand:B01",
+              "category:C01",
+              "product:P01",
+              "vendor:V01"
+            ],
+            "edges": [
+              {
+                "source": "product:P01",
+                "relationship": "BELONGS_TO_BRAND",
+                "target": "brand:B01"
+              },
+              {
+                "source": "product:P01",
+                "relationship": "IN_CATEGORY",
+                "target": "category:C01"
+              },
+              {
+                "source": "vendor:V01",
+                "relationship": "SUPPLIES",
+                "target": "product:P01"
+              }
+            ]
+          },
+          {
+            "record_id": "R002",
+            "kind": "Product",
+            "fields": {
+              "id": "P02",
+              "name": "Portable Speaker",
+              "brand": "NovaTech",
+              "category": "Electronics",
+              "price_paise": 249900
+            },
+            "node_ids": [
+              "brand:B01",
+              "category:C01",
+              "product:P02",
+              "vendor:V01"
+            ],
+            "edges": [
+              {
+                "source": "product:P02",
+                "relationship": "BELONGS_TO_BRAND",
+                "target": "brand:B01"
+              },
+              {
+                "source": "product:P02",
+                "relationship": "IN_CATEGORY",
+                "target": "category:C01"
+              },
+              {
+                "source": "vendor:V01",
+                "relationship": "SUPPLIES",
+                "target": "product:P02"
+              }
+            ]
+          },
+          {
+            "record_id": "R003",
+            "kind": "Product",
+            "fields": {
+              "id": "P03",
+              "name": "Smartwatch",
+              "brand": "NovaTech",
+              "category": "Electronics",
+              "price_paise": 599900
+            },
+            "node_ids": [
+              "brand:B01",
+              "category:C01",
+              "product:P03",
+              "vendor:V01"
+            ],
+            "edges": [
+              {
+                "source": "product:P03",
+                "relationship": "BELONGS_TO_BRAND",
+                "target": "brand:B01"
+              },
+              {
+                "source": "product:P03",
+                "relationship": "IN_CATEGORY",
+                "target": "category:C01"
+              },
+              {
+                "source": "vendor:V01",
+                "relationship": "SUPPLIES",
+                "target": "product:P03"
+              }
+            ]
+          }
+        ],
+        "aggregates": {
+          "matching_count": 3
+        },
+        "nodes": {
+          "brand:B01": {
+            "type": "Brand",
+            "id": "B01",
+            "name": "NovaTech"
+          },
+          "category:C01": {
+            "type": "Category",
+            "id": "C01",
+            "name": "Electronics"
+          },
+          "product:P01": {
+            "type": "Product",
+            "id": "P01",
+            "name": "Wireless Headphones",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 399900
+          },
+          "product:P02": {
+            "type": "Product",
+            "id": "P02",
+            "name": "Portable Speaker",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 249900
+          },
+          "product:P03": {
+            "type": "Product",
+            "id": "P03",
+            "name": "Smartwatch",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 599900
+          },
+          "vendor:V01": {
+            "type": "Vendor",
+            "id": "V01",
+            "name": "MetroSupply"
+          }
+        },
+        "edges": [
+          {
+            "source": "product:P01",
+            "relationship": "BELONGS_TO_BRAND",
+            "target": "brand:B01"
+          },
+          {
+            "source": "product:P01",
+            "relationship": "IN_CATEGORY",
+            "target": "category:C01"
+          },
+          {
+            "source": "product:P02",
+            "relationship": "BELONGS_TO_BRAND",
+            "target": "brand:B01"
+          },
+          {
+            "source": "product:P02",
+            "relationship": "IN_CATEGORY",
+            "target": "category:C01"
+          },
+          {
+            "source": "product:P03",
+            "relationship": "BELONGS_TO_BRAND",
+            "target": "brand:B01"
+          },
+          {
+            "source": "product:P03",
+            "relationship": "IN_CATEGORY",
+            "target": "category:C01"
+          },
+          {
+            "source": "vendor:V01",
+            "relationship": "SUPPLIES",
+            "target": "product:P01"
+          },
+          {
+            "source": "vendor:V01",
+            "relationship": "SUPPLIES",
+            "target": "product:P02"
+          },
+          {
+            "source": "vendor:V01",
+            "relationship": "SUPPLIES",
+            "target": "product:P03"
+          }
+        ],
+        "currency": "INR"
+      },
+      "answer": "Found 3 matching records in the sample graph.\nP01 · Wireless Headphones — INR 3,999.00 (NovaTech; Electronics)\nP02 · Portable Speaker — INR 2,499.00 (NovaTech; Electronics)\nP03 · Smartwatch — INR 5,999.00 (NovaTech; Electronics)",
+      "answer_plan": {
+        "template_id": "product_list",
+        "record_ids": [
+          "R001",
+          "R002",
+          "R003"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "answer_presentation_source": "gemini",
+      "stage_durations_seconds": {
+        "interpret": 3.2517717000009725,
+        "retrieve": 0.0005740000051446259,
+        "present": 1.122834599998896
+      },
+      "token_usage": {
+        "query": {
+          "candidates_token_count": 109,
+          "prompt_token_count": 1573,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 1573
+            }
+          ],
+          "total_token_count": 1682
+        },
+        "answer": {
+          "candidates_token_count": 68,
+          "prompt_token_count": 409,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 409
+            }
+          ],
+          "total_token_count": 477
+        }
+      },
+      "error_code": null,
+      "raw_answer_plan": {
+        "template_id": "product_list",
+        "record_ids": [
+          "R001",
+          "R002",
+          "R003"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "duration_seconds": 4.37560189999931,
+      "example_id": "Q01",
+      "verification_errors": []
+    },
+    {
+      "question": "What is the merchandise total for order O01?",
+      "mode": "live",
+      "timestamp": "2026-10-01T17:00:02.634933+00:00",
+      "model": "gemini-3.5-flash-lite",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "3",
+      "raw_plan": {
+        "decision": "query",
+        "operation": "order_details",
+        "parameters": {
+          "brand_name": null,
+          "vendor_name": null,
+          "category_name": null,
+          "customer_name": null,
+          "product_name": null,
+          "order_id": "O01",
+          "price_lt_inr": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "clarification_code": null,
+        "unsupported_code": null
+      },
+      "resolved_plan": {
+        "operation": "order_details",
+        "order_id": "O01"
+      },
+      "status": "ok",
+      "evidence": {
+        "query": {
+          "operation": "order_details",
+          "brand_id": null,
+          "vendor_id": null,
+          "category_id": null,
+          "customer_id": null,
+          "product_id": null,
+          "order_id": "O01",
+          "price_lt_paise": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "status": "ok",
+        "records": [
+          {
+            "record_id": "R001",
+            "kind": "Order",
+            "fields": {
+              "id": "O01",
+              "date": "2026-09-01",
+              "status": "delivered",
+              "customer_id": "U01",
+              "customer_name": "Asha Mehta",
+              "total_paise": 539700,
+              "items": [
+                {
+                  "item_id": "L01",
+                  "product_id": "P01",
+                  "product_name": "Wireless Headphones",
+                  "quantity": 1,
+                  "unit_price_paise": 389900,
+                  "line_total_paise": 389900
+                },
+                {
+                  "item_id": "L02",
+                  "product_id": "P05",
+                  "product_name": "Insulated Bottle",
+                  "quantity": 2,
+                  "unit_price_paise": 74900,
+                  "line_total_paise": 149800
+                }
+              ]
+            },
+            "node_ids": [
+              "customer:U01",
+              "order:O01",
+              "orderitem:L01",
+              "orderitem:L02",
+              "product:P01",
+              "product:P05"
+            ],
+            "edges": [
+              {
+                "source": "customer:U01",
+                "relationship": "PLACED",
+                "target": "order:O01"
+              },
+              {
+                "source": "order:O01",
+                "relationship": "HAS_ITEM",
+                "target": "orderitem:L01"
+              },
+              {
+                "source": "order:O01",
+                "relationship": "HAS_ITEM",
+                "target": "orderitem:L02"
+              },
+              {
+                "source": "orderitem:L01",
+                "relationship": "FOR_PRODUCT",
+                "target": "product:P01"
+              },
+              {
+                "source": "orderitem:L02",
+                "relationship": "FOR_PRODUCT",
+                "target": "product:P05"
+              }
+            ]
+          }
+        ],
+        "aggregates": {
+          "matching_count": 1,
+          "total_paise": 539700
+        },
+        "nodes": {
+          "customer:U01": {
+            "type": "Customer",
+            "id": "U01",
+            "name": "Asha Mehta"
+          },
+          "order:O01": {
+            "type": "Order",
+            "id": "O01",
+            "customer_id": "U01",
+            "date": "2026-09-01",
+            "status": "delivered"
+          },
+          "orderitem:L01": {
+            "type": "OrderItem",
+            "id": "L01",
+            "order_id": "O01",
+            "product_id": "P01",
+            "quantity": 1,
+            "unit_price_paise": 389900
+          },
+          "orderitem:L02": {
+            "type": "OrderItem",
+            "id": "L02",
+            "order_id": "O01",
+            "product_id": "P05",
+            "quantity": 2,
+            "unit_price_paise": 74900
+          },
+          "product:P01": {
+            "type": "Product",
+            "id": "P01",
+            "name": "Wireless Headphones",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 399900
+          },
+          "product:P05": {
+            "type": "Product",
+            "id": "P05",
+            "name": "Insulated Bottle",
+            "brand_id": "B02",
+            "category_id": "C02",
+            "price_paise": 79900
+          }
+        },
+        "edges": [
+          {
+            "source": "customer:U01",
+            "relationship": "PLACED",
+            "target": "order:O01"
+          },
+          {
+            "source": "order:O01",
+            "relationship": "HAS_ITEM",
+            "target": "orderitem:L01"
+          },
+          {
+            "source": "order:O01",
+            "relationship": "HAS_ITEM",
+            "target": "orderitem:L02"
+          },
+          {
+            "source": "orderitem:L01",
+            "relationship": "FOR_PRODUCT",
+            "target": "product:P01"
+          },
+          {
+            "source": "orderitem:L02",
+            "relationship": "FOR_PRODUCT",
+            "target": "product:P05"
+          }
+        ],
+        "currency": "INR"
+      },
+      "answer": "Found 1 matching record in the sample graph.\nO01 · delivered · 2026-09-01 · Asha Mehta — merchandise total INR 5,397.00\n  L01 · Wireless Headphones: 1 × INR 3,899.00 = INR 3,899.00\n  L02 · Insulated Bottle: 2 × INR 749.00 = INR 1,498.00\nMerchandise total only; tax and shipping are not modeled.",
+      "answer_plan": {
+        "template_id": "order_details",
+        "record_ids": [
+          "R001"
+        ],
+        "aggregate_keys": [
+          "matching_count",
+          "total_paise"
+        ]
+      },
+      "answer_presentation_source": "gemini",
+      "stage_durations_seconds": {
+        "interpret": 2.404362900007982,
+        "retrieve": 0.0023661999875912443,
+        "present": 1.4322451000043657
+      },
+      "token_usage": {
+        "query": {
+          "candidates_token_count": 142,
+          "prompt_token_count": 1573,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 1573
+            }
+          ],
+          "total_token_count": 1715
+        },
+        "answer": {
+          "candidates_token_count": 60,
+          "prompt_token_count": 446,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 446
+            }
+          ],
+          "total_token_count": 506
+        }
+      },
+      "error_code": null,
+      "raw_answer_plan": {
+        "template_id": "order_details",
+        "record_ids": [
+          "R001"
+        ],
+        "aggregate_keys": [
+          "matching_count",
+          "total_paise"
+        ]
+      },
+      "duration_seconds": 3.8390465999982553,
+      "example_id": "Q05",
+      "verification_errors": []
+    },
+    {
+      "question": "What is the merchandise total for order O07?",
+      "mode": "live",
+      "timestamp": "2026-10-01T17:00:21.474514+00:00",
+      "model": "gemini-3.5-flash-lite",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "3",
+      "raw_plan": {
+        "decision": "query",
+        "operation": "order_details",
+        "parameters": {
+          "brand_name": null,
+          "vendor_name": null,
+          "category_name": null,
+          "customer_name": null,
+          "product_name": null,
+          "order_id": "O07",
+          "price_lt_inr": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "clarification_code": null,
+        "unsupported_code": null
+      },
+      "resolved_plan": {
+        "operation": "order_details",
+        "order_id": "O07"
+      },
+      "status": "ok",
+      "evidence": {
+        "query": {
+          "operation": "order_details",
+          "brand_id": null,
+          "vendor_id": null,
+          "category_id": null,
+          "customer_id": null,
+          "product_id": null,
+          "order_id": "O07",
+          "price_lt_paise": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "status": "ok",
+        "records": [
+          {
+            "record_id": "R001",
+            "kind": "Order",
+            "fields": {
+              "id": "O07",
+              "date": "2026-09-07",
+              "status": "cancelled",
+              "customer_id": "U06",
+              "customer_name": "Arjun Nair",
+              "total_paise": 279800,
+              "items": [
+                {
+                  "item_id": "L13",
+                  "product_id": "P04",
+                  "product_name": "Hiking Backpack",
+                  "quantity": 1,
+                  "unit_price_paise": 199900,
+                  "line_total_paise": 199900
+                },
+                {
+                  "item_id": "L14",
+                  "product_id": "P05",
+                  "product_name": "Insulated Bottle",
+                  "quantity": 1,
+                  "unit_price_paise": 79900,
+                  "line_total_paise": 79900
+                }
+              ]
+            },
+            "node_ids": [
+              "customer:U06",
+              "order:O07",
+              "orderitem:L13",
+              "orderitem:L14",
+              "product:P04",
+              "product:P05"
+            ],
+            "edges": [
+              {
+                "source": "customer:U06",
+                "relationship": "PLACED",
+                "target": "order:O07"
+              },
+              {
+                "source": "order:O07",
+                "relationship": "HAS_ITEM",
+                "target": "orderitem:L13"
+              },
+              {
+                "source": "order:O07",
+                "relationship": "HAS_ITEM",
+                "target": "orderitem:L14"
+              },
+              {
+                "source": "orderitem:L13",
+                "relationship": "FOR_PRODUCT",
+                "target": "product:P04"
+              },
+              {
+                "source": "orderitem:L14",
+                "relationship": "FOR_PRODUCT",
+                "target": "product:P05"
+              }
+            ]
+          }
+        ],
+        "aggregates": {
+          "matching_count": 1,
+          "total_paise": 279800
+        },
+        "nodes": {
+          "customer:U06": {
+            "type": "Customer",
+            "id": "U06",
+            "name": "Arjun Nair"
+          },
+          "order:O07": {
+            "type": "Order",
+            "id": "O07",
+            "customer_id": "U06",
+            "date": "2026-09-07",
+            "status": "cancelled"
+          },
+          "orderitem:L13": {
+            "type": "OrderItem",
+            "id": "L13",
+            "order_id": "O07",
+            "product_id": "P04",
+            "quantity": 1,
+            "unit_price_paise": 199900
+          },
+          "orderitem:L14": {
+            "type": "OrderItem",
+            "id": "L14",
+            "order_id": "O07",
+            "product_id": "P05",
+            "quantity": 1,
+            "unit_price_paise": 79900
+          },
+          "product:P04": {
+            "type": "Product",
+            "id": "P04",
+            "name": "Hiking Backpack",
+            "brand_id": "B02",
+            "category_id": "C02",
+            "price_paise": 199900
+          },
+          "product:P05": {
+            "type": "Product",
+            "id": "P05",
+            "name": "Insulated Bottle",
+            "brand_id": "B02",
+            "category_id": "C02",
+            "price_paise": 79900
+          }
+        },
+        "edges": [
+          {
+            "source": "customer:U06",
+            "relationship": "PLACED",
+            "target": "order:O07"
+          },
+          {
+            "source": "order:O07",
+            "relationship": "HAS_ITEM",
+            "target": "orderitem:L13"
+          },
+          {
+            "source": "order:O07",
+            "relationship": "HAS_ITEM",
+            "target": "orderitem:L14"
+          },
+          {
+            "source": "orderitem:L13",
+            "relationship": "FOR_PRODUCT",
+            "target": "product:P04"
+          },
+          {
+            "source": "orderitem:L14",
+            "relationship": "FOR_PRODUCT",
+            "target": "product:P05"
+          }
+        ],
+        "currency": "INR"
+      },
+      "answer": "Found 1 matching record in the sample graph.\nO07 · cancelled · 2026-09-07 · Arjun Nair — merchandise total INR 2,798.00\n  L13 · Hiking Backpack: 1 × INR 1,999.00 = INR 1,999.00\n  L14 · Insulated Bottle: 1 × INR 799.00 = INR 799.00\nMerchandise total only; tax and shipping are not modeled.",
+      "answer_plan": {
+        "template_id": "order_details",
+        "record_ids": [
+          "R001"
+        ],
+        "aggregate_keys": [
+          "matching_count",
+          "total_paise"
+        ]
+      },
+      "answer_presentation_source": "gemini",
+      "stage_durations_seconds": {
+        "interpret": 1.8042462000012165,
+        "retrieve": 0.0003802999999606982,
+        "present": 1.2759467999858316
+      },
+      "token_usage": {
+        "query": {
+          "candidates_token_count": 142,
+          "prompt_token_count": 1573,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 1573
+            }
+          ],
+          "total_token_count": 1715
+        },
+        "answer": {
+          "candidates_token_count": 60,
+          "prompt_token_count": 445,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 445
+            }
+          ],
+          "total_token_count": 505
+        }
+      },
+      "error_code": null,
+      "raw_answer_plan": {
+        "template_id": "order_details",
+        "record_ids": [
+          "R001"
+        ],
+        "aggregate_keys": [
+          "matching_count",
+          "total_paise"
+        ]
+      },
+      "duration_seconds": 3.080612799996743,
+      "example_id": "Q14",
+      "verification_errors": []
+    }
+  ]
+}

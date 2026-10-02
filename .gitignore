@@ -1,0 +1,18 @@
+.env
+.venv*/
+.uv-cache/
+.uv-clean-cache/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+build/
+dist/
+local-logs/
+
+# Credentials stay local or in the hosting provider Secrets settings.
+.env.*
+!.env.example
+.streamlit/secrets.toml

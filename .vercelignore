@@ -1,0 +1,16 @@
+# Never upload credentials, local environments or generated archives.
+.env
+.env.*
+.streamlit/secrets.toml
+.venv*/
+.git/
+**/__pycache__/
+**/*.pyc
+**/*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.uv-cache/
+.uv-clean-cache/
+build/
+dist/
+local-logs/

@@ -1,0 +1,415 @@
+{
+  "schema_version": 1,
+  "currency": "INR",
+  "brands": [
+    {
+      "id": "B01",
+      "name": "NovaTech"
+    },
+    {
+      "id": "B02",
+      "name": "TrailWorks"
+    },
+    {
+      "id": "B03",
+      "name": "HomeNest"
+    },
+    {
+      "id": "B04",
+      "name": "PantryCo"
+    }
+  ],
+  "categories": [
+    {
+      "id": "C01",
+      "name": "Electronics"
+    },
+    {
+      "id": "C02",
+      "name": "Outdoors"
+    },
+    {
+      "id": "C03",
+      "name": "Home"
+    },
+    {
+      "id": "C04",
+      "name": "Grocery"
+    }
+  ],
+  "vendors": [
+    {
+      "id": "V01",
+      "name": "MetroSupply"
+    },
+    {
+      "id": "V02",
+      "name": "GreenRoute"
+    },
+    {
+      "id": "V03",
+      "name": "EverydayWholesale"
+    }
+  ],
+  "customers": [
+    {
+      "id": "U01",
+      "name": "Asha Mehta"
+    },
+    {
+      "id": "U02",
+      "name": "Rohan Shah"
+    },
+    {
+      "id": "U03",
+      "name": "Neha Rao"
+    },
+    {
+      "id": "U04",
+      "name": "Kabir Sen"
+    },
+    {
+      "id": "U05",
+      "name": "Meera Das"
+    },
+    {
+      "id": "U06",
+      "name": "Arjun Nair"
+    }
+  ],
+  "products": [
+    {
+      "id": "P01",
+      "name": "Wireless Headphones",
+      "brand_id": "B01",
+      "category_id": "C01",
+      "price_paise": 399900
+    },
+    {
+      "id": "P02",
+      "name": "Portable Speaker",
+      "brand_id": "B01",
+      "category_id": "C01",
+      "price_paise": 249900
+    },
+    {
+      "id": "P03",
+      "name": "Smartwatch",
+      "brand_id": "B01",
+      "category_id": "C01",
+      "price_paise": 599900
+    },
+    {
+      "id": "P04",
+      "name": "Hiking Backpack",
+      "brand_id": "B02",
+      "category_id": "C02",
+      "price_paise": 199900
+    },
+    {
+      "id": "P05",
+      "name": "Insulated Bottle",
+      "brand_id": "B02",
+      "category_id": "C02",
+      "price_paise": 79900
+    },
+    {
+      "id": "P06",
+      "name": "Camping Lantern",
+      "brand_id": "B02",
+      "category_id": "C02",
+      "price_paise": 129900
+    },
+    {
+      "id": "P07",
+      "name": "Electric Kettle",
+      "brand_id": "B03",
+      "category_id": "C03",
+      "price_paise": 149900
+    },
+    {
+      "id": "P08",
+      "name": "Desk Lamp",
+      "brand_id": "B03",
+      "category_id": "C03",
+      "price_paise": 99900
+    },
+    {
+      "id": "P09",
+      "name": "Storage Basket",
+      "brand_id": "B03",
+      "category_id": "C03",
+      "price_paise": 49900
+    },
+    {
+      "id": "P10",
+      "name": "Rolled Oats",
+      "brand_id": "B04",
+      "category_id": "C04",
+      "price_paise": 24900
+    },
+    {
+      "id": "P11",
+      "name": "Mixed Nuts",
+      "brand_id": "B04",
+      "category_id": "C04",
+      "price_paise": 39900
+    },
+    {
+      "id": "P12",
+      "name": "Herbal Tea",
+      "brand_id": "B04",
+      "category_id": "C04",
+      "price_paise": 19900
+    }
+  ],
+  "supplies": [
+    {
+      "vendor_id": "V01",
+      "product_id": "P01"
+    },
+    {
+      "vendor_id": "V01",
+      "product_id": "P02"
+    },
+    {
+      "vendor_id": "V01",
+      "product_id": "P03"
+    },
+    {
+      "vendor_id": "V01",
+      "product_id": "P07"
+    },
+    {
+      "vendor_id": "V01",
+      "product_id": "P08"
+    },
+    {
+      "vendor_id": "V02",
+      "product_id": "P04"
+    },
+    {
+      "vendor_id": "V02",
+      "product_id": "P05"
+    },
+    {
+      "vendor_id": "V02",
+      "product_id": "P06"
+    },
+    {
+      "vendor_id": "V02",
+      "product_id": "P10"
+    },
+    {
+      "vendor_id": "V03",
+      "product_id": "P02"
+    },
+    {
+      "vendor_id": "V03",
+      "product_id": "P09"
+    },
+    {
+      "vendor_id": "V03",
+      "product_id": "P10"
+    },
+    {
+      "vendor_id": "V03",
+      "product_id": "P11"
+    },
+    {
+      "vendor_id": "V03",
+      "product_id": "P12"
+    }
+  ],
+  "orders": [
+    {
+      "id": "O01",
+      "customer_id": "U01",
+      "date": "2026-09-01",
+      "status": "delivered"
+    },
+    {
+      "id": "O02",
+      "customer_id": "U02",
+      "date": "2026-09-02",
+      "status": "delivered"
+    },
+    {
+      "id": "O03",
+      "customer_id": "U03",
+      "date": "2026-09-03",
+      "status": "delivered"
+    },
+    {
+      "id": "O04",
+      "customer_id": "U01",
+      "date": "2026-09-04",
+      "status": "delivered"
+    },
+    {
+      "id": "O05",
+      "customer_id": "U04",
+      "date": "2026-09-05",
+      "status": "delivered"
+    },
+    {
+      "id": "O06",
+      "customer_id": "U05",
+      "date": "2026-09-06",
+      "status": "delivered"
+    },
+    {
+      "id": "O07",
+      "customer_id": "U06",
+      "date": "2026-09-07",
+      "status": "cancelled"
+    },
+    {
+      "id": "O08",
+      "customer_id": "U02",
+      "date": "2026-09-08",
+      "status": "pending"
+    }
+  ],
+  "order_items": [
+    {
+      "id": "L01",
+      "order_id": "O01",
+      "product_id": "P01",
+      "quantity": 1,
+      "unit_price_paise": 389900
+    },
+    {
+      "id": "L02",
+      "order_id": "O01",
+      "product_id": "P05",
+      "quantity": 2,
+      "unit_price_paise": 74900
+    },
+    {
+      "id": "L03",
+      "order_id": "O02",
+      "product_id": "P04",
+      "quantity": 1,
+      "unit_price_paise": 199900
+    },
+    {
+      "id": "L04",
+      "order_id": "O02",
+      "product_id": "P06",
+      "quantity": 1,
+      "unit_price_paise": 129900
+    },
+    {
+      "id": "L05",
+      "order_id": "O03",
+      "product_id": "P02",
+      "quantity": 1,
+      "unit_price_paise": 249900
+    },
+    {
+      "id": "L06",
+      "order_id": "O03",
+      "product_id": "P10",
+      "quantity": 2,
+      "unit_price_paise": 24900
+    },
+    {
+      "id": "L07",
+      "order_id": "O04",
+      "product_id": "P07",
+      "quantity": 1,
+      "unit_price_paise": 149900
+    },
+    {
+      "id": "L08",
+      "order_id": "O04",
+      "product_id": "P12",
+      "quantity": 3,
+      "unit_price_paise": 19900
+    },
+    {
+      "id": "L09",
+      "order_id": "O05",
+      "product_id": "P03",
+      "quantity": 1,
+      "unit_price_paise": 599900
+    },
+    {
+      "id": "L10",
+      "order_id": "O05",
+      "product_id": "P08",
+      "quantity": 1,
+      "unit_price_paise": 99900
+    },
+    {
+      "id": "L11",
+      "order_id": "O06",
+      "product_id": "P11",
+      "quantity": 2,
+      "unit_price_paise": 39900
+    },
+    {
+      "id": "L12",
+      "order_id": "O06",
+      "product_id": "P09",
+      "quantity": 2,
+      "unit_price_paise": 49900
+    },
+    {
+      "id": "L13",
+      "order_id": "O07",
+      "product_id": "P04",
+      "quantity": 1,
+      "unit_price_paise": 199900
+    },
+    {
+      "id": "L14",
+      "order_id": "O07",
+      "product_id": "P05",
+      "quantity": 1,
+      "unit_price_paise": 79900
+    },
+    {
+      "id": "L15",
+      "order_id": "O08",
+      "product_id": "P10",
+      "quantity": 4,
+      "unit_price_paise": 24900
+    },
+    {
+      "id": "L16",
+      "order_id": "O08",
+      "product_id": "P12",
+      "quantity": 1,
+      "unit_price_paise": 19900
+    }
+  ],
+  "markers": [
+    {
+      "id": "M01",
+      "value": "banana",
+      "product_id": "P01"
+    },
+    {
+      "id": "M02",
+      "value": "banana",
+      "product_id": "P04"
+    },
+    {
+      "id": "M03",
+      "value": "banana",
+      "product_id": "P07"
+    },
+    {
+      "id": "M04",
+      "value": "banana",
+      "product_id": "P10"
+    },
+    {
+      "id": "M05",
+      "value": "banana",
+      "product_id": "P12"
+    }
+  ]
+}

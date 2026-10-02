@@ -1,0 +1,2809 @@
+{
+  "mode": "live",
+  "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+  "passed": false,
+  "failed_examples": [
+    "Q04",
+    "Q05",
+    "Q06",
+    "Q10",
+    "Q11",
+    "Q12",
+    "Q13",
+    "Q14"
+  ],
+  "runs": [
+    {
+      "question": "Which products from NovaTech are supplied by MetroSupply?",
+      "mode": "live",
+      "timestamp": "2026-10-01T16:35:30.527960+00:00",
+      "model": "gemini-3.5-flash-lite",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "1",
+      "raw_plan": {
+        "decision": "query",
+        "operation": "find_products",
+        "parameters": {
+          "brand_name": "NovaTech",
+          "vendor_name": "MetroSupply",
+          "category_name": null,
+          "customer_name": null,
+          "product_name": null,
+          "order_id": null,
+          "price_lt_inr": null,
+          "value": null,
+          "output_mode": "list",
+          "order_status": null
+        },
+        "clarification_code": null,
+        "unsupported_code": null
+      },
+      "resolved_plan": {
+        "operation": "find_products",
+        "brand_id": "B01",
+        "vendor_id": "V01",
+        "output_mode": "list"
+      },
+      "status": "ok",
+      "evidence": {
+        "query": {
+          "operation": "find_products",
+          "brand_id": "B01",
+          "vendor_id": "V01",
+          "category_id": null,
+          "customer_id": null,
+          "product_id": null,
+          "order_id": null,
+          "price_lt_paise": null,
+          "value": null,
+          "output_mode": "list",
+          "order_status": null
+        },
+        "status": "ok",
+        "records": [
+          {
+            "record_id": "R001",
+            "kind": "Product",
+            "fields": {
+              "id": "P01",
+              "name": "Wireless Headphones",
+              "brand": "NovaTech",
+              "category": "Electronics",
+              "price_paise": 399900
+            },
+            "node_ids": [
+              "brand:B01",
+              "category:C01",
+              "product:P01",
+              "vendor:V01"
+            ],
+            "edges": [
+              {
+                "source": "product:P01",
+                "relationship": "BELONGS_TO_BRAND",
+                "target": "brand:B01"
+              },
+              {
+                "source": "product:P01",
+                "relationship": "IN_CATEGORY",
+                "target": "category:C01"
+              },
+              {
+                "source": "vendor:V01",
+                "relationship": "SUPPLIES",
+                "target": "product:P01"
+              }
+            ]
+          },
+          {
+            "record_id": "R002",
+            "kind": "Product",
+            "fields": {
+              "id": "P02",
+              "name": "Portable Speaker",
+              "brand": "NovaTech",
+              "category": "Electronics",
+              "price_paise": 249900
+            },
+            "node_ids": [
+              "brand:B01",
+              "category:C01",
+              "product:P02",
+              "vendor:V01"
+            ],
+            "edges": [
+              {
+                "source": "product:P02",
+                "relationship": "BELONGS_TO_BRAND",
+                "target": "brand:B01"
+              },
+              {
+                "source": "product:P02",
+                "relationship": "IN_CATEGORY",
+                "target": "category:C01"
+              },
+              {
+                "source": "vendor:V01",
+                "relationship": "SUPPLIES",
+                "target": "product:P02"
+              }
+            ]
+          },
+          {
+            "record_id": "R003",
+            "kind": "Product",
+            "fields": {
+              "id": "P03",
+              "name": "Smartwatch",
+              "brand": "NovaTech",
+              "category": "Electronics",
+              "price_paise": 599900
+            },
+            "node_ids": [
+              "brand:B01",
+              "category:C01",
+              "product:P03",
+              "vendor:V01"
+            ],
+            "edges": [
+              {
+                "source": "product:P03",
+                "relationship": "BELONGS_TO_BRAND",
+                "target": "brand:B01"
+              },
+              {
+                "source": "product:P03",
+                "relationship": "IN_CATEGORY",
+                "target": "category:C01"
+              },
+              {
+                "source": "vendor:V01",
+                "relationship": "SUPPLIES",
+                "target": "product:P03"
+              }
+            ]
+          }
+        ],
+        "aggregates": {
+          "matching_count": 3
+        },
+        "nodes": {
+          "brand:B01": {
+            "type": "Brand",
+            "id": "B01",
+            "name": "NovaTech"
+          },
+          "category:C01": {
+            "type": "Category",
+            "id": "C01",
+            "name": "Electronics"
+          },
+          "product:P01": {
+            "type": "Product",
+            "id": "P01",
+            "name": "Wireless Headphones",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 399900
+          },
+          "product:P02": {
+            "type": "Product",
+            "id": "P02",
+            "name": "Portable Speaker",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 249900
+          },
+          "product:P03": {
+            "type": "Product",
+            "id": "P03",
+            "name": "Smartwatch",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 599900
+          },
+          "vendor:V01": {
+            "type": "Vendor",
+            "id": "V01",
+            "name": "MetroSupply"
+          }
+        },
+        "edges": [
+          {
+            "source": "product:P01",
+            "relationship": "BELONGS_TO_BRAND",
+            "target": "brand:B01"
+          },
+          {
+            "source": "product:P01",
+            "relationship": "IN_CATEGORY",
+            "target": "category:C01"
+          },
+          {
+            "source": "product:P02",
+            "relationship": "BELONGS_TO_BRAND",
+            "target": "brand:B01"
+          },
+          {
+            "source": "product:P02",
+            "relationship": "IN_CATEGORY",
+            "target": "category:C01"
+          },
+          {
+            "source": "product:P03",
+            "relationship": "BELONGS_TO_BRAND",
+            "target": "brand:B01"
+          },
+          {
+            "source": "product:P03",
+            "relationship": "IN_CATEGORY",
+            "target": "category:C01"
+          },
+          {
+            "source": "vendor:V01",
+            "relationship": "SUPPLIES",
+            "target": "product:P01"
+          },
+          {
+            "source": "vendor:V01",
+            "relationship": "SUPPLIES",
+            "target": "product:P02"
+          },
+          {
+            "source": "vendor:V01",
+            "relationship": "SUPPLIES",
+            "target": "product:P03"
+          }
+        ],
+        "currency": "INR"
+      },
+      "answer": "Found 3 matching records in the sample graph.\nP01 · Wireless Headphones — INR 3,999.00 (NovaTech; Electronics)\nP02 · Portable Speaker — INR 2,499.00 (NovaTech; Electronics)\nP03 · Smartwatch — INR 5,999.00 (NovaTech; Electronics)",
+      "answer_plan": {
+        "template_id": "product_list",
+        "record_ids": [
+          "R001",
+          "R002",
+          "R003"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "answer_presentation_source": "gemini",
+      "stage_durations_seconds": {
+        "interpret": 5.290895300000557,
+        "retrieve": 0.0019423999910941347,
+        "present": 0.9998820000037085
+      },
+      "token_usage": {
+        "query": {
+          "candidates_token_count": 144,
+          "prompt_token_count": 1186,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 1186
+            }
+          ],
+          "total_token_count": 1330
+        },
+        "answer": {
+          "candidates_token_count": 68,
+          "prompt_token_count": 342,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 342
+            }
+          ],
+          "total_token_count": 410
+        }
+      },
+      "error_code": null,
+      "raw_answer_plan": {
+        "template_id": "product_list",
+        "record_ids": [
+          "R001",
+          "R002",
+          "R003"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "duration_seconds": 6.292912699995213,
+      "example_id": "Q01",
+      "verification_errors": []
+    },
+    {
+      "question": "Which vendors supply Portable Speaker?",
+      "mode": "live",
+      "timestamp": "2026-10-01T16:35:36.820945+00:00",
+      "model": "gemini-3.5-flash-lite",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "1",
+      "raw_plan": {
+        "decision": "query",
+        "operation": "vendors_for_product",
+        "parameters": {
+          "brand_name": null,
+          "vendor_name": null,
+          "category_name": null,
+          "customer_name": null,
+          "product_name": "Portable Speaker",
+          "order_id": null,
+          "price_lt_inr": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "clarification_code": null,
+        "unsupported_code": null
+      },
+      "resolved_plan": {
+        "operation": "vendors_for_product",
+        "product_id": "P02"
+      },
+      "status": "ok",
+      "evidence": {
+        "query": {
+          "operation": "vendors_for_product",
+          "brand_id": null,
+          "vendor_id": null,
+          "category_id": null,
+          "customer_id": null,
+          "product_id": "P02",
+          "order_id": null,
+          "price_lt_paise": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "status": "ok",
+        "records": [
+          {
+            "record_id": "R001",
+            "kind": "Vendor",
+            "fields": {
+              "id": "V01",
+              "name": "MetroSupply",
+              "product_id": "P02",
+              "product_name": "Portable Speaker"
+            },
+            "node_ids": [
+              "product:P02",
+              "vendor:V01"
+            ],
+            "edges": [
+              {
+                "source": "vendor:V01",
+                "relationship": "SUPPLIES",
+                "target": "product:P02"
+              }
+            ]
+          },
+          {
+            "record_id": "R002",
+            "kind": "Vendor",
+            "fields": {
+              "id": "V03",
+              "name": "EverydayWholesale",
+              "product_id": "P02",
+              "product_name": "Portable Speaker"
+            },
+            "node_ids": [
+              "product:P02",
+              "vendor:V03"
+            ],
+            "edges": [
+              {
+                "source": "vendor:V03",
+                "relationship": "SUPPLIES",
+                "target": "product:P02"
+              }
+            ]
+          }
+        ],
+        "aggregates": {
+          "matching_count": 2
+        },
+        "nodes": {
+          "product:P02": {
+            "type": "Product",
+            "id": "P02",
+            "name": "Portable Speaker",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 249900
+          },
+          "vendor:V01": {
+            "type": "Vendor",
+            "id": "V01",
+            "name": "MetroSupply"
+          },
+          "vendor:V03": {
+            "type": "Vendor",
+            "id": "V03",
+            "name": "EverydayWholesale"
+          }
+        },
+        "edges": [
+          {
+            "source": "vendor:V01",
+            "relationship": "SUPPLIES",
+            "target": "product:P02"
+          },
+          {
+            "source": "vendor:V03",
+            "relationship": "SUPPLIES",
+            "target": "product:P02"
+          }
+        ],
+        "currency": "INR"
+      },
+      "answer": "Found 2 matching records in the sample graph.\nV01 · MetroSupply supplies Portable Speaker (P02) in the catalog.\nV03 · EverydayWholesale supplies Portable Speaker (P02) in the catalog.",
+      "answer_plan": {
+        "template_id": "vendor_list",
+        "record_ids": [
+          "R001",
+          "R002"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "answer_presentation_source": "gemini",
+      "stage_durations_seconds": {
+        "interpret": 1.1612499000038952,
+        "retrieve": 0.000756499997805804,
+        "present": 1.132385000004433
+      },
+      "token_usage": {
+        "query": {
+          "candidates_token_count": 143,
+          "prompt_token_count": 1181,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 1181
+            }
+          ],
+          "total_token_count": 1324
+        },
+        "answer": {
+          "candidates_token_count": 60,
+          "prompt_token_count": 252,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 252
+            }
+          ],
+          "total_token_count": 312
+        }
+      },
+      "error_code": null,
+      "raw_answer_plan": {
+        "template_id": "vendor_list",
+        "record_ids": [
+          "R001",
+          "R002"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "duration_seconds": 2.294436600001063,
+      "example_id": "Q02",
+      "verification_errors": []
+    },
+    {
+      "question": "Which Outdoors products cost under INR 1500?",
+      "mode": "live",
+      "timestamp": "2026-10-01T16:35:39.119024+00:00",
+      "model": "gemini-3.5-flash-lite",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "1",
+      "raw_plan": {
+        "decision": "query",
+        "operation": "find_products",
+        "parameters": {
+          "brand_name": null,
+          "vendor_name": null,
+          "category_name": "Outdoors",
+          "customer_name": null,
+          "product_name": null,
+          "order_id": null,
+          "price_lt_inr": "1500",
+          "value": null,
+          "output_mode": "list",
+          "order_status": null
+        },
+        "clarification_code": null,
+        "unsupported_code": null
+      },
+      "resolved_plan": {
+        "operation": "find_products",
+        "category_id": "C02",
+        "price_lt_paise": 150000,
+        "output_mode": "list"
+      },
+      "status": "ok",
+      "evidence": {
+        "query": {
+          "operation": "find_products",
+          "brand_id": null,
+          "vendor_id": null,
+          "category_id": "C02",
+          "customer_id": null,
+          "product_id": null,
+          "order_id": null,
+          "price_lt_paise": 150000,
+          "value": null,
+          "output_mode": "list",
+          "order_status": null
+        },
+        "status": "ok",
+        "records": [
+          {
+            "record_id": "R001",
+            "kind": "Product",
+            "fields": {
+              "id": "P05",
+              "name": "Insulated Bottle",
+              "brand": "TrailWorks",
+              "category": "Outdoors",
+              "price_paise": 79900
+            },
+            "node_ids": [
+              "brand:B02",
+              "category:C02",
+              "product:P05"
+            ],
+            "edges": [
+              {
+                "source": "product:P05",
+                "relationship": "BELONGS_TO_BRAND",
+                "target": "brand:B02"
+              },
+              {
+                "source": "product:P05",
+                "relationship": "IN_CATEGORY",
+                "target": "category:C02"
+              }
+            ]
+          },
+          {
+            "record_id": "R002",
+            "kind": "Product",
+            "fields": {
+              "id": "P06",
+              "name": "Camping Lantern",
+              "brand": "TrailWorks",
+              "category": "Outdoors",
+              "price_paise": 129900
+            },
+            "node_ids": [
+              "brand:B02",
+              "category:C02",
+              "product:P06"
+            ],
+            "edges": [
+              {
+                "source": "product:P06",
+                "relationship": "BELONGS_TO_BRAND",
+                "target": "brand:B02"
+              },
+              {
+                "source": "product:P06",
+                "relationship": "IN_CATEGORY",
+                "target": "category:C02"
+              }
+            ]
+          }
+        ],
+        "aggregates": {
+          "matching_count": 2
+        },
+        "nodes": {
+          "brand:B02": {
+            "type": "Brand",
+            "id": "B02",
+            "name": "TrailWorks"
+          },
+          "category:C02": {
+            "type": "Category",
+            "id": "C02",
+            "name": "Outdoors"
+          },
+          "product:P05": {
+            "type": "Product",
+            "id": "P05",
+            "name": "Insulated Bottle",
+            "brand_id": "B02",
+            "category_id": "C02",
+            "price_paise": 79900
+          },
+          "product:P06": {
+            "type": "Product",
+            "id": "P06",
+            "name": "Camping Lantern",
+            "brand_id": "B02",
+            "category_id": "C02",
+            "price_paise": 129900
+          }
+        },
+        "edges": [
+          {
+            "source": "product:P05",
+            "relationship": "BELONGS_TO_BRAND",
+            "target": "brand:B02"
+          },
+          {
+            "source": "product:P05",
+            "relationship": "IN_CATEGORY",
+            "target": "category:C02"
+          },
+          {
+            "source": "product:P06",
+            "relationship": "BELONGS_TO_BRAND",
+            "target": "brand:B02"
+          },
+          {
+            "source": "product:P06",
+            "relationship": "IN_CATEGORY",
+            "target": "category:C02"
+          }
+        ],
+        "currency": "INR"
+      },
+      "answer": "Found 2 matching records in the sample graph.\nP05 · Insulated Bottle — INR 799.00 (TrailWorks; Outdoors)\nP06 · Camping Lantern — INR 1,299.00 (TrailWorks; Outdoors)",
+      "answer_plan": {
+        "template_id": "product_list",
+        "record_ids": [
+          "R001",
+          "R002"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "answer_presentation_source": "gemini",
+      "stage_durations_seconds": {
+        "interpret": 1.3059761000040453,
+        "retrieve": 0.0017703000048641115,
+        "present": 1.0402506999962498
+      },
+      "token_usage": {
+        "query": {
+          "candidates_token_count": 146,
+          "prompt_token_count": 1187,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 1187
+            }
+          ],
+          "total_token_count": 1333
+        },
+        "answer": {
+          "candidates_token_count": 60,
+          "prompt_token_count": 295,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 295
+            }
+          ],
+          "total_token_count": 355
+        }
+      },
+      "error_code": null,
+      "raw_answer_plan": {
+        "template_id": "product_list",
+        "record_ids": [
+          "R001",
+          "R002"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "duration_seconds": 2.3482092000049306,
+      "example_id": "Q03",
+      "verification_errors": []
+    },
+    {
+      "question": "Show all orders placed by Asha Mehta.",
+      "mode": "live",
+      "timestamp": "2026-10-01T16:35:41.467850+00:00",
+      "model": "gemini-3.5-flash-lite",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "1",
+      "raw_plan": {
+        "decision": "query",
+        "operation": "orders_for_customer",
+        "parameters": {
+          "brand_name": null,
+          "vendor_name": null,
+          "category_name": null,
+          "customer_name": "Asha Mehta",
+          "product_name": null,
+          "order_id": null,
+          "price_lt_inr": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "clarification_code": null,
+        "unsupported_code": null
+      },
+      "resolved_plan": {
+        "operation": "orders_for_customer",
+        "customer_id": "U01"
+      },
+      "status": "ok",
+      "evidence": {
+        "query": {
+          "operation": "orders_for_customer",
+          "brand_id": null,
+          "vendor_id": null,
+          "category_id": null,
+          "customer_id": "U01",
+          "product_id": null,
+          "order_id": null,
+          "price_lt_paise": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "status": "ok",
+        "records": [
+          {
+            "record_id": "R001",
+            "kind": "Order",
+            "fields": {
+              "id": "O01",
+              "date": "2026-09-01",
+              "status": "delivered",
+              "customer_id": "U01",
+              "customer_name": "Asha Mehta",
+              "total_paise": 539700,
+              "items": [
+                {
+                  "item_id": "L01",
+                  "product_id": "P01",
+                  "product_name": "Wireless Headphones",
+                  "quantity": 1,
+                  "unit_price_paise": 389900,
+                  "line_total_paise": 389900
+                },
+                {
+                  "item_id": "L02",
+                  "product_id": "P05",
+                  "product_name": "Insulated Bottle",
+                  "quantity": 2,
+                  "unit_price_paise": 74900,
+                  "line_total_paise": 149800
+                }
+              ]
+            },
+            "node_ids": [
+              "customer:U01",
+              "order:O01",
+              "orderitem:L01",
+              "orderitem:L02",
+              "product:P01",
+              "product:P05"
+            ],
+            "edges": [
+              {
+                "source": "customer:U01",
+                "relationship": "PLACED",
+                "target": "order:O01"
+              },
+              {
+                "source": "order:O01",
+                "relationship": "HAS_ITEM",
+                "target": "orderitem:L01"
+              },
+              {
+                "source": "order:O01",
+                "relationship": "HAS_ITEM",
+                "target": "orderitem:L02"
+              },
+              {
+                "source": "orderitem:L01",
+                "relationship": "FOR_PRODUCT",
+                "target": "product:P01"
+              },
+              {
+                "source": "orderitem:L02",
+                "relationship": "FOR_PRODUCT",
+                "target": "product:P05"
+              }
+            ]
+          },
+          {
+            "record_id": "R002",
+            "kind": "Order",
+            "fields": {
+              "id": "O04",
+              "date": "2026-09-04",
+              "status": "delivered",
+              "customer_id": "U01",
+              "customer_name": "Asha Mehta",
+              "total_paise": 209600,
+              "items": [
+                {
+                  "item_id": "L07",
+                  "product_id": "P07",
+                  "product_name": "Electric Kettle",
+                  "quantity": 1,
+                  "unit_price_paise": 149900,
+                  "line_total_paise": 149900
+                },
+                {
+                  "item_id": "L08",
+                  "product_id": "P12",
+                  "product_name": "Herbal Tea",
+                  "quantity": 3,
+                  "unit_price_paise": 19900,
+                  "line_total_paise": 59700
+                }
+              ]
+            },
+            "node_ids": [
+              "customer:U01",
+              "order:O04",
+              "orderitem:L07",
+              "orderitem:L08",
+              "product:P07",
+              "product:P12"
+            ],
+            "edges": [
+              {
+                "source": "customer:U01",
+                "relationship": "PLACED",
+                "target": "order:O04"
+              },
+              {
+                "source": "order:O04",
+                "relationship": "HAS_ITEM",
+                "target": "orderitem:L07"
+              },
+              {
+                "source": "order:O04",
+                "relationship": "HAS_ITEM",
+                "target": "orderitem:L08"
+              },
+              {
+                "source": "orderitem:L07",
+                "relationship": "FOR_PRODUCT",
+                "target": "product:P07"
+              },
+              {
+                "source": "orderitem:L08",
+                "relationship": "FOR_PRODUCT",
+                "target": "product:P12"
+              }
+            ]
+          }
+        ],
+        "aggregates": {
+          "matching_count": 2
+        },
+        "nodes": {
+          "customer:U01": {
+            "type": "Customer",
+            "id": "U01",
+            "name": "Asha Mehta"
+          },
+          "order:O01": {
+            "type": "Order",
+            "id": "O01",
+            "customer_id": "U01",
+            "date": "2026-09-01",
+            "status": "delivered"
+          },
+          "order:O04": {
+            "type": "Order",
+            "id": "O04",
+            "customer_id": "U01",
+            "date": "2026-09-04",
+            "status": "delivered"
+          },
+          "orderitem:L01": {
+            "type": "OrderItem",
+            "id": "L01",
+            "order_id": "O01",
+            "product_id": "P01",
+            "quantity": 1,
+            "unit_price_paise": 389900
+          },
+          "orderitem:L02": {
+            "type": "OrderItem",
+            "id": "L02",
+            "order_id": "O01",
+            "product_id": "P05",
+            "quantity": 2,
+            "unit_price_paise": 74900
+          },
+          "orderitem:L07": {
+            "type": "OrderItem",
+            "id": "L07",
+            "order_id": "O04",
+            "product_id": "P07",
+            "quantity": 1,
+            "unit_price_paise": 149900
+          },
+          "orderitem:L08": {
+            "type": "OrderItem",
+            "id": "L08",
+            "order_id": "O04",
+            "product_id": "P12",
+            "quantity": 3,
+            "unit_price_paise": 19900
+          },
+          "product:P01": {
+            "type": "Product",
+            "id": "P01",
+            "name": "Wireless Headphones",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 399900
+          },
+          "product:P05": {
+            "type": "Product",
+            "id": "P05",
+            "name": "Insulated Bottle",
+            "brand_id": "B02",
+            "category_id": "C02",
+            "price_paise": 79900
+          },
+          "product:P07": {
+            "type": "Product",
+            "id": "P07",
+            "name": "Electric Kettle",
+            "brand_id": "B03",
+            "category_id": "C03",
+            "price_paise": 149900
+          },
+          "product:P12": {
+            "type": "Product",
+            "id": "P12",
+            "name": "Herbal Tea",
+            "brand_id": "B04",
+            "category_id": "C04",
+            "price_paise": 19900
+          }
+        },
+        "edges": [
+          {
+            "source": "customer:U01",
+            "relationship": "PLACED",
+            "target": "order:O01"
+          },
+          {
+            "source": "customer:U01",
+            "relationship": "PLACED",
+            "target": "order:O04"
+          },
+          {
+            "source": "order:O01",
+            "relationship": "HAS_ITEM",
+            "target": "orderitem:L01"
+          },
+          {
+            "source": "order:O01",
+            "relationship": "HAS_ITEM",
+            "target": "orderitem:L02"
+          },
+          {
+            "source": "order:O04",
+            "relationship": "HAS_ITEM",
+            "target": "orderitem:L07"
+          },
+          {
+            "source": "order:O04",
+            "relationship": "HAS_ITEM",
+            "target": "orderitem:L08"
+          },
+          {
+            "source": "orderitem:L01",
+            "relationship": "FOR_PRODUCT",
+            "target": "product:P01"
+          },
+          {
+            "source": "orderitem:L02",
+            "relationship": "FOR_PRODUCT",
+            "target": "product:P05"
+          },
+          {
+            "source": "orderitem:L07",
+            "relationship": "FOR_PRODUCT",
+            "target": "product:P07"
+          },
+          {
+            "source": "orderitem:L08",
+            "relationship": "FOR_PRODUCT",
+            "target": "product:P12"
+          }
+        ],
+        "currency": "INR"
+      },
+      "answer": "Found 2 matching records in the sample graph.\nO01 · delivered · 2026-09-01 · Asha Mehta — merchandise total INR 5,397.00\nO04 · delivered · 2026-09-04 · Asha Mehta — merchandise total INR 2,096.00",
+      "answer_plan": {
+        "template_id": "customer_orders",
+        "record_ids": [
+          "R001",
+          "R002"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "answer_presentation_source": "deterministic_fallback",
+      "stage_durations_seconds": {
+        "interpret": 1.1656521999975666,
+        "retrieve": 0.0024896000104490668,
+        "present": 1.0440964000008535
+      },
+      "token_usage": {
+        "query": {
+          "candidates_token_count": 144,
+          "prompt_token_count": 1183,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 1183
+            }
+          ],
+          "total_token_count": 1327
+        },
+        "answer": {
+          "candidates_token_count": 50,
+          "prompt_token_count": 584,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 584
+            }
+          ],
+          "total_token_count": 634
+        }
+      },
+      "error_code": null,
+      "raw_answer_plan": {
+        "template_id": "customer_orders",
+        "record_ids": [
+          "R001",
+          "R002"
+        ],
+        "aggregate_keys": []
+      },
+      "presentation_error_code": "invalid_answer_plan",
+      "duration_seconds": 2.2122727999958443,
+      "example_id": "Q04",
+      "verification_errors": [
+        "Both real Gemini stages must succeed for the submission examples"
+      ]
+    },
+    {
+      "question": "What is the merchandise total for order O01?",
+      "mode": "live",
+      "timestamp": "2026-10-01T16:35:43.680610+00:00",
+      "model": "gemini-3.5-flash-lite",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "1",
+      "raw_plan": {
+        "decision": "unsupported",
+        "operation": null,
+        "parameters": {
+          "brand_name": null,
+          "vendor_name": null,
+          "category_name": null,
+          "customer_name": null,
+          "product_name": null,
+          "order_id": null,
+          "price_lt_inr": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "clarification_code": null,
+        "unsupported_code": "missing_fact"
+      },
+      "resolved_plan": null,
+      "status": "unsupported",
+      "evidence": null,
+      "answer": "The sample graph does not contain the facts needed for this question.",
+      "answer_plan": null,
+      "answer_presentation_source": null,
+      "stage_durations_seconds": {
+        "interpret": 1.2924771000107285
+      },
+      "token_usage": {
+        "query": {
+          "candidates_token_count": 141,
+          "prompt_token_count": 1186,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 1186
+            }
+          ],
+          "total_token_count": 1327
+        }
+      },
+      "error_code": null,
+      "duration_seconds": 1.2925388000003295,
+      "example_id": "Q05",
+      "verification_errors": [
+        "Expected status ok; got unsupported",
+        "Retrieved IDs differ from independent fixture expectations",
+        "Matching count differs from independent fixture expectation",
+        "Mismatch in totals_paise",
+        "Interpreted operation or filters differ from expected intent",
+        "Both real Gemini stages must succeed for the submission examples"
+      ]
+    },
+    {
+      "question": "Which customers bought products from NovaTech?",
+      "mode": "live",
+      "timestamp": "2026-10-01T16:35:44.984068+00:00",
+      "model": "gemini-3.5-flash-lite",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "1",
+      "raw_plan": {
+        "decision": "query",
+        "operation": "customers_bought_brand",
+        "parameters": {
+          "brand_name": "NovaTech",
+          "vendor_name": null,
+          "category_name": null,
+          "customer_name": null,
+          "product_name": null,
+          "order_id": null,
+          "price_lt_inr": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "clarification_code": null,
+        "unsupported_code": null
+      },
+      "resolved_plan": {
+        "operation": "customers_bought_brand",
+        "brand_id": "B01"
+      },
+      "status": "ok",
+      "evidence": {
+        "query": {
+          "operation": "customers_bought_brand",
+          "brand_id": "B01",
+          "vendor_id": null,
+          "category_id": null,
+          "customer_id": null,
+          "product_id": null,
+          "order_id": null,
+          "price_lt_paise": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "status": "ok",
+        "records": [
+          {
+            "record_id": "R001",
+            "kind": "Customer",
+            "fields": {
+              "id": "U01",
+              "name": "Asha Mehta",
+              "brand": "NovaTech",
+              "delivered_order_ids": [
+                "O01"
+              ]
+            },
+            "node_ids": [
+              "brand:B01",
+              "customer:U01",
+              "order:O01",
+              "orderitem:L01",
+              "product:P01"
+            ],
+            "edges": [
+              {
+                "source": "customer:U01",
+                "relationship": "PLACED",
+                "target": "order:O01"
+              },
+              {
+                "source": "order:O01",
+                "relationship": "HAS_ITEM",
+                "target": "orderitem:L01"
+              },
+              {
+                "source": "orderitem:L01",
+                "relationship": "FOR_PRODUCT",
+                "target": "product:P01"
+              },
+              {
+                "source": "product:P01",
+                "relationship": "BELONGS_TO_BRAND",
+                "target": "brand:B01"
+              }
+            ]
+          },
+          {
+            "record_id": "R002",
+            "kind": "Customer",
+            "fields": {
+              "id": "U03",
+              "name": "Neha Rao",
+              "brand": "NovaTech",
+              "delivered_order_ids": [
+                "O03"
+              ]
+            },
+            "node_ids": [
+              "brand:B01",
+              "customer:U03",
+              "order:O03",
+              "orderitem:L05",
+              "product:P02"
+            ],
+            "edges": [
+              {
+                "source": "customer:U03",
+                "relationship": "PLACED",
+                "target": "order:O03"
+              },
+              {
+                "source": "order:O03",
+                "relationship": "HAS_ITEM",
+                "target": "orderitem:L05"
+              },
+              {
+                "source": "orderitem:L05",
+                "relationship": "FOR_PRODUCT",
+                "target": "product:P02"
+              },
+              {
+                "source": "product:P02",
+                "relationship": "BELONGS_TO_BRAND",
+                "target": "brand:B01"
+              }
+            ]
+          },
+          {
+            "record_id": "R003",
+            "kind": "Customer",
+            "fields": {
+              "id": "U04",
+              "name": "Kabir Sen",
+              "brand": "NovaTech",
+              "delivered_order_ids": [
+                "O05"
+              ]
+            },
+            "node_ids": [
+              "brand:B01",
+              "customer:U04",
+              "order:O05",
+              "orderitem:L09",
+              "product:P03"
+            ],
+            "edges": [
+              {
+                "source": "customer:U04",
+                "relationship": "PLACED",
+                "target": "order:O05"
+              },
+              {
+                "source": "order:O05",
+                "relationship": "HAS_ITEM",
+                "target": "orderitem:L09"
+              },
+              {
+                "source": "orderitem:L09",
+                "relationship": "FOR_PRODUCT",
+                "target": "product:P03"
+              },
+              {
+                "source": "product:P03",
+                "relationship": "BELONGS_TO_BRAND",
+                "target": "brand:B01"
+              }
+            ]
+          }
+        ],
+        "aggregates": {
+          "matching_count": 3
+        },
+        "nodes": {
+          "brand:B01": {
+            "type": "Brand",
+            "id": "B01",
+            "name": "NovaTech"
+          },
+          "customer:U01": {
+            "type": "Customer",
+            "id": "U01",
+            "name": "Asha Mehta"
+          },
+          "customer:U03": {
+            "type": "Customer",
+            "id": "U03",
+            "name": "Neha Rao"
+          },
+          "customer:U04": {
+            "type": "Customer",
+            "id": "U04",
+            "name": "Kabir Sen"
+          },
+          "order:O01": {
+            "type": "Order",
+            "id": "O01",
+            "customer_id": "U01",
+            "date": "2026-09-01",
+            "status": "delivered"
+          },
+          "order:O03": {
+            "type": "Order",
+            "id": "O03",
+            "customer_id": "U03",
+            "date": "2026-09-03",
+            "status": "delivered"
+          },
+          "order:O05": {
+            "type": "Order",
+            "id": "O05",
+            "customer_id": "U04",
+            "date": "2026-09-05",
+            "status": "delivered"
+          },
+          "orderitem:L01": {
+            "type": "OrderItem",
+            "id": "L01",
+            "order_id": "O01",
+            "product_id": "P01",
+            "quantity": 1,
+            "unit_price_paise": 389900
+          },
+          "orderitem:L05": {
+            "type": "OrderItem",
+            "id": "L05",
+            "order_id": "O03",
+            "product_id": "P02",
+            "quantity": 1,
+            "unit_price_paise": 249900
+          },
+          "orderitem:L09": {
+            "type": "OrderItem",
+            "id": "L09",
+            "order_id": "O05",
+            "product_id": "P03",
+            "quantity": 1,
+            "unit_price_paise": 599900
+          },
+          "product:P01": {
+            "type": "Product",
+            "id": "P01",
+            "name": "Wireless Headphones",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 399900
+          },
+          "product:P02": {
+            "type": "Product",
+            "id": "P02",
+            "name": "Portable Speaker",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 249900
+          },
+          "product:P03": {
+            "type": "Product",
+            "id": "P03",
+            "name": "Smartwatch",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 599900
+          }
+        },
+        "edges": [
+          {
+            "source": "customer:U01",
+            "relationship": "PLACED",
+            "target": "order:O01"
+          },
+          {
+            "source": "customer:U03",
+            "relationship": "PLACED",
+            "target": "order:O03"
+          },
+          {
+            "source": "customer:U04",
+            "relationship": "PLACED",
+            "target": "order:O05"
+          },
+          {
+            "source": "order:O01",
+            "relationship": "HAS_ITEM",
+            "target": "orderitem:L01"
+          },
+          {
+            "source": "order:O03",
+            "relationship": "HAS_ITEM",
+            "target": "orderitem:L05"
+          },
+          {
+            "source": "order:O05",
+            "relationship": "HAS_ITEM",
+            "target": "orderitem:L09"
+          },
+          {
+            "source": "orderitem:L01",
+            "relationship": "FOR_PRODUCT",
+            "target": "product:P01"
+          },
+          {
+            "source": "orderitem:L05",
+            "relationship": "FOR_PRODUCT",
+            "target": "product:P02"
+          },
+          {
+            "source": "orderitem:L09",
+            "relationship": "FOR_PRODUCT",
+            "target": "product:P03"
+          },
+          {
+            "source": "product:P01",
+            "relationship": "BELONGS_TO_BRAND",
+            "target": "brand:B01"
+          },
+          {
+            "source": "product:P02",
+            "relationship": "BELONGS_TO_BRAND",
+            "target": "brand:B01"
+          },
+          {
+            "source": "product:P03",
+            "relationship": "BELONGS_TO_BRAND",
+            "target": "brand:B01"
+          }
+        ],
+        "currency": "INR"
+      },
+      "answer": "Found 3 matching records in the sample graph. Purchases include delivered orders only.\nU01 · Asha Mehta — delivered orders: O01\nU03 · Neha Rao — delivered orders: O03\nU04 · Kabir Sen — delivered orders: O05",
+      "answer_plan": {
+        "template_id": "customer_list",
+        "record_ids": [
+          "R001",
+          "R002",
+          "R003"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "answer_presentation_source": "deterministic_fallback",
+      "stage_durations_seconds": {
+        "interpret": 1.3341168000042671,
+        "retrieve": 0.0035594999935710803,
+        "present": 0.9664860000048066
+      },
+      "token_usage": {
+        "query": {
+          "candidates_token_count": 143,
+          "prompt_token_count": 1183,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 1183
+            }
+          ],
+          "total_token_count": 1326
+        },
+        "answer": {
+          "candidates_token_count": 48,
+          "prompt_token_count": 304,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 304
+            }
+          ],
+          "total_token_count": 352
+        }
+      },
+      "error_code": null,
+      "raw_answer_plan": {
+        "template_id": "customer_list",
+        "record_ids": [
+          "R001",
+          "R002",
+          "R003"
+        ],
+        "aggregate_keys": []
+      },
+      "presentation_error_code": "invalid_answer_plan",
+      "duration_seconds": 2.308696599997347,
+      "example_id": "Q06",
+      "verification_errors": [
+        "Both real Gemini stages must succeed for the submission examples"
+      ]
+    },
+    {
+      "question": "How many distinct products does each vendor supply?",
+      "mode": "live",
+      "timestamp": "2026-10-01T16:35:47.291577+00:00",
+      "model": "gemini-3.5-flash-lite",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "1",
+      "raw_plan": {
+        "decision": "query",
+        "operation": "vendor_product_counts",
+        "parameters": {
+          "brand_name": null,
+          "vendor_name": null,
+          "category_name": null,
+          "customer_name": null,
+          "product_name": null,
+          "order_id": null,
+          "price_lt_inr": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "clarification_code": null,
+        "unsupported_code": null
+      },
+      "resolved_plan": {
+        "operation": "vendor_product_counts"
+      },
+      "status": "ok",
+      "evidence": {
+        "query": {
+          "operation": "vendor_product_counts",
+          "brand_id": null,
+          "vendor_id": null,
+          "category_id": null,
+          "customer_id": null,
+          "product_id": null,
+          "order_id": null,
+          "price_lt_paise": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "status": "ok",
+        "records": [
+          {
+            "record_id": "R001",
+            "kind": "Vendor",
+            "fields": {
+              "id": "V01",
+              "name": "MetroSupply",
+              "product_count": 5,
+              "product_ids": [
+                "P01",
+                "P02",
+                "P03",
+                "P07",
+                "P08"
+              ]
+            },
+            "node_ids": [
+              "product:P01",
+              "product:P02",
+              "product:P03",
+              "product:P07",
+              "product:P08",
+              "vendor:V01"
+            ],
+            "edges": [
+              {
+                "source": "vendor:V01",
+                "relationship": "SUPPLIES",
+                "target": "product:P01"
+              },
+              {
+                "source": "vendor:V01",
+                "relationship": "SUPPLIES",
+                "target": "product:P02"
+              },
+              {
+                "source": "vendor:V01",
+                "relationship": "SUPPLIES",
+                "target": "product:P03"
+              },
+              {
+                "source": "vendor:V01",
+                "relationship": "SUPPLIES",
+                "target": "product:P07"
+              },
+              {
+                "source": "vendor:V01",
+                "relationship": "SUPPLIES",
+                "target": "product:P08"
+              }
+            ]
+          },
+          {
+            "record_id": "R002",
+            "kind": "Vendor",
+            "fields": {
+              "id": "V02",
+              "name": "GreenRoute",
+              "product_count": 4,
+              "product_ids": [
+                "P04",
+                "P05",
+                "P06",
+                "P10"
+              ]
+            },
+            "node_ids": [
+              "product:P04",
+              "product:P05",
+              "product:P06",
+              "product:P10",
+              "vendor:V02"
+            ],
+            "edges": [
+              {
+                "source": "vendor:V02",
+                "relationship": "SUPPLIES",
+                "target": "product:P04"
+              },
+              {
+                "source": "vendor:V02",
+                "relationship": "SUPPLIES",
+                "target": "product:P05"
+              },
+              {
+                "source": "vendor:V02",
+                "relationship": "SUPPLIES",
+                "target": "product:P06"
+              },
+              {
+                "source": "vendor:V02",
+                "relationship": "SUPPLIES",
+                "target": "product:P10"
+              }
+            ]
+          },
+          {
+            "record_id": "R003",
+            "kind": "Vendor",
+            "fields": {
+              "id": "V03",
+              "name": "EverydayWholesale",
+              "product_count": 5,
+              "product_ids": [
+                "P02",
+                "P09",
+                "P10",
+                "P11",
+                "P12"
+              ]
+            },
+            "node_ids": [
+              "product:P02",
+              "product:P09",
+              "product:P10",
+              "product:P11",
+              "product:P12",
+              "vendor:V03"
+            ],
+            "edges": [
+              {
+                "source": "vendor:V03",
+                "relationship": "SUPPLIES",
+                "target": "product:P02"
+              },
+              {
+                "source": "vendor:V03",
+                "relationship": "SUPPLIES",
+                "target": "product:P09"
+              },
+              {
+                "source": "vendor:V03",
+                "relationship": "SUPPLIES",
+                "target": "product:P10"
+              },
+              {
+                "source": "vendor:V03",
+                "relationship": "SUPPLIES",
+                "target": "product:P11"
+              },
+              {
+                "source": "vendor:V03",
+                "relationship": "SUPPLIES",
+                "target": "product:P12"
+              }
+            ]
+          }
+        ],
+        "aggregates": {
+          "matching_count": 3
+        },
+        "nodes": {
+          "product:P01": {
+            "type": "Product",
+            "id": "P01",
+            "name": "Wireless Headphones",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 399900
+          },
+          "product:P02": {
+            "type": "Product",
+            "id": "P02",
+            "name": "Portable Speaker",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 249900
+          },
+          "product:P03": {
+            "type": "Product",
+            "id": "P03",
+            "name": "Smartwatch",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 599900
+          },
+          "product:P04": {
+            "type": "Product",
+            "id": "P04",
+            "name": "Hiking Backpack",
+            "brand_id": "B02",
+            "category_id": "C02",
+            "price_paise": 199900
+          },
+          "product:P05": {
+            "type": "Product",
+            "id": "P05",
+            "name": "Insulated Bottle",
+            "brand_id": "B02",
+            "category_id": "C02",
+            "price_paise": 79900
+          },
+          "product:P06": {
+            "type": "Product",
+            "id": "P06",
+            "name": "Camping Lantern",
+            "brand_id": "B02",
+            "category_id": "C02",
+            "price_paise": 129900
+          },
+          "product:P07": {
+            "type": "Product",
+            "id": "P07",
+            "name": "Electric Kettle",
+            "brand_id": "B03",
+            "category_id": "C03",
+            "price_paise": 149900
+          },
+          "product:P08": {
+            "type": "Product",
+            "id": "P08",
+            "name": "Desk Lamp",
+            "brand_id": "B03",
+            "category_id": "C03",
+            "price_paise": 99900
+          },
+          "product:P09": {
+            "type": "Product",
+            "id": "P09",
+            "name": "Storage Basket",
+            "brand_id": "B03",
+            "category_id": "C03",
+            "price_paise": 49900
+          },
+          "product:P10": {
+            "type": "Product",
+            "id": "P10",
+            "name": "Rolled Oats",
+            "brand_id": "B04",
+            "category_id": "C04",
+            "price_paise": 24900
+          },
+          "product:P11": {
+            "type": "Product",
+            "id": "P11",
+            "name": "Mixed Nuts",
+            "brand_id": "B04",
+            "category_id": "C04",
+            "price_paise": 39900
+          },
+          "product:P12": {
+            "type": "Product",
+            "id": "P12",
+            "name": "Herbal Tea",
+            "brand_id": "B04",
+            "category_id": "C04",
+            "price_paise": 19900
+          },
+          "vendor:V01": {
+            "type": "Vendor",
+            "id": "V01",
+            "name": "MetroSupply"
+          },
+          "vendor:V02": {
+            "type": "Vendor",
+            "id": "V02",
+            "name": "GreenRoute"
+          },
+          "vendor:V03": {
+            "type": "Vendor",
+            "id": "V03",
+            "name": "EverydayWholesale"
+          }
+        },
+        "edges": [
+          {
+            "source": "vendor:V01",
+            "relationship": "SUPPLIES",
+            "target": "product:P01"
+          },
+          {
+            "source": "vendor:V01",
+            "relationship": "SUPPLIES",
+            "target": "product:P02"
+          },
+          {
+            "source": "vendor:V01",
+            "relationship": "SUPPLIES",
+            "target": "product:P03"
+          },
+          {
+            "source": "vendor:V01",
+            "relationship": "SUPPLIES",
+            "target": "product:P07"
+          },
+          {
+            "source": "vendor:V01",
+            "relationship": "SUPPLIES",
+            "target": "product:P08"
+          },
+          {
+            "source": "vendor:V02",
+            "relationship": "SUPPLIES",
+            "target": "product:P04"
+          },
+          {
+            "source": "vendor:V02",
+            "relationship": "SUPPLIES",
+            "target": "product:P05"
+          },
+          {
+            "source": "vendor:V02",
+            "relationship": "SUPPLIES",
+            "target": "product:P06"
+          },
+          {
+            "source": "vendor:V02",
+            "relationship": "SUPPLIES",
+            "target": "product:P10"
+          },
+          {
+            "source": "vendor:V03",
+            "relationship": "SUPPLIES",
+            "target": "product:P02"
+          },
+          {
+            "source": "vendor:V03",
+            "relationship": "SUPPLIES",
+            "target": "product:P09"
+          },
+          {
+            "source": "vendor:V03",
+            "relationship": "SUPPLIES",
+            "target": "product:P10"
+          },
+          {
+            "source": "vendor:V03",
+            "relationship": "SUPPLIES",
+            "target": "product:P11"
+          },
+          {
+            "source": "vendor:V03",
+            "relationship": "SUPPLIES",
+            "target": "product:P12"
+          }
+        ],
+        "currency": "INR"
+      },
+      "answer": "Found 3 matching records in the sample graph.\nV01 · MetroSupply: 5 distinct supplied products\nV02 · GreenRoute: 4 distinct supplied products\nV03 · EverydayWholesale: 5 distinct supplied products",
+      "answer_plan": {
+        "template_id": "vendor_counts",
+        "record_ids": [
+          "R001",
+          "R002",
+          "R003"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "answer_presentation_source": "gemini",
+      "stage_durations_seconds": {
+        "interpret": 1.6174589000002015,
+        "retrieve": 0.004970499998307787,
+        "present": 1.0454677999950945
+      },
+      "token_usage": {
+        "query": {
+          "candidates_token_count": 141,
+          "prompt_token_count": 1184,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 1184
+            }
+          ],
+          "total_token_count": 1325
+        },
+        "answer": {
+          "candidates_token_count": 68,
+          "prompt_token_count": 347,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 347
+            }
+          ],
+          "total_token_count": 415
+        }
+      },
+      "error_code": null,
+      "raw_answer_plan": {
+        "template_id": "vendor_counts",
+        "record_ids": [
+          "R001",
+          "R002",
+          "R003"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "duration_seconds": 2.6694848999904934,
+      "example_id": "Q07",
+      "verification_errors": []
+    },
+    {
+      "question": "Find all graph markers whose value is banana and show their products.",
+      "mode": "live",
+      "timestamp": "2026-10-01T16:35:49.960906+00:00",
+      "model": "gemini-3.5-flash-lite",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "1",
+      "raw_plan": {
+        "decision": "query",
+        "operation": "lookup_value",
+        "parameters": {
+          "brand_name": null,
+          "vendor_name": null,
+          "category_name": null,
+          "customer_name": null,
+          "product_name": null,
+          "order_id": null,
+          "price_lt_inr": null,
+          "value": "banana",
+          "output_mode": "list",
+          "order_status": null
+        },
+        "clarification_code": null,
+        "unsupported_code": null
+      },
+      "resolved_plan": {
+        "operation": "lookup_value",
+        "value": "banana",
+        "output_mode": "list"
+      },
+      "status": "ok",
+      "evidence": {
+        "query": {
+          "operation": "lookup_value",
+          "brand_id": null,
+          "vendor_id": null,
+          "category_id": null,
+          "customer_id": null,
+          "product_id": null,
+          "order_id": null,
+          "price_lt_paise": null,
+          "value": "banana",
+          "output_mode": "list",
+          "order_status": null
+        },
+        "status": "ok",
+        "records": [
+          {
+            "record_id": "R001",
+            "kind": "Marker",
+            "fields": {
+              "id": "M01",
+              "value": "banana",
+              "product_id": "P01",
+              "product_name": "Wireless Headphones"
+            },
+            "node_ids": [
+              "marker:M01",
+              "product:P01"
+            ],
+            "edges": [
+              {
+                "source": "product:P01",
+                "relationship": "HAS_MARKER",
+                "target": "marker:M01"
+              }
+            ]
+          },
+          {
+            "record_id": "R002",
+            "kind": "Marker",
+            "fields": {
+              "id": "M02",
+              "value": "banana",
+              "product_id": "P04",
+              "product_name": "Hiking Backpack"
+            },
+            "node_ids": [
+              "marker:M02",
+              "product:P04"
+            ],
+            "edges": [
+              {
+                "source": "product:P04",
+                "relationship": "HAS_MARKER",
+                "target": "marker:M02"
+              }
+            ]
+          },
+          {
+            "record_id": "R003",
+            "kind": "Marker",
+            "fields": {
+              "id": "M03",
+              "value": "banana",
+              "product_id": "P07",
+              "product_name": "Electric Kettle"
+            },
+            "node_ids": [
+              "marker:M03",
+              "product:P07"
+            ],
+            "edges": [
+              {
+                "source": "product:P07",
+                "relationship": "HAS_MARKER",
+                "target": "marker:M03"
+              }
+            ]
+          },
+          {
+            "record_id": "R004",
+            "kind": "Marker",
+            "fields": {
+              "id": "M04",
+              "value": "banana",
+              "product_id": "P10",
+              "product_name": "Rolled Oats"
+            },
+            "node_ids": [
+              "marker:M04",
+              "product:P10"
+            ],
+            "edges": [
+              {
+                "source": "product:P10",
+                "relationship": "HAS_MARKER",
+                "target": "marker:M04"
+              }
+            ]
+          },
+          {
+            "record_id": "R005",
+            "kind": "Marker",
+            "fields": {
+              "id": "M05",
+              "value": "banana",
+              "product_id": "P12",
+              "product_name": "Herbal Tea"
+            },
+            "node_ids": [
+              "marker:M05",
+              "product:P12"
+            ],
+            "edges": [
+              {
+                "source": "product:P12",
+                "relationship": "HAS_MARKER",
+                "target": "marker:M05"
+              }
+            ]
+          }
+        ],
+        "aggregates": {
+          "matching_count": 5
+        },
+        "nodes": {
+          "marker:M01": {
+            "type": "Marker",
+            "id": "M01",
+            "value": "banana",
+            "product_id": "P01"
+          },
+          "marker:M02": {
+            "type": "Marker",
+            "id": "M02",
+            "value": "banana",
+            "product_id": "P04"
+          },
+          "marker:M03": {
+            "type": "Marker",
+            "id": "M03",
+            "value": "banana",
+            "product_id": "P07"
+          },
+          "marker:M04": {
+            "type": "Marker",
+            "id": "M04",
+            "value": "banana",
+            "product_id": "P10"
+          },
+          "marker:M05": {
+            "type": "Marker",
+            "id": "M05",
+            "value": "banana",
+            "product_id": "P12"
+          },
+          "product:P01": {
+            "type": "Product",
+            "id": "P01",
+            "name": "Wireless Headphones",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 399900
+          },
+          "product:P04": {
+            "type": "Product",
+            "id": "P04",
+            "name": "Hiking Backpack",
+            "brand_id": "B02",
+            "category_id": "C02",
+            "price_paise": 199900
+          },
+          "product:P07": {
+            "type": "Product",
+            "id": "P07",
+            "name": "Electric Kettle",
+            "brand_id": "B03",
+            "category_id": "C03",
+            "price_paise": 149900
+          },
+          "product:P10": {
+            "type": "Product",
+            "id": "P10",
+            "name": "Rolled Oats",
+            "brand_id": "B04",
+            "category_id": "C04",
+            "price_paise": 24900
+          },
+          "product:P12": {
+            "type": "Product",
+            "id": "P12",
+            "name": "Herbal Tea",
+            "brand_id": "B04",
+            "category_id": "C04",
+            "price_paise": 19900
+          }
+        },
+        "edges": [
+          {
+            "source": "product:P01",
+            "relationship": "HAS_MARKER",
+            "target": "marker:M01"
+          },
+          {
+            "source": "product:P04",
+            "relationship": "HAS_MARKER",
+            "target": "marker:M02"
+          },
+          {
+            "source": "product:P07",
+            "relationship": "HAS_MARKER",
+            "target": "marker:M03"
+          },
+          {
+            "source": "product:P10",
+            "relationship": "HAS_MARKER",
+            "target": "marker:M04"
+          },
+          {
+            "source": "product:P12",
+            "relationship": "HAS_MARKER",
+            "target": "marker:M05"
+          }
+        ],
+        "currency": "INR"
+      },
+      "answer": "Found 5 matching records in the sample graph. These are artificial assignment markers.\nM01 · value 'banana' → P01 · Wireless Headphones\nM02 · value 'banana' → P04 · Hiking Backpack\nM03 · value 'banana' → P07 · Electric Kettle\nM04 · value 'banana' → P10 · Rolled Oats\nM05 · value 'banana' → P12 · Herbal Tea",
+      "answer_plan": {
+        "template_id": "value_matches",
+        "record_ids": [
+          "R001",
+          "R002",
+          "R003",
+          "R004",
+          "R005"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "answer_presentation_source": "gemini",
+      "stage_durations_seconds": {
+        "interpret": 1.2661419000069145,
+        "retrieve": 0.002314000012120232,
+        "present": 1.1180274000071222
+      },
+      "token_usage": {
+        "query": {
+          "candidates_token_count": 141,
+          "prompt_token_count": 1188,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 1188
+            }
+          ],
+          "total_token_count": 1329
+        },
+        "answer": {
+          "candidates_token_count": 84,
+          "prompt_token_count": 403,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 403
+            }
+          ],
+          "total_token_count": 487
+        }
+      },
+      "error_code": null,
+      "raw_answer_plan": {
+        "template_id": "value_matches",
+        "record_ids": [
+          "R001",
+          "R002",
+          "R003",
+          "R004",
+          "R005"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "duration_seconds": 2.386553799995454,
+      "example_id": "Q08",
+      "verification_errors": []
+    },
+    {
+      "question": "How many graph markers have the value banana?",
+      "mode": "live",
+      "timestamp": "2026-10-01T16:35:52.347990+00:00",
+      "model": "gemini-3.5-flash-lite",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "1",
+      "raw_plan": {
+        "decision": "query",
+        "operation": "lookup_value",
+        "parameters": {
+          "brand_name": null,
+          "vendor_name": null,
+          "category_name": null,
+          "customer_name": null,
+          "product_name": null,
+          "order_id": null,
+          "price_lt_inr": null,
+          "value": "banana",
+          "output_mode": "count",
+          "order_status": null
+        },
+        "clarification_code": null,
+        "unsupported_code": null
+      },
+      "resolved_plan": {
+        "operation": "lookup_value",
+        "value": "banana",
+        "output_mode": "count"
+      },
+      "status": "ok",
+      "evidence": {
+        "query": {
+          "operation": "lookup_value",
+          "brand_id": null,
+          "vendor_id": null,
+          "category_id": null,
+          "customer_id": null,
+          "product_id": null,
+          "order_id": null,
+          "price_lt_paise": null,
+          "value": "banana",
+          "output_mode": "count",
+          "order_status": null
+        },
+        "status": "ok",
+        "records": [
+          {
+            "record_id": "R001",
+            "kind": "Marker",
+            "fields": {
+              "id": "M01",
+              "value": "banana",
+              "product_id": "P01",
+              "product_name": "Wireless Headphones"
+            },
+            "node_ids": [
+              "marker:M01",
+              "product:P01"
+            ],
+            "edges": [
+              {
+                "source": "product:P01",
+                "relationship": "HAS_MARKER",
+                "target": "marker:M01"
+              }
+            ]
+          },
+          {
+            "record_id": "R002",
+            "kind": "Marker",
+            "fields": {
+              "id": "M02",
+              "value": "banana",
+              "product_id": "P04",
+              "product_name": "Hiking Backpack"
+            },
+            "node_ids": [
+              "marker:M02",
+              "product:P04"
+            ],
+            "edges": [
+              {
+                "source": "product:P04",
+                "relationship": "HAS_MARKER",
+                "target": "marker:M02"
+              }
+            ]
+          },
+          {
+            "record_id": "R003",
+            "kind": "Marker",
+            "fields": {
+              "id": "M03",
+              "value": "banana",
+              "product_id": "P07",
+              "product_name": "Electric Kettle"
+            },
+            "node_ids": [
+              "marker:M03",
+              "product:P07"
+            ],
+            "edges": [
+              {
+                "source": "product:P07",
+                "relationship": "HAS_MARKER",
+                "target": "marker:M03"
+              }
+            ]
+          },
+          {
+            "record_id": "R004",
+            "kind": "Marker",
+            "fields": {
+              "id": "M04",
+              "value": "banana",
+              "product_id": "P10",
+              "product_name": "Rolled Oats"
+            },
+            "node_ids": [
+              "marker:M04",
+              "product:P10"
+            ],
+            "edges": [
+              {
+                "source": "product:P10",
+                "relationship": "HAS_MARKER",
+                "target": "marker:M04"
+              }
+            ]
+          },
+          {
+            "record_id": "R005",
+            "kind": "Marker",
+            "fields": {
+              "id": "M05",
+              "value": "banana",
+              "product_id": "P12",
+              "product_name": "Herbal Tea"
+            },
+            "node_ids": [
+              "marker:M05",
+              "product:P12"
+            ],
+            "edges": [
+              {
+                "source": "product:P12",
+                "relationship": "HAS_MARKER",
+                "target": "marker:M05"
+              }
+            ]
+          }
+        ],
+        "aggregates": {
+          "matching_count": 5
+        },
+        "nodes": {
+          "marker:M01": {
+            "type": "Marker",
+            "id": "M01",
+            "value": "banana",
+            "product_id": "P01"
+          },
+          "marker:M02": {
+            "type": "Marker",
+            "id": "M02",
+            "value": "banana",
+            "product_id": "P04"
+          },
+          "marker:M03": {
+            "type": "Marker",
+            "id": "M03",
+            "value": "banana",
+            "product_id": "P07"
+          },
+          "marker:M04": {
+            "type": "Marker",
+            "id": "M04",
+            "value": "banana",
+            "product_id": "P10"
+          },
+          "marker:M05": {
+            "type": "Marker",
+            "id": "M05",
+            "value": "banana",
+            "product_id": "P12"
+          },
+          "product:P01": {
+            "type": "Product",
+            "id": "P01",
+            "name": "Wireless Headphones",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 399900
+          },
+          "product:P04": {
+            "type": "Product",
+            "id": "P04",
+            "name": "Hiking Backpack",
+            "brand_id": "B02",
+            "category_id": "C02",
+            "price_paise": 199900
+          },
+          "product:P07": {
+            "type": "Product",
+            "id": "P07",
+            "name": "Electric Kettle",
+            "brand_id": "B03",
+            "category_id": "C03",
+            "price_paise": 149900
+          },
+          "product:P10": {
+            "type": "Product",
+            "id": "P10",
+            "name": "Rolled Oats",
+            "brand_id": "B04",
+            "category_id": "C04",
+            "price_paise": 24900
+          },
+          "product:P12": {
+            "type": "Product",
+            "id": "P12",
+            "name": "Herbal Tea",
+            "brand_id": "B04",
+            "category_id": "C04",
+            "price_paise": 19900
+          }
+        },
+        "edges": [
+          {
+            "source": "product:P01",
+            "relationship": "HAS_MARKER",
+            "target": "marker:M01"
+          },
+          {
+            "source": "product:P04",
+            "relationship": "HAS_MARKER",
+            "target": "marker:M02"
+          },
+          {
+            "source": "product:P07",
+            "relationship": "HAS_MARKER",
+            "target": "marker:M03"
+          },
+          {
+            "source": "product:P10",
+            "relationship": "HAS_MARKER",
+            "target": "marker:M04"
+          },
+          {
+            "source": "product:P12",
+            "relationship": "HAS_MARKER",
+            "target": "marker:M05"
+          }
+        ],
+        "currency": "INR"
+      },
+      "answer": "Found 5 matching graph markers in the sample graph.",
+      "answer_plan": {
+        "template_id": "value_count",
+        "record_ids": [
+          "R001",
+          "R002",
+          "R003",
+          "R004",
+          "R005"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "answer_presentation_source": "gemini",
+      "stage_durations_seconds": {
+        "interpret": 1.308204700006172,
+        "retrieve": 0.0038169999897945672,
+        "present": 1.007754099991871
+      },
+      "token_usage": {
+        "query": {
+          "candidates_token_count": 141,
+          "prompt_token_count": 1184,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 1184
+            }
+          ],
+          "total_token_count": 1325
+        },
+        "answer": {
+          "candidates_token_count": 84,
+          "prompt_token_count": 399,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 399
+            }
+          ],
+          "total_token_count": 483
+        }
+      },
+      "error_code": null,
+      "raw_answer_plan": {
+        "template_id": "value_count",
+        "record_ids": [
+          "R001",
+          "R002",
+          "R003",
+          "R004",
+          "R005"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "duration_seconds": 2.319853900000453,
+      "example_id": "Q09",
+      "verification_errors": []
+    },
+    {
+      "question": "Which HomeNest products are supplied by GreenRoute?",
+      "mode": "live",
+      "timestamp": "2026-10-01T16:35:54.668149+00:00",
+      "model": "gemini-3.5-flash-lite",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "1",
+      "raw_plan": {
+        "decision": "query",
+        "operation": "find_products",
+        "parameters": {
+          "brand_name": "HomeNest",
+          "vendor_name": "GreenRoute",
+          "category_name": null,
+          "customer_name": null,
+          "product_name": null,
+          "order_id": null,
+          "price_lt_inr": null,
+          "value": null,
+          "output_mode": "list",
+          "order_status": null
+        },
+        "clarification_code": null,
+        "unsupported_code": null
+      },
+      "resolved_plan": {
+        "operation": "find_products",
+        "brand_id": "B03",
+        "vendor_id": "V02",
+        "output_mode": "list"
+      },
+      "status": "no_data",
+      "evidence": {
+        "query": {
+          "operation": "find_products",
+          "brand_id": "B03",
+          "vendor_id": "V02",
+          "category_id": null,
+          "customer_id": null,
+          "product_id": null,
+          "order_id": null,
+          "price_lt_paise": null,
+          "value": null,
+          "output_mode": "list",
+          "order_status": null
+        },
+        "status": "no_data",
+        "records": [],
+        "aggregates": {
+          "matching_count": 0
+        },
+        "nodes": {},
+        "edges": [],
+        "currency": "INR"
+      },
+      "answer": "No matching records in the sample graph for the interpreted filters.",
+      "answer_plan": {
+        "template_id": "no_data",
+        "record_ids": [],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "answer_presentation_source": "deterministic_fallback",
+      "stage_durations_seconds": {
+        "interpret": 1.2523165000020526,
+        "retrieve": 0.001708600000711158,
+        "present": 1.8941837000020314
+      },
+      "token_usage": {
+        "query": {
+          "candidates_token_count": 144,
+          "prompt_token_count": 1185,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 1185
+            }
+          ],
+          "total_token_count": 1329
+        }
+      },
+      "error_code": null,
+      "presentation_error_code": "api_429",
+      "duration_seconds": 3.1482725999958348,
+      "example_id": "Q10",
+      "verification_errors": [
+        "Both real Gemini stages must succeed for the submission examples"
+      ]
+    },
+    {
+      "question": "Which products are from AcmeBrand?",
+      "mode": "live",
+      "timestamp": "2026-10-01T16:35:57.816416+00:00",
+      "model": "gemini-3.5-flash-lite",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "1",
+      "raw_plan": null,
+      "resolved_plan": null,
+      "status": "llm_unavailable",
+      "evidence": null,
+      "answer": "Gemini quota or rate limit reached. Check AI Studio limits and retry later.",
+      "answer_plan": null,
+      "answer_presentation_source": null,
+      "stage_durations_seconds": {},
+      "token_usage": {},
+      "error_code": "api_429",
+      "duration_seconds": 2.615588199987542,
+      "example_id": "Q11",
+      "verification_errors": [
+        "Expected status entity_not_found; got llm_unavailable"
+      ]
+    },
+    {
+      "question": "What is the capital of France?",
+      "mode": "live",
+      "timestamp": "2026-10-01T16:36:00.433172+00:00",
+      "model": "gemini-3.5-flash-lite",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "1",
+      "raw_plan": null,
+      "resolved_plan": null,
+      "status": "llm_unavailable",
+      "evidence": null,
+      "answer": "Gemini quota or rate limit reached. Check AI Studio limits and retry later.",
+      "answer_plan": null,
+      "answer_presentation_source": null,
+      "stage_durations_seconds": {},
+      "token_usage": {},
+      "error_code": "api_429",
+      "duration_seconds": 2.4425936000043293,
+      "example_id": "Q12",
+      "verification_errors": [
+        "Expected status unsupported; got llm_unavailable"
+      ]
+    },
+    {
+      "question": "Which customers bought TrailWorks products?",
+      "mode": "live",
+      "timestamp": "2026-10-01T16:36:02.875655+00:00",
+      "model": "gemini-3.5-flash-lite",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "1",
+      "raw_plan": null,
+      "resolved_plan": null,
+      "status": "llm_unavailable",
+      "evidence": null,
+      "answer": "Gemini quota or rate limit reached. Check AI Studio limits and retry later.",
+      "answer_plan": null,
+      "answer_presentation_source": null,
+      "stage_durations_seconds": {},
+      "token_usage": {},
+      "error_code": "api_429",
+      "duration_seconds": 1.9120466000022134,
+      "example_id": "Q13",
+      "verification_errors": [
+        "Expected status ok; got llm_unavailable",
+        "Retrieved IDs differ from independent fixture expectations",
+        "Matching count differs from independent fixture expectation",
+        "Interpreted operation or filters differ from expected intent",
+        "Both real Gemini stages must succeed for the submission examples"
+      ]
+    },
+    {
+      "question": "What is the merchandise total for order O07?",
+      "mode": "live",
+      "timestamp": "2026-10-01T16:36:04.788400+00:00",
+      "model": "gemini-3.5-flash-lite",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "1",
+      "raw_plan": null,
+      "resolved_plan": null,
+      "status": "llm_unavailable",
+      "evidence": null,
+      "answer": "Gemini quota or rate limit reached. Check AI Studio limits and retry later.",
+      "answer_plan": null,
+      "answer_presentation_source": null,
+      "stage_durations_seconds": {},
+      "token_usage": {},
+      "error_code": "api_429",
+      "duration_seconds": 1.8525175000104355,
+      "example_id": "Q14",
+      "verification_errors": [
+        "Expected status ok; got llm_unavailable",
+        "Retrieved IDs differ from independent fixture expectations",
+        "Matching count differs from independent fixture expectation",
+        "Mismatch in totals_paise",
+        "Mismatch in order_statuses",
+        "Interpreted operation or filters differ from expected intent",
+        "Both real Gemini stages must succeed for the submission examples"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+[
+  {"id": "Q01", "question": "Which products from NovaTech are supplied by MetroSupply?", "operation": "find_products", "parameters": {"brand_name": "NovaTech", "vendor_name": "MetroSupply"}, "ids": ["P01", "P02", "P03"], "status": "ok"},
+  {"id": "Q02", "question": "Which vendors supply Portable Speaker?", "operation": "vendors_for_product", "parameters": {"product_name": "Portable Speaker"}, "ids": ["V01", "V03"], "status": "ok"},
+  {"id": "Q03", "question": "Which Outdoors products cost under INR 1500?", "operation": "find_products", "parameters": {"category_name": "Outdoors", "price_lt_inr": "1500"}, "ids": ["P05", "P06"], "status": "ok", "prices_paise": [79900, 129900]},
+  {"id": "Q04", "question": "Show all orders placed by Asha Mehta.", "operation": "orders_for_customer", "parameters": {"customer_name": "Asha Mehta"}, "ids": ["O01", "O04"], "status": "ok", "totals_paise": [539700, 209600]},
+  {"id": "Q05", "question": "What is the merchandise total for order O01?", "operation": "order_details", "parameters": {"order_id": "O01"}, "ids": ["O01"], "status": "ok", "totals_paise": [539700]},
+  {"id": "Q06", "question": "Which customers bought products from NovaTech?", "operation": "customers_bought_brand", "parameters": {"brand_name": "NovaTech"}, "ids": ["U01", "U03", "U04"], "status": "ok"},
+  {"id": "Q07", "question": "How many distinct products does each vendor supply?", "operation": "vendor_product_counts", "parameters": {}, "ids": ["V01", "V02", "V03"], "status": "ok", "counts": [5, 4, 5]},
+  {"id": "Q08", "question": "Find all graph markers whose value is banana and show their products.", "operation": "lookup_value", "parameters": {"value": "banana", "output_mode": "list"}, "ids": ["M01", "M02", "M03", "M04", "M05"], "status": "ok", "product_ids": ["P01", "P04", "P07", "P10", "P12"]},
+  {"id": "Q09", "question": "How many graph markers have the value banana?", "operation": "lookup_value", "parameters": {"value": "banana", "output_mode": "count"}, "ids": ["M01", "M02", "M03", "M04", "M05"], "status": "ok"},
+  {"id": "Q10", "question": "Which HomeNest products are supplied by GreenRoute?", "operation": "find_products", "parameters": {"brand_name": "HomeNest", "vendor_name": "GreenRoute"}, "ids": [], "status": "no_data"},
+  {"id": "Q11", "question": "Which products are from AcmeBrand?", "operation": "find_products", "parameters": {"brand_name": "AcmeBrand"}, "ids": [], "status": "entity_not_found"},
+  {"id": "Q12", "question": "What is the capital of France?", "decision": "unsupported", "unsupported_code": "out_of_scope", "ids": [], "status": "unsupported"},
+  {"id": "Q13", "question": "Which customers bought TrailWorks products?", "operation": "customers_bought_brand", "parameters": {"brand_name": "TrailWorks"}, "ids": ["U01", "U02"], "status": "ok"},
+  {"id": "Q14", "question": "What is the merchandise total for order O07?", "operation": "order_details", "parameters": {"order_id": "O07"}, "ids": ["O07"], "status": "ok", "totals_paise": [279800], "order_statuses": ["cancelled"]}
+]

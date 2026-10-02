@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1440" viewBox="0 0 2560 1440" role="img" aria-labelledby="title desc">
+<title id="title">CommerceGraph architecture</title>
+<desc id="desc">Validated JSON builds a local NetworkX graph. A question passes through Gemini query planning, Python validation and graph retrieval, an evidence bundle, Gemini answer planning, and Python reference validation and factual rendering. The interface presents the answer and supporting evidence.</desc>
+<rect width="2560" height="1440" fill="#F6F8F9"/>
+<text x="140" y="91" font-family="Segoe UI,Arial,sans-serif" font-size="25" font-weight="600" fill="#087F72">COMMERCEGRAPH</text>
+<text x="140" y="172" font-family="Segoe UI,Arial,sans-serif" font-size="60" font-weight="600" fill="#172B35">From a question to a grounded answer</text>
+<text x="140" y="222" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="600" fill="#536C77">DATA FOUNDATION  /  BUILT LOCALLY AT STARTUP</text>
+<rect x="140" y="250" width="550" height="140" rx="20" fill="#FFFFFF" stroke="#DCE6E8" stroke-width="2"/>
+<text x="168" y="309" font-family="Segoe UI,Arial,sans-serif" font-size="34" font-weight="600" fill="#172B35">Synthetic JSON dataset</text>
+<text x="168" y="356" font-family="Segoe UI,Arial,sans-serif" font-size="26" font-weight="400" fill="#536C77">Entities, purchases and typed links</text>
+<rect x="865" y="250" width="550" height="140" rx="20" fill="#FFFFFF" stroke="#DCE6E8" stroke-width="2"/>
+<text x="893" y="309" font-family="Segoe UI,Arial,sans-serif" font-size="34" font-weight="600" fill="#172B35">Pydantic validation</text>
+<text x="893" y="356" font-family="Segoe UI,Arial,sans-serif" font-size="26" font-weight="400" fill="#536C77">Schema, unique IDs and references</text>
+<rect x="1590" y="250" width="830" height="140" rx="20" fill="#E9F4EF" stroke="#BDDCD1" stroke-width="2"/>
+<text x="1618" y="309" font-family="Segoe UI,Arial,sans-serif" font-size="34" font-weight="600" fill="#172B35">NetworkX directed graph + integrity audit</text>
+<text x="1618" y="356" font-family="Segoe UI,Arial,sans-serif" font-size="26" font-weight="400" fill="#536C77">58 nodes  ·  83 edges  ·  5 marker values</text>
+<polyline points="690,320 865,320" fill="none" stroke="#91A8AE" stroke-width="3"/>
+<polygon points="865,320 852,313 852,327" fill="#91A8AE"/>
+<polyline points="1415,320 1590,320" fill="none" stroke="#91A8AE" stroke-width="3"/>
+<polygon points="1590,320 1577,313 1577,327" fill="#91A8AE"/>
+<polyline points="1825,390 1825,445 985,445 985,590" fill="none" stroke="#087F72" stroke-width="3"/>
+<polygon points="985,590 978,577 992,577" fill="#087F72"/>
+<text x="1120" y="430" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="400" fill="#087F72">Canonical IDs + names</text>
+<polyline points="2175,390 2175,590" fill="none" stroke="#087F72" stroke-width="3"/>
+<polygon points="2175,590 2168,577 2182,577" fill="#087F72"/>
+<text x="2200" y="489" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="400" fill="#087F72">Graph data</text>
+<text x="140" y="544" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="600" fill="#536C77">QUESTION PIPELINE  /  RUNS ONLY ON SUBMIT</text>
+<rect x="140" y="590" width="500" height="190" rx="20" fill="#FFFFFF" stroke="#DCE6E8" stroke-width="2"/>
+<rect x="164" y="617" width="48" height="48" rx="14" fill="#087F72" stroke="#087F72" stroke-width="2"/>
+<text x="177" y="651" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="600" fill="#FFFFFF">1</text>
+<text x="228" y="656" font-family="Segoe UI,Arial,sans-serif" font-size="31" font-weight="600" fill="#172B35">User question</text>
+<text x="168" y="719" font-family="Segoe UI,Arial,sans-serif" font-size="26" font-weight="400" fill="#536C77">Streamlit UI or CLI</text>
+<text x="168" y="755" font-family="Segoe UI,Arial,sans-serif" font-size="26" font-weight="400" fill="#536C77">Standalone question</text>
+<rect x="735" y="590" width="500" height="190" rx="20" fill="#F2EDF9" stroke="#D8CBEA" stroke-width="2"/>
+<rect x="759" y="617" width="48" height="48" rx="14" fill="#7960AA" stroke="#7960AA" stroke-width="2"/>
+<text x="772" y="651" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="600" fill="#FFFFFF">2</text>
+<text x="823" y="656" font-family="Segoe UI,Arial,sans-serif" font-size="31" font-weight="600" fill="#172B35">Gemini · QueryPlan</text>
+<text x="763" y="719" font-family="Segoe UI,Arial,sans-serif" font-size="26" font-weight="400" fill="#536C77">Structured operation + filters</text>
+<text x="763" y="755" font-family="Segoe UI,Arial,sans-serif" font-size="26" font-weight="400" fill="#536C77">Uses the entity catalog</text>
+<rect x="1330" y="590" width="500" height="190" rx="20" fill="#FFFFFF" stroke="#DCE6E8" stroke-width="2"/>
+<rect x="1354" y="617" width="48" height="48" rx="14" fill="#087F72" stroke="#087F72" stroke-width="2"/>
+<text x="1367" y="651" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="600" fill="#FFFFFF">3</text>
+<text x="1418" y="656" font-family="Segoe UI,Arial,sans-serif" font-size="31" font-weight="600" fill="#172B35">Validate + resolve</text>
+<text x="1358" y="719" font-family="Segoe UI,Arial,sans-serif" font-size="26" font-weight="400" fill="#536C77">Python checks the plan</text>
+<text x="1358" y="755" font-family="Segoe UI,Arial,sans-serif" font-size="26" font-weight="400" fill="#536C77">Resolves exact names and IDs</text>
+<rect x="1925" y="590" width="500" height="190" rx="20" fill="#FFFFFF" stroke="#DCE6E8" stroke-width="2"/>
+<rect x="1949" y="617" width="48" height="48" rx="14" fill="#087F72" stroke="#087F72" stroke-width="2"/>
+<text x="1962" y="651" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="600" fill="#FFFFFF">4</text>
+<text x="2013" y="656" font-family="Segoe UI,Arial,sans-serif" font-size="31" font-weight="600" fill="#172B35">Graph retrieval</text>
+<text x="1953" y="719" font-family="Segoe UI,Arial,sans-serif" font-size="26" font-weight="400" fill="#536C77">Seven approved traversals</text>
+<text x="1953" y="755" font-family="Segoe UI,Arial,sans-serif" font-size="26" font-weight="400" fill="#536C77">Python reads graph facts</text>
+<polyline points="640,685 735,685" fill="none" stroke="#91A8AE" stroke-width="3"/>
+<polygon points="735,685 722,678 722,692" fill="#91A8AE"/>
+<polyline points="1235,685 1330,685" fill="none" stroke="#91A8AE" stroke-width="3"/>
+<polygon points="1330,685 1317,678 1317,692" fill="#91A8AE"/>
+<polyline points="1830,685 1925,685" fill="none" stroke="#91A8AE" stroke-width="3"/>
+<polygon points="1925,685 1912,678 1912,692" fill="#91A8AE"/>
+<polyline points="2175,780 2175,900" fill="none" stroke="#91A8AE" stroke-width="3"/>
+<polygon points="2175,900 2168,887 2182,887" fill="#91A8AE"/>
+<rect x="1925" y="900" width="500" height="190" rx="20" fill="#FFFFFF" stroke="#DCE6E8" stroke-width="2"/>
+<rect x="1949" y="927" width="48" height="48" rx="14" fill="#087F72" stroke="#087F72" stroke-width="2"/>
+<text x="1962" y="961" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="600" fill="#FFFFFF">5</text>
+<text x="2013" y="966" font-family="Segoe UI,Arial,sans-serif" font-size="31" font-weight="600" fill="#172B35">Evidence bundle</text>
+<text x="1953" y="1029" font-family="Segoe UI,Arial,sans-serif" font-size="26" font-weight="400" fill="#536C77">Records + supporting paths</text>
+<text x="1953" y="1065" font-family="Segoe UI,Arial,sans-serif" font-size="26" font-weight="400" fill="#536C77">Integer-paise totals + counts</text>
+<rect x="1330" y="900" width="500" height="190" rx="20" fill="#F2EDF9" stroke="#D8CBEA" stroke-width="2"/>
+<rect x="1354" y="927" width="48" height="48" rx="14" fill="#7960AA" stroke="#7960AA" stroke-width="2"/>
+<text x="1367" y="961" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="600" fill="#FFFFFF">6</text>
+<text x="1418" y="966" font-family="Segoe UI,Arial,sans-serif" font-size="31" font-weight="600" fill="#172B35">Gemini · AnswerPlan</text>
+<text x="1358" y="1029" font-family="Segoe UI,Arial,sans-serif" font-size="26" font-weight="400" fill="#536C77">Template + record references</text>
+<text x="1358" y="1065" font-family="Segoe UI,Arial,sans-serif" font-size="26" font-weight="400" fill="#536C77">References to aggregates</text>
+<rect x="735" y="900" width="500" height="190" rx="20" fill="#FFFFFF" stroke="#DCE6E8" stroke-width="2"/>
+<rect x="759" y="927" width="48" height="48" rx="14" fill="#087F72" stroke="#087F72" stroke-width="2"/>
+<text x="772" y="961" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="600" fill="#FFFFFF">7</text>
+<text x="823" y="966" font-family="Segoe UI,Arial,sans-serif" font-size="31" font-weight="600" fill="#172B35">Validate + render</text>
+<text x="763" y="1029" font-family="Segoe UI,Arial,sans-serif" font-size="26" font-weight="400" fill="#536C77">Check complete references</text>
+<text x="763" y="1065" font-family="Segoe UI,Arial,sans-serif" font-size="26" font-weight="400" fill="#536C77">Python fills facts from evidence</text>
+<rect x="140" y="900" width="500" height="190" rx="20" fill="#FFFFFF" stroke="#DCE6E8" stroke-width="2"/>
+<rect x="164" y="927" width="48" height="48" rx="14" fill="#087F72" stroke="#087F72" stroke-width="2"/>
+<text x="177" y="961" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="600" fill="#FFFFFF">8</text>
+<text x="228" y="966" font-family="Segoe UI,Arial,sans-serif" font-size="31" font-weight="600" fill="#172B35">Answer + evidence</text>
+<text x="168" y="1029" font-family="Segoe UI,Arial,sans-serif" font-size="26" font-weight="400" fill="#536C77">UI / CLI · inspect query + graph</text>
+<text x="168" y="1065" font-family="Segoe UI,Arial,sans-serif" font-size="26" font-weight="400" fill="#536C77">Download CSV and JSON</text>
+<polyline points="1925,995 1830,995" fill="none" stroke="#91A8AE" stroke-width="3"/>
+<polygon points="1830,995 1843,988 1843,1002" fill="#91A8AE"/>
+<polyline points="1330,995 1235,995" fill="none" stroke="#91A8AE" stroke-width="3"/>
+<polygon points="1235,995 1248,988 1248,1002" fill="#91A8AE"/>
+<polyline points="735,995 640,995" fill="none" stroke="#91A8AE" stroke-width="3"/>
+<polygon points="640,995 653,988 653,1002" fill="#91A8AE"/>
+<polyline points="2175,1090 2175,1160 985,1160 985,1090" fill="none" stroke="#087F72" stroke-width="3"/>
+<polygon points="985,1090 978,1103 992,1103" fill="#087F72"/>
+<text x="1330" y="1205" font-family="Segoe UI,Arial,sans-serif" font-size="25" font-weight="400" fill="#087F72">Retrieved facts also feed the Python renderer</text>
+<rect x="140" y="1270" width="2285" height="82" rx="14" fill="#EDF2F4" stroke="#EDF2F4" stroke-width="2"/>
+<text x="166" y="1320" font-family="Segoe UI,Arial,sans-serif" font-size="29" font-weight="400" fill="#536C77">Planning failure → explicit error   ·   Presentation failure → labeled evidence fallback</text>
+<text x="140" y="1404" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="400" fill="#536C77">LOCAL: Python · NetworkX · Pydantic · Streamlit · Plotly</text>
+<text x="1560" y="1404" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="600" fill="#7960AA">PURPLE = GEMINI API    /    TEAL = GRAPH FACTS</text>
+</svg>

@@ -1,0 +1,325 @@
+{
+  "scope": "selected cases only",
+  "passed": true,
+  "runs": [
+    {
+      "question": "Find all graph markers whose value is banana and show their products.",
+      "mode": "live",
+      "timestamp": "2026-10-01T17:09:19.901363+00:00",
+      "model": "gemini-3.5-flash-lite",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "4",
+      "raw_plan": {
+        "decision": "query",
+        "operation": "lookup_value",
+        "parameters": {
+          "brand_name": null,
+          "vendor_name": null,
+          "category_name": null,
+          "customer_name": null,
+          "product_name": null,
+          "order_id": null,
+          "price_lt_inr": null,
+          "value": "banana",
+          "output_mode": "list",
+          "order_status": null
+        },
+        "clarification_code": null,
+        "unsupported_code": null
+      },
+      "resolved_plan": {
+        "operation": "lookup_value",
+        "value": "banana",
+        "output_mode": "list"
+      },
+      "status": "ok",
+      "evidence": {
+        "query": {
+          "operation": "lookup_value",
+          "brand_id": null,
+          "vendor_id": null,
+          "category_id": null,
+          "customer_id": null,
+          "product_id": null,
+          "order_id": null,
+          "price_lt_paise": null,
+          "value": "banana",
+          "output_mode": "list",
+          "order_status": null
+        },
+        "status": "ok",
+        "records": [
+          {
+            "record_id": "R001",
+            "kind": "Marker",
+            "fields": {
+              "id": "M01",
+              "value": "banana",
+              "product_id": "P01",
+              "product_name": "Wireless Headphones"
+            },
+            "node_ids": [
+              "marker:M01",
+              "product:P01"
+            ],
+            "edges": [
+              {
+                "source": "product:P01",
+                "relationship": "HAS_MARKER",
+                "target": "marker:M01"
+              }
+            ]
+          },
+          {
+            "record_id": "R002",
+            "kind": "Marker",
+            "fields": {
+              "id": "M02",
+              "value": "banana",
+              "product_id": "P04",
+              "product_name": "Hiking Backpack"
+            },
+            "node_ids": [
+              "marker:M02",
+              "product:P04"
+            ],
+            "edges": [
+              {
+                "source": "product:P04",
+                "relationship": "HAS_MARKER",
+                "target": "marker:M02"
+              }
+            ]
+          },
+          {
+            "record_id": "R003",
+            "kind": "Marker",
+            "fields": {
+              "id": "M03",
+              "value": "banana",
+              "product_id": "P07",
+              "product_name": "Electric Kettle"
+            },
+            "node_ids": [
+              "marker:M03",
+              "product:P07"
+            ],
+            "edges": [
+              {
+                "source": "product:P07",
+                "relationship": "HAS_MARKER",
+                "target": "marker:M03"
+              }
+            ]
+          },
+          {
+            "record_id": "R004",
+            "kind": "Marker",
+            "fields": {
+              "id": "M04",
+              "value": "banana",
+              "product_id": "P10",
+              "product_name": "Rolled Oats"
+            },
+            "node_ids": [
+              "marker:M04",
+              "product:P10"
+            ],
+            "edges": [
+              {
+                "source": "product:P10",
+                "relationship": "HAS_MARKER",
+                "target": "marker:M04"
+              }
+            ]
+          },
+          {
+            "record_id": "R005",
+            "kind": "Marker",
+            "fields": {
+              "id": "M05",
+              "value": "banana",
+              "product_id": "P12",
+              "product_name": "Herbal Tea"
+            },
+            "node_ids": [
+              "marker:M05",
+              "product:P12"
+            ],
+            "edges": [
+              {
+                "source": "product:P12",
+                "relationship": "HAS_MARKER",
+                "target": "marker:M05"
+              }
+            ]
+          }
+        ],
+        "aggregates": {
+          "matching_count": 5
+        },
+        "nodes": {
+          "marker:M01": {
+            "type": "Marker",
+            "id": "M01",
+            "value": "banana",
+            "product_id": "P01"
+          },
+          "marker:M02": {
+            "type": "Marker",
+            "id": "M02",
+            "value": "banana",
+            "product_id": "P04"
+          },
+          "marker:M03": {
+            "type": "Marker",
+            "id": "M03",
+            "value": "banana",
+            "product_id": "P07"
+          },
+          "marker:M04": {
+            "type": "Marker",
+            "id": "M04",
+            "value": "banana",
+            "product_id": "P10"
+          },
+          "marker:M05": {
+            "type": "Marker",
+            "id": "M05",
+            "value": "banana",
+            "product_id": "P12"
+          },
+          "product:P01": {
+            "type": "Product",
+            "id": "P01",
+            "name": "Wireless Headphones",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 399900
+          },
+          "product:P04": {
+            "type": "Product",
+            "id": "P04",
+            "name": "Hiking Backpack",
+            "brand_id": "B02",
+            "category_id": "C02",
+            "price_paise": 199900
+          },
+          "product:P07": {
+            "type": "Product",
+            "id": "P07",
+            "name": "Electric Kettle",
+            "brand_id": "B03",
+            "category_id": "C03",
+            "price_paise": 149900
+          },
+          "product:P10": {
+            "type": "Product",
+            "id": "P10",
+            "name": "Rolled Oats",
+            "brand_id": "B04",
+            "category_id": "C04",
+            "price_paise": 24900
+          },
+          "product:P12": {
+            "type": "Product",
+            "id": "P12",
+            "name": "Herbal Tea",
+            "brand_id": "B04",
+            "category_id": "C04",
+            "price_paise": 19900
+          }
+        },
+        "edges": [
+          {
+            "source": "product:P01",
+            "relationship": "HAS_MARKER",
+            "target": "marker:M01"
+          },
+          {
+            "source": "product:P04",
+            "relationship": "HAS_MARKER",
+            "target": "marker:M02"
+          },
+          {
+            "source": "product:P07",
+            "relationship": "HAS_MARKER",
+            "target": "marker:M03"
+          },
+          {
+            "source": "product:P10",
+            "relationship": "HAS_MARKER",
+            "target": "marker:M04"
+          },
+          {
+            "source": "product:P12",
+            "relationship": "HAS_MARKER",
+            "target": "marker:M05"
+          }
+        ],
+        "currency": "INR"
+      },
+      "answer": "Found 5 matching records in the sample graph. These are artificial assignment markers.\nM01 · value 'banana' → P01 · Wireless Headphones\nM02 · value 'banana' → P04 · Hiking Backpack\nM03 · value 'banana' → P07 · Electric Kettle\nM04 · value 'banana' → P10 · Rolled Oats\nM05 · value 'banana' → P12 · Herbal Tea",
+      "answer_plan": {
+        "template_id": "value_matches",
+        "record_ids": [
+          "R001",
+          "R002",
+          "R003",
+          "R004",
+          "R005"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "answer_presentation_source": "gemini",
+      "stage_durations_seconds": {
+        "interpret": 3.110157300005085,
+        "retrieve": 0.0004761000018334016,
+        "present": 1.8029957999970065
+      },
+      "token_usage": {
+        "query": {
+          "candidates_token_count": 141,
+          "prompt_token_count": 1622,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 1622
+            }
+          ],
+          "total_token_count": 1763
+        },
+        "answer": {
+          "candidates_token_count": 84,
+          "prompt_token_count": 482,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 482
+            }
+          ],
+          "total_token_count": 566
+        }
+      },
+      "error_code": null,
+      "raw_answer_plan": {
+        "template_id": "value_matches",
+        "record_ids": [
+          "R001",
+          "R002",
+          "R003",
+          "R004",
+          "R005"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "duration_seconds": 4.913706599996658,
+      "example_id": "Q08",
+      "verification_errors": []
+    }
+  ]
+}

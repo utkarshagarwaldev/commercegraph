@@ -1,0 +1,3333 @@
+{
+  "mode": "offline",
+  "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+  "passed": true,
+  "failed_examples": [],
+  "runs": [
+    {
+      "question": "Which products from NovaTech are supplied by MetroSupply?",
+      "mode": "offline",
+      "timestamp": "2026-10-01T17:10:18.237657+00:00",
+      "model": "offline-fixture",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "4",
+      "raw_plan": {
+        "decision": "query",
+        "operation": "find_products",
+        "parameters": {
+          "brand_name": "NovaTech",
+          "vendor_name": "MetroSupply",
+          "category_name": null,
+          "customer_name": null,
+          "product_name": null,
+          "order_id": null,
+          "price_lt_inr": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "clarification_code": null,
+        "unsupported_code": null
+      },
+      "resolved_plan": {
+        "operation": "find_products",
+        "brand_id": "B01",
+        "vendor_id": "V01",
+        "output_mode": "list"
+      },
+      "status": "ok",
+      "evidence": {
+        "query": {
+          "operation": "find_products",
+          "brand_id": "B01",
+          "vendor_id": "V01",
+          "category_id": null,
+          "customer_id": null,
+          "product_id": null,
+          "order_id": null,
+          "price_lt_paise": null,
+          "value": null,
+          "output_mode": "list",
+          "order_status": null
+        },
+        "status": "ok",
+        "records": [
+          {
+            "record_id": "R001",
+            "kind": "Product",
+            "fields": {
+              "id": "P01",
+              "name": "Wireless Headphones",
+              "brand": "NovaTech",
+              "category": "Electronics",
+              "price_paise": 399900
+            },
+            "node_ids": [
+              "brand:B01",
+              "category:C01",
+              "product:P01",
+              "vendor:V01"
+            ],
+            "edges": [
+              {
+                "source": "product:P01",
+                "relationship": "BELONGS_TO_BRAND",
+                "target": "brand:B01"
+              },
+              {
+                "source": "product:P01",
+                "relationship": "IN_CATEGORY",
+                "target": "category:C01"
+              },
+              {
+                "source": "vendor:V01",
+                "relationship": "SUPPLIES",
+                "target": "product:P01"
+              }
+            ]
+          },
+          {
+            "record_id": "R002",
+            "kind": "Product",
+            "fields": {
+              "id": "P02",
+              "name": "Portable Speaker",
+              "brand": "NovaTech",
+              "category": "Electronics",
+              "price_paise": 249900
+            },
+            "node_ids": [
+              "brand:B01",
+              "category:C01",
+              "product:P02",
+              "vendor:V01"
+            ],
+            "edges": [
+              {
+                "source": "product:P02",
+                "relationship": "BELONGS_TO_BRAND",
+                "target": "brand:B01"
+              },
+              {
+                "source": "product:P02",
+                "relationship": "IN_CATEGORY",
+                "target": "category:C01"
+              },
+              {
+                "source": "vendor:V01",
+                "relationship": "SUPPLIES",
+                "target": "product:P02"
+              }
+            ]
+          },
+          {
+            "record_id": "R003",
+            "kind": "Product",
+            "fields": {
+              "id": "P03",
+              "name": "Smartwatch",
+              "brand": "NovaTech",
+              "category": "Electronics",
+              "price_paise": 599900
+            },
+            "node_ids": [
+              "brand:B01",
+              "category:C01",
+              "product:P03",
+              "vendor:V01"
+            ],
+            "edges": [
+              {
+                "source": "product:P03",
+                "relationship": "BELONGS_TO_BRAND",
+                "target": "brand:B01"
+              },
+              {
+                "source": "product:P03",
+                "relationship": "IN_CATEGORY",
+                "target": "category:C01"
+              },
+              {
+                "source": "vendor:V01",
+                "relationship": "SUPPLIES",
+                "target": "product:P03"
+              }
+            ]
+          }
+        ],
+        "aggregates": {
+          "matching_count": 3
+        },
+        "nodes": {
+          "brand:B01": {
+            "type": "Brand",
+            "id": "B01",
+            "name": "NovaTech"
+          },
+          "category:C01": {
+            "type": "Category",
+            "id": "C01",
+            "name": "Electronics"
+          },
+          "product:P01": {
+            "type": "Product",
+            "id": "P01",
+            "name": "Wireless Headphones",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 399900
+          },
+          "product:P02": {
+            "type": "Product",
+            "id": "P02",
+            "name": "Portable Speaker",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 249900
+          },
+          "product:P03": {
+            "type": "Product",
+            "id": "P03",
+            "name": "Smartwatch",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 599900
+          },
+          "vendor:V01": {
+            "type": "Vendor",
+            "id": "V01",
+            "name": "MetroSupply"
+          }
+        },
+        "edges": [
+          {
+            "source": "product:P01",
+            "relationship": "BELONGS_TO_BRAND",
+            "target": "brand:B01"
+          },
+          {
+            "source": "product:P01",
+            "relationship": "IN_CATEGORY",
+            "target": "category:C01"
+          },
+          {
+            "source": "product:P02",
+            "relationship": "BELONGS_TO_BRAND",
+            "target": "brand:B01"
+          },
+          {
+            "source": "product:P02",
+            "relationship": "IN_CATEGORY",
+            "target": "category:C01"
+          },
+          {
+            "source": "product:P03",
+            "relationship": "BELONGS_TO_BRAND",
+            "target": "brand:B01"
+          },
+          {
+            "source": "product:P03",
+            "relationship": "IN_CATEGORY",
+            "target": "category:C01"
+          },
+          {
+            "source": "vendor:V01",
+            "relationship": "SUPPLIES",
+            "target": "product:P01"
+          },
+          {
+            "source": "vendor:V01",
+            "relationship": "SUPPLIES",
+            "target": "product:P02"
+          },
+          {
+            "source": "vendor:V01",
+            "relationship": "SUPPLIES",
+            "target": "product:P03"
+          }
+        ],
+        "currency": "INR"
+      },
+      "answer": "Found 3 matching records in the sample graph.\nP01 · Wireless Headphones — INR 3,999.00 (NovaTech; Electronics)\nP02 · Portable Speaker — INR 2,499.00 (NovaTech; Electronics)\nP03 · Smartwatch — INR 5,999.00 (NovaTech; Electronics)",
+      "answer_plan": {
+        "template_id": "product_list",
+        "record_ids": [
+          "R001",
+          "R002",
+          "R003"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "answer_presentation_source": "offline-fixture",
+      "stage_durations_seconds": {
+        "interpret": 0.0008916000078897923,
+        "retrieve": 0.0010240999981760979,
+        "present": 0.00012169999536126852
+      },
+      "token_usage": {
+        "query": null,
+        "answer": null
+      },
+      "error_code": null,
+      "raw_answer_plan": {
+        "template_id": "product_list",
+        "record_ids": [
+          "R001",
+          "R002",
+          "R003"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "duration_seconds": 0.0020878999930573627,
+      "example_id": "Q01",
+      "verification_errors": []
+    },
+    {
+      "question": "Which vendors supply Portable Speaker?",
+      "mode": "offline",
+      "timestamp": "2026-10-01T17:10:18.239654+00:00",
+      "model": "offline-fixture",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "4",
+      "raw_plan": {
+        "decision": "query",
+        "operation": "vendors_for_product",
+        "parameters": {
+          "brand_name": null,
+          "vendor_name": null,
+          "category_name": null,
+          "customer_name": null,
+          "product_name": "Portable Speaker",
+          "order_id": null,
+          "price_lt_inr": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "clarification_code": null,
+        "unsupported_code": null
+      },
+      "resolved_plan": {
+        "operation": "vendors_for_product",
+        "product_id": "P02"
+      },
+      "status": "ok",
+      "evidence": {
+        "query": {
+          "operation": "vendors_for_product",
+          "brand_id": null,
+          "vendor_id": null,
+          "category_id": null,
+          "customer_id": null,
+          "product_id": "P02",
+          "order_id": null,
+          "price_lt_paise": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "status": "ok",
+        "records": [
+          {
+            "record_id": "R001",
+            "kind": "Vendor",
+            "fields": {
+              "id": "V01",
+              "name": "MetroSupply",
+              "product_id": "P02",
+              "product_name": "Portable Speaker"
+            },
+            "node_ids": [
+              "product:P02",
+              "vendor:V01"
+            ],
+            "edges": [
+              {
+                "source": "vendor:V01",
+                "relationship": "SUPPLIES",
+                "target": "product:P02"
+              }
+            ]
+          },
+          {
+            "record_id": "R002",
+            "kind": "Vendor",
+            "fields": {
+              "id": "V03",
+              "name": "EverydayWholesale",
+              "product_id": "P02",
+              "product_name": "Portable Speaker"
+            },
+            "node_ids": [
+              "product:P02",
+              "vendor:V03"
+            ],
+            "edges": [
+              {
+                "source": "vendor:V03",
+                "relationship": "SUPPLIES",
+                "target": "product:P02"
+              }
+            ]
+          }
+        ],
+        "aggregates": {
+          "matching_count": 2
+        },
+        "nodes": {
+          "product:P02": {
+            "type": "Product",
+            "id": "P02",
+            "name": "Portable Speaker",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 249900
+          },
+          "vendor:V01": {
+            "type": "Vendor",
+            "id": "V01",
+            "name": "MetroSupply"
+          },
+          "vendor:V03": {
+            "type": "Vendor",
+            "id": "V03",
+            "name": "EverydayWholesale"
+          }
+        },
+        "edges": [
+          {
+            "source": "vendor:V01",
+            "relationship": "SUPPLIES",
+            "target": "product:P02"
+          },
+          {
+            "source": "vendor:V03",
+            "relationship": "SUPPLIES",
+            "target": "product:P02"
+          }
+        ],
+        "currency": "INR"
+      },
+      "answer": "Found 2 matching records in the sample graph.\nV01 · MetroSupply supplies Portable Speaker (P02) in the catalog.\nV03 · EverydayWholesale supplies Portable Speaker (P02) in the catalog.",
+      "answer_plan": {
+        "template_id": "vendor_list",
+        "record_ids": [
+          "R001",
+          "R002"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "answer_presentation_source": "offline-fixture",
+      "stage_durations_seconds": {
+        "interpret": 0.0007627999875694513,
+        "retrieve": 0.00039929999911691993,
+        "present": 7.760000880807638e-05
+      },
+      "token_usage": {
+        "query": null,
+        "answer": null
+      },
+      "error_code": null,
+      "raw_answer_plan": {
+        "template_id": "vendor_list",
+        "record_ids": [
+          "R001",
+          "R002"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "duration_seconds": 0.0012716000055661425,
+      "example_id": "Q02",
+      "verification_errors": []
+    },
+    {
+      "question": "Which Outdoors products cost under INR 1500?",
+      "mode": "offline",
+      "timestamp": "2026-10-01T17:10:18.240658+00:00",
+      "model": "offline-fixture",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "4",
+      "raw_plan": {
+        "decision": "query",
+        "operation": "find_products",
+        "parameters": {
+          "brand_name": null,
+          "vendor_name": null,
+          "category_name": "Outdoors",
+          "customer_name": null,
+          "product_name": null,
+          "order_id": null,
+          "price_lt_inr": "1500",
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "clarification_code": null,
+        "unsupported_code": null
+      },
+      "resolved_plan": {
+        "operation": "find_products",
+        "category_id": "C02",
+        "price_lt_paise": 150000,
+        "output_mode": "list"
+      },
+      "status": "ok",
+      "evidence": {
+        "query": {
+          "operation": "find_products",
+          "brand_id": null,
+          "vendor_id": null,
+          "category_id": "C02",
+          "customer_id": null,
+          "product_id": null,
+          "order_id": null,
+          "price_lt_paise": 150000,
+          "value": null,
+          "output_mode": "list",
+          "order_status": null
+        },
+        "status": "ok",
+        "records": [
+          {
+            "record_id": "R001",
+            "kind": "Product",
+            "fields": {
+              "id": "P05",
+              "name": "Insulated Bottle",
+              "brand": "TrailWorks",
+              "category": "Outdoors",
+              "price_paise": 79900
+            },
+            "node_ids": [
+              "brand:B02",
+              "category:C02",
+              "product:P05"
+            ],
+            "edges": [
+              {
+                "source": "product:P05",
+                "relationship": "BELONGS_TO_BRAND",
+                "target": "brand:B02"
+              },
+              {
+                "source": "product:P05",
+                "relationship": "IN_CATEGORY",
+                "target": "category:C02"
+              }
+            ]
+          },
+          {
+            "record_id": "R002",
+            "kind": "Product",
+            "fields": {
+              "id": "P06",
+              "name": "Camping Lantern",
+              "brand": "TrailWorks",
+              "category": "Outdoors",
+              "price_paise": 129900
+            },
+            "node_ids": [
+              "brand:B02",
+              "category:C02",
+              "product:P06"
+            ],
+            "edges": [
+              {
+                "source": "product:P06",
+                "relationship": "BELONGS_TO_BRAND",
+                "target": "brand:B02"
+              },
+              {
+                "source": "product:P06",
+                "relationship": "IN_CATEGORY",
+                "target": "category:C02"
+              }
+            ]
+          }
+        ],
+        "aggregates": {
+          "matching_count": 2
+        },
+        "nodes": {
+          "brand:B02": {
+            "type": "Brand",
+            "id": "B02",
+            "name": "TrailWorks"
+          },
+          "category:C02": {
+            "type": "Category",
+            "id": "C02",
+            "name": "Outdoors"
+          },
+          "product:P05": {
+            "type": "Product",
+            "id": "P05",
+            "name": "Insulated Bottle",
+            "brand_id": "B02",
+            "category_id": "C02",
+            "price_paise": 79900
+          },
+          "product:P06": {
+            "type": "Product",
+            "id": "P06",
+            "name": "Camping Lantern",
+            "brand_id": "B02",
+            "category_id": "C02",
+            "price_paise": 129900
+          }
+        },
+        "edges": [
+          {
+            "source": "product:P05",
+            "relationship": "BELONGS_TO_BRAND",
+            "target": "brand:B02"
+          },
+          {
+            "source": "product:P05",
+            "relationship": "IN_CATEGORY",
+            "target": "category:C02"
+          },
+          {
+            "source": "product:P06",
+            "relationship": "BELONGS_TO_BRAND",
+            "target": "brand:B02"
+          },
+          {
+            "source": "product:P06",
+            "relationship": "IN_CATEGORY",
+            "target": "category:C02"
+          }
+        ],
+        "currency": "INR"
+      },
+      "answer": "Found 2 matching records in the sample graph.\nP05 · Insulated Bottle — INR 799.00 (TrailWorks; Outdoors)\nP06 · Camping Lantern — INR 1,299.00 (TrailWorks; Outdoors)",
+      "answer_plan": {
+        "template_id": "product_list",
+        "record_ids": [
+          "R001",
+          "R002"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "answer_presentation_source": "offline-fixture",
+      "stage_durations_seconds": {
+        "interpret": 0.0017457999929320067,
+        "retrieve": 0.0016965999966487288,
+        "present": 0.00022069999249652028
+      },
+      "token_usage": {
+        "query": null,
+        "answer": null
+      },
+      "error_code": null,
+      "raw_answer_plan": {
+        "template_id": "product_list",
+        "record_ids": [
+          "R001",
+          "R002"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "duration_seconds": 0.0036938999983249232,
+      "example_id": "Q03",
+      "verification_errors": []
+    },
+    {
+      "question": "Show all orders placed by Asha Mehta.",
+      "mode": "offline",
+      "timestamp": "2026-10-01T17:10:18.245653+00:00",
+      "model": "offline-fixture",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "4",
+      "raw_plan": {
+        "decision": "query",
+        "operation": "orders_for_customer",
+        "parameters": {
+          "brand_name": null,
+          "vendor_name": null,
+          "category_name": null,
+          "customer_name": "Asha Mehta",
+          "product_name": null,
+          "order_id": null,
+          "price_lt_inr": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "clarification_code": null,
+        "unsupported_code": null
+      },
+      "resolved_plan": {
+        "operation": "orders_for_customer",
+        "customer_id": "U01"
+      },
+      "status": "ok",
+      "evidence": {
+        "query": {
+          "operation": "orders_for_customer",
+          "brand_id": null,
+          "vendor_id": null,
+          "category_id": null,
+          "customer_id": "U01",
+          "product_id": null,
+          "order_id": null,
+          "price_lt_paise": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "status": "ok",
+        "records": [
+          {
+            "record_id": "R001",
+            "kind": "Order",
+            "fields": {
+              "id": "O01",
+              "date": "2026-09-01",
+              "status": "delivered",
+              "customer_id": "U01",
+              "customer_name": "Asha Mehta",
+              "total_paise": 539700,
+              "items": [
+                {
+                  "item_id": "L01",
+                  "product_id": "P01",
+                  "product_name": "Wireless Headphones",
+                  "quantity": 1,
+                  "unit_price_paise": 389900,
+                  "line_total_paise": 389900
+                },
+                {
+                  "item_id": "L02",
+                  "product_id": "P05",
+                  "product_name": "Insulated Bottle",
+                  "quantity": 2,
+                  "unit_price_paise": 74900,
+                  "line_total_paise": 149800
+                }
+              ]
+            },
+            "node_ids": [
+              "customer:U01",
+              "order:O01",
+              "orderitem:L01",
+              "orderitem:L02",
+              "product:P01",
+              "product:P05"
+            ],
+            "edges": [
+              {
+                "source": "customer:U01",
+                "relationship": "PLACED",
+                "target": "order:O01"
+              },
+              {
+                "source": "order:O01",
+                "relationship": "HAS_ITEM",
+                "target": "orderitem:L01"
+              },
+              {
+                "source": "order:O01",
+                "relationship": "HAS_ITEM",
+                "target": "orderitem:L02"
+              },
+              {
+                "source": "orderitem:L01",
+                "relationship": "FOR_PRODUCT",
+                "target": "product:P01"
+              },
+              {
+                "source": "orderitem:L02",
+                "relationship": "FOR_PRODUCT",
+                "target": "product:P05"
+              }
+            ]
+          },
+          {
+            "record_id": "R002",
+            "kind": "Order",
+            "fields": {
+              "id": "O04",
+              "date": "2026-09-04",
+              "status": "delivered",
+              "customer_id": "U01",
+              "customer_name": "Asha Mehta",
+              "total_paise": 209600,
+              "items": [
+                {
+                  "item_id": "L07",
+                  "product_id": "P07",
+                  "product_name": "Electric Kettle",
+                  "quantity": 1,
+                  "unit_price_paise": 149900,
+                  "line_total_paise": 149900
+                },
+                {
+                  "item_id": "L08",
+                  "product_id": "P12",
+                  "product_name": "Herbal Tea",
+                  "quantity": 3,
+                  "unit_price_paise": 19900,
+                  "line_total_paise": 59700
+                }
+              ]
+            },
+            "node_ids": [
+              "customer:U01",
+              "order:O04",
+              "orderitem:L07",
+              "orderitem:L08",
+              "product:P07",
+              "product:P12"
+            ],
+            "edges": [
+              {
+                "source": "customer:U01",
+                "relationship": "PLACED",
+                "target": "order:O04"
+              },
+              {
+                "source": "order:O04",
+                "relationship": "HAS_ITEM",
+                "target": "orderitem:L07"
+              },
+              {
+                "source": "order:O04",
+                "relationship": "HAS_ITEM",
+                "target": "orderitem:L08"
+              },
+              {
+                "source": "orderitem:L07",
+                "relationship": "FOR_PRODUCT",
+                "target": "product:P07"
+              },
+              {
+                "source": "orderitem:L08",
+                "relationship": "FOR_PRODUCT",
+                "target": "product:P12"
+              }
+            ]
+          }
+        ],
+        "aggregates": {
+          "matching_count": 2
+        },
+        "nodes": {
+          "customer:U01": {
+            "type": "Customer",
+            "id": "U01",
+            "name": "Asha Mehta"
+          },
+          "order:O01": {
+            "type": "Order",
+            "id": "O01",
+            "customer_id": "U01",
+            "date": "2026-09-01",
+            "status": "delivered"
+          },
+          "order:O04": {
+            "type": "Order",
+            "id": "O04",
+            "customer_id": "U01",
+            "date": "2026-09-04",
+            "status": "delivered"
+          },
+          "orderitem:L01": {
+            "type": "OrderItem",
+            "id": "L01",
+            "order_id": "O01",
+            "product_id": "P01",
+            "quantity": 1,
+            "unit_price_paise": 389900
+          },
+          "orderitem:L02": {
+            "type": "OrderItem",
+            "id": "L02",
+            "order_id": "O01",
+            "product_id": "P05",
+            "quantity": 2,
+            "unit_price_paise": 74900
+          },
+          "orderitem:L07": {
+            "type": "OrderItem",
+            "id": "L07",
+            "order_id": "O04",
+            "product_id": "P07",
+            "quantity": 1,
+            "unit_price_paise": 149900
+          },
+          "orderitem:L08": {
+            "type": "OrderItem",
+            "id": "L08",
+            "order_id": "O04",
+            "product_id": "P12",
+            "quantity": 3,
+            "unit_price_paise": 19900
+          },
+          "product:P01": {
+            "type": "Product",
+            "id": "P01",
+            "name": "Wireless Headphones",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 399900
+          },
+          "product:P05": {
+            "type": "Product",
+            "id": "P05",
+            "name": "Insulated Bottle",
+            "brand_id": "B02",
+            "category_id": "C02",
+            "price_paise": 79900
+          },
+          "product:P07": {
+            "type": "Product",
+            "id": "P07",
+            "name": "Electric Kettle",
+            "brand_id": "B03",
+            "category_id": "C03",
+            "price_paise": 149900
+          },
+          "product:P12": {
+            "type": "Product",
+            "id": "P12",
+            "name": "Herbal Tea",
+            "brand_id": "B04",
+            "category_id": "C04",
+            "price_paise": 19900
+          }
+        },
+        "edges": [
+          {
+            "source": "customer:U01",
+            "relationship": "PLACED",
+            "target": "order:O01"
+          },
+          {
+            "source": "customer:U01",
+            "relationship": "PLACED",
+            "target": "order:O04"
+          },
+          {
+            "source": "order:O01",
+            "relationship": "HAS_ITEM",
+            "target": "orderitem:L01"
+          },
+          {
+            "source": "order:O01",
+            "relationship": "HAS_ITEM",
+            "target": "orderitem:L02"
+          },
+          {
+            "source": "order:O04",
+            "relationship": "HAS_ITEM",
+            "target": "orderitem:L07"
+          },
+          {
+            "source": "order:O04",
+            "relationship": "HAS_ITEM",
+            "target": "orderitem:L08"
+          },
+          {
+            "source": "orderitem:L01",
+            "relationship": "FOR_PRODUCT",
+            "target": "product:P01"
+          },
+          {
+            "source": "orderitem:L02",
+            "relationship": "FOR_PRODUCT",
+            "target": "product:P05"
+          },
+          {
+            "source": "orderitem:L07",
+            "relationship": "FOR_PRODUCT",
+            "target": "product:P07"
+          },
+          {
+            "source": "orderitem:L08",
+            "relationship": "FOR_PRODUCT",
+            "target": "product:P12"
+          }
+        ],
+        "currency": "INR"
+      },
+      "answer": "Found 2 matching records in the sample graph.\nO01 · delivered · 2026-09-01 · Asha Mehta — merchandise total INR 5,397.00\nO04 · delivered · 2026-09-04 · Asha Mehta — merchandise total INR 2,096.00",
+      "answer_plan": {
+        "template_id": "customer_orders",
+        "record_ids": [
+          "R001",
+          "R002"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "answer_presentation_source": "offline-fixture",
+      "stage_durations_seconds": {
+        "interpret": 0.001573299989104271,
+        "retrieve": 0.0014492000045720488,
+        "present": 0.00017759999900590628
+      },
+      "token_usage": {
+        "query": null,
+        "answer": null
+      },
+      "error_code": null,
+      "raw_answer_plan": {
+        "template_id": "customer_orders",
+        "record_ids": [
+          "R001",
+          "R002"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "duration_seconds": 0.003259999997681007,
+      "example_id": "Q04",
+      "verification_errors": []
+    },
+    {
+      "question": "What is the merchandise total for order O01?",
+      "mode": "offline",
+      "timestamp": "2026-10-01T17:10:18.248657+00:00",
+      "model": "offline-fixture",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "4",
+      "raw_plan": {
+        "decision": "query",
+        "operation": "order_details",
+        "parameters": {
+          "brand_name": null,
+          "vendor_name": null,
+          "category_name": null,
+          "customer_name": null,
+          "product_name": null,
+          "order_id": "O01",
+          "price_lt_inr": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "clarification_code": null,
+        "unsupported_code": null
+      },
+      "resolved_plan": {
+        "operation": "order_details",
+        "order_id": "O01"
+      },
+      "status": "ok",
+      "evidence": {
+        "query": {
+          "operation": "order_details",
+          "brand_id": null,
+          "vendor_id": null,
+          "category_id": null,
+          "customer_id": null,
+          "product_id": null,
+          "order_id": "O01",
+          "price_lt_paise": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "status": "ok",
+        "records": [
+          {
+            "record_id": "R001",
+            "kind": "Order",
+            "fields": {
+              "id": "O01",
+              "date": "2026-09-01",
+              "status": "delivered",
+              "customer_id": "U01",
+              "customer_name": "Asha Mehta",
+              "total_paise": 539700,
+              "items": [
+                {
+                  "item_id": "L01",
+                  "product_id": "P01",
+                  "product_name": "Wireless Headphones",
+                  "quantity": 1,
+                  "unit_price_paise": 389900,
+                  "line_total_paise": 389900
+                },
+                {
+                  "item_id": "L02",
+                  "product_id": "P05",
+                  "product_name": "Insulated Bottle",
+                  "quantity": 2,
+                  "unit_price_paise": 74900,
+                  "line_total_paise": 149800
+                }
+              ]
+            },
+            "node_ids": [
+              "customer:U01",
+              "order:O01",
+              "orderitem:L01",
+              "orderitem:L02",
+              "product:P01",
+              "product:P05"
+            ],
+            "edges": [
+              {
+                "source": "customer:U01",
+                "relationship": "PLACED",
+                "target": "order:O01"
+              },
+              {
+                "source": "order:O01",
+                "relationship": "HAS_ITEM",
+                "target": "orderitem:L01"
+              },
+              {
+                "source": "order:O01",
+                "relationship": "HAS_ITEM",
+                "target": "orderitem:L02"
+              },
+              {
+                "source": "orderitem:L01",
+                "relationship": "FOR_PRODUCT",
+                "target": "product:P01"
+              },
+              {
+                "source": "orderitem:L02",
+                "relationship": "FOR_PRODUCT",
+                "target": "product:P05"
+              }
+            ]
+          }
+        ],
+        "aggregates": {
+          "matching_count": 1,
+          "total_paise": 539700
+        },
+        "nodes": {
+          "customer:U01": {
+            "type": "Customer",
+            "id": "U01",
+            "name": "Asha Mehta"
+          },
+          "order:O01": {
+            "type": "Order",
+            "id": "O01",
+            "customer_id": "U01",
+            "date": "2026-09-01",
+            "status": "delivered"
+          },
+          "orderitem:L01": {
+            "type": "OrderItem",
+            "id": "L01",
+            "order_id": "O01",
+            "product_id": "P01",
+            "quantity": 1,
+            "unit_price_paise": 389900
+          },
+          "orderitem:L02": {
+            "type": "OrderItem",
+            "id": "L02",
+            "order_id": "O01",
+            "product_id": "P05",
+            "quantity": 2,
+            "unit_price_paise": 74900
+          },
+          "product:P01": {
+            "type": "Product",
+            "id": "P01",
+            "name": "Wireless Headphones",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 399900
+          },
+          "product:P05": {
+            "type": "Product",
+            "id": "P05",
+            "name": "Insulated Bottle",
+            "brand_id": "B02",
+            "category_id": "C02",
+            "price_paise": 79900
+          }
+        },
+        "edges": [
+          {
+            "source": "customer:U01",
+            "relationship": "PLACED",
+            "target": "order:O01"
+          },
+          {
+            "source": "order:O01",
+            "relationship": "HAS_ITEM",
+            "target": "orderitem:L01"
+          },
+          {
+            "source": "order:O01",
+            "relationship": "HAS_ITEM",
+            "target": "orderitem:L02"
+          },
+          {
+            "source": "orderitem:L01",
+            "relationship": "FOR_PRODUCT",
+            "target": "product:P01"
+          },
+          {
+            "source": "orderitem:L02",
+            "relationship": "FOR_PRODUCT",
+            "target": "product:P05"
+          }
+        ],
+        "currency": "INR"
+      },
+      "answer": "Found 1 matching record in the sample graph.\nO01 · delivered · 2026-09-01 · Asha Mehta — merchandise total INR 5,397.00\n  L01 · Wireless Headphones: 1 × INR 3,899.00 = INR 3,899.00\n  L02 · Insulated Bottle: 2 × INR 749.00 = INR 1,498.00\nMerchandise total only; tax and shipping are not modeled.",
+      "answer_plan": {
+        "template_id": "order_details",
+        "record_ids": [
+          "R001"
+        ],
+        "aggregate_keys": [
+          "matching_count",
+          "total_paise"
+        ]
+      },
+      "answer_presentation_source": "offline-fixture",
+      "stage_durations_seconds": {
+        "interpret": 0.001508999994257465,
+        "retrieve": 0.0008402999956160784,
+        "present": 0.00017749999824445695
+      },
+      "token_usage": {
+        "query": null,
+        "answer": null
+      },
+      "error_code": null,
+      "raw_answer_plan": {
+        "template_id": "order_details",
+        "record_ids": [
+          "R001"
+        ],
+        "aggregate_keys": [
+          "matching_count",
+          "total_paise"
+        ]
+      },
+      "duration_seconds": 0.0025821999879553914,
+      "example_id": "Q05",
+      "verification_errors": []
+    },
+    {
+      "question": "Which customers bought products from NovaTech?",
+      "mode": "offline",
+      "timestamp": "2026-10-01T17:10:18.251657+00:00",
+      "model": "offline-fixture",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "4",
+      "raw_plan": {
+        "decision": "query",
+        "operation": "customers_bought_brand",
+        "parameters": {
+          "brand_name": "NovaTech",
+          "vendor_name": null,
+          "category_name": null,
+          "customer_name": null,
+          "product_name": null,
+          "order_id": null,
+          "price_lt_inr": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "clarification_code": null,
+        "unsupported_code": null
+      },
+      "resolved_plan": {
+        "operation": "customers_bought_brand",
+        "brand_id": "B01"
+      },
+      "status": "ok",
+      "evidence": {
+        "query": {
+          "operation": "customers_bought_brand",
+          "brand_id": "B01",
+          "vendor_id": null,
+          "category_id": null,
+          "customer_id": null,
+          "product_id": null,
+          "order_id": null,
+          "price_lt_paise": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "status": "ok",
+        "records": [
+          {
+            "record_id": "R001",
+            "kind": "Customer",
+            "fields": {
+              "id": "U01",
+              "name": "Asha Mehta",
+              "brand": "NovaTech",
+              "delivered_order_ids": [
+                "O01"
+              ]
+            },
+            "node_ids": [
+              "brand:B01",
+              "customer:U01",
+              "order:O01",
+              "orderitem:L01",
+              "product:P01"
+            ],
+            "edges": [
+              {
+                "source": "customer:U01",
+                "relationship": "PLACED",
+                "target": "order:O01"
+              },
+              {
+                "source": "order:O01",
+                "relationship": "HAS_ITEM",
+                "target": "orderitem:L01"
+              },
+              {
+                "source": "orderitem:L01",
+                "relationship": "FOR_PRODUCT",
+                "target": "product:P01"
+              },
+              {
+                "source": "product:P01",
+                "relationship": "BELONGS_TO_BRAND",
+                "target": "brand:B01"
+              }
+            ]
+          },
+          {
+            "record_id": "R002",
+            "kind": "Customer",
+            "fields": {
+              "id": "U03",
+              "name": "Neha Rao",
+              "brand": "NovaTech",
+              "delivered_order_ids": [
+                "O03"
+              ]
+            },
+            "node_ids": [
+              "brand:B01",
+              "customer:U03",
+              "order:O03",
+              "orderitem:L05",
+              "product:P02"
+            ],
+            "edges": [
+              {
+                "source": "customer:U03",
+                "relationship": "PLACED",
+                "target": "order:O03"
+              },
+              {
+                "source": "order:O03",
+                "relationship": "HAS_ITEM",
+                "target": "orderitem:L05"
+              },
+              {
+                "source": "orderitem:L05",
+                "relationship": "FOR_PRODUCT",
+                "target": "product:P02"
+              },
+              {
+                "source": "product:P02",
+                "relationship": "BELONGS_TO_BRAND",
+                "target": "brand:B01"
+              }
+            ]
+          },
+          {
+            "record_id": "R003",
+            "kind": "Customer",
+            "fields": {
+              "id": "U04",
+              "name": "Kabir Sen",
+              "brand": "NovaTech",
+              "delivered_order_ids": [
+                "O05"
+              ]
+            },
+            "node_ids": [
+              "brand:B01",
+              "customer:U04",
+              "order:O05",
+              "orderitem:L09",
+              "product:P03"
+            ],
+            "edges": [
+              {
+                "source": "customer:U04",
+                "relationship": "PLACED",
+                "target": "order:O05"
+              },
+              {
+                "source": "order:O05",
+                "relationship": "HAS_ITEM",
+                "target": "orderitem:L09"
+              },
+              {
+                "source": "orderitem:L09",
+                "relationship": "FOR_PRODUCT",
+                "target": "product:P03"
+              },
+              {
+                "source": "product:P03",
+                "relationship": "BELONGS_TO_BRAND",
+                "target": "brand:B01"
+              }
+            ]
+          }
+        ],
+        "aggregates": {
+          "matching_count": 3
+        },
+        "nodes": {
+          "brand:B01": {
+            "type": "Brand",
+            "id": "B01",
+            "name": "NovaTech"
+          },
+          "customer:U01": {
+            "type": "Customer",
+            "id": "U01",
+            "name": "Asha Mehta"
+          },
+          "customer:U03": {
+            "type": "Customer",
+            "id": "U03",
+            "name": "Neha Rao"
+          },
+          "customer:U04": {
+            "type": "Customer",
+            "id": "U04",
+            "name": "Kabir Sen"
+          },
+          "order:O01": {
+            "type": "Order",
+            "id": "O01",
+            "customer_id": "U01",
+            "date": "2026-09-01",
+            "status": "delivered"
+          },
+          "order:O03": {
+            "type": "Order",
+            "id": "O03",
+            "customer_id": "U03",
+            "date": "2026-09-03",
+            "status": "delivered"
+          },
+          "order:O05": {
+            "type": "Order",
+            "id": "O05",
+            "customer_id": "U04",
+            "date": "2026-09-05",
+            "status": "delivered"
+          },
+          "orderitem:L01": {
+            "type": "OrderItem",
+            "id": "L01",
+            "order_id": "O01",
+            "product_id": "P01",
+            "quantity": 1,
+            "unit_price_paise": 389900
+          },
+          "orderitem:L05": {
+            "type": "OrderItem",
+            "id": "L05",
+            "order_id": "O03",
+            "product_id": "P02",
+            "quantity": 1,
+            "unit_price_paise": 249900
+          },
+          "orderitem:L09": {
+            "type": "OrderItem",
+            "id": "L09",
+            "order_id": "O05",
+            "product_id": "P03",
+            "quantity": 1,
+            "unit_price_paise": 599900
+          },
+          "product:P01": {
+            "type": "Product",
+            "id": "P01",
+            "name": "Wireless Headphones",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 399900
+          },
+          "product:P02": {
+            "type": "Product",
+            "id": "P02",
+            "name": "Portable Speaker",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 249900
+          },
+          "product:P03": {
+            "type": "Product",
+            "id": "P03",
+            "name": "Smartwatch",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 599900
+          }
+        },
+        "edges": [
+          {
+            "source": "customer:U01",
+            "relationship": "PLACED",
+            "target": "order:O01"
+          },
+          {
+            "source": "customer:U03",
+            "relationship": "PLACED",
+            "target": "order:O03"
+          },
+          {
+            "source": "customer:U04",
+            "relationship": "PLACED",
+            "target": "order:O05"
+          },
+          {
+            "source": "order:O01",
+            "relationship": "HAS_ITEM",
+            "target": "orderitem:L01"
+          },
+          {
+            "source": "order:O03",
+            "relationship": "HAS_ITEM",
+            "target": "orderitem:L05"
+          },
+          {
+            "source": "order:O05",
+            "relationship": "HAS_ITEM",
+            "target": "orderitem:L09"
+          },
+          {
+            "source": "orderitem:L01",
+            "relationship": "FOR_PRODUCT",
+            "target": "product:P01"
+          },
+          {
+            "source": "orderitem:L05",
+            "relationship": "FOR_PRODUCT",
+            "target": "product:P02"
+          },
+          {
+            "source": "orderitem:L09",
+            "relationship": "FOR_PRODUCT",
+            "target": "product:P03"
+          },
+          {
+            "source": "product:P01",
+            "relationship": "BELONGS_TO_BRAND",
+            "target": "brand:B01"
+          },
+          {
+            "source": "product:P02",
+            "relationship": "BELONGS_TO_BRAND",
+            "target": "brand:B01"
+          },
+          {
+            "source": "product:P03",
+            "relationship": "BELONGS_TO_BRAND",
+            "target": "brand:B01"
+          }
+        ],
+        "currency": "INR"
+      },
+      "answer": "Found 3 matching records in the sample graph. Purchases include delivered orders only.\nU01 · Asha Mehta — delivered orders: O01\nU03 · Neha Rao — delivered orders: O03\nU04 · Kabir Sen — delivered orders: O05",
+      "answer_plan": {
+        "template_id": "customer_list",
+        "record_ids": [
+          "R001",
+          "R002",
+          "R003"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "answer_presentation_source": "offline-fixture",
+      "stage_durations_seconds": {
+        "interpret": 0.0014984999870648608,
+        "retrieve": 0.0016007999947760254,
+        "present": 0.00017600000137463212
+      },
+      "token_usage": {
+        "query": null,
+        "answer": null
+      },
+      "error_code": null,
+      "raw_answer_plan": {
+        "template_id": "customer_list",
+        "record_ids": [
+          "R001",
+          "R002",
+          "R003"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "duration_seconds": 0.0033285000099567696,
+      "example_id": "Q06",
+      "verification_errors": []
+    },
+    {
+      "question": "How many distinct products does each vendor supply?",
+      "mode": "offline",
+      "timestamp": "2026-10-01T17:10:18.255658+00:00",
+      "model": "offline-fixture",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "4",
+      "raw_plan": {
+        "decision": "query",
+        "operation": "vendor_product_counts",
+        "parameters": {
+          "brand_name": null,
+          "vendor_name": null,
+          "category_name": null,
+          "customer_name": null,
+          "product_name": null,
+          "order_id": null,
+          "price_lt_inr": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "clarification_code": null,
+        "unsupported_code": null
+      },
+      "resolved_plan": {
+        "operation": "vendor_product_counts"
+      },
+      "status": "ok",
+      "evidence": {
+        "query": {
+          "operation": "vendor_product_counts",
+          "brand_id": null,
+          "vendor_id": null,
+          "category_id": null,
+          "customer_id": null,
+          "product_id": null,
+          "order_id": null,
+          "price_lt_paise": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "status": "ok",
+        "records": [
+          {
+            "record_id": "R001",
+            "kind": "Vendor",
+            "fields": {
+              "id": "V01",
+              "name": "MetroSupply",
+              "product_count": 5,
+              "product_ids": [
+                "P01",
+                "P02",
+                "P03",
+                "P07",
+                "P08"
+              ]
+            },
+            "node_ids": [
+              "product:P01",
+              "product:P02",
+              "product:P03",
+              "product:P07",
+              "product:P08",
+              "vendor:V01"
+            ],
+            "edges": [
+              {
+                "source": "vendor:V01",
+                "relationship": "SUPPLIES",
+                "target": "product:P01"
+              },
+              {
+                "source": "vendor:V01",
+                "relationship": "SUPPLIES",
+                "target": "product:P02"
+              },
+              {
+                "source": "vendor:V01",
+                "relationship": "SUPPLIES",
+                "target": "product:P03"
+              },
+              {
+                "source": "vendor:V01",
+                "relationship": "SUPPLIES",
+                "target": "product:P07"
+              },
+              {
+                "source": "vendor:V01",
+                "relationship": "SUPPLIES",
+                "target": "product:P08"
+              }
+            ]
+          },
+          {
+            "record_id": "R002",
+            "kind": "Vendor",
+            "fields": {
+              "id": "V02",
+              "name": "GreenRoute",
+              "product_count": 4,
+              "product_ids": [
+                "P04",
+                "P05",
+                "P06",
+                "P10"
+              ]
+            },
+            "node_ids": [
+              "product:P04",
+              "product:P05",
+              "product:P06",
+              "product:P10",
+              "vendor:V02"
+            ],
+            "edges": [
+              {
+                "source": "vendor:V02",
+                "relationship": "SUPPLIES",
+                "target": "product:P04"
+              },
+              {
+                "source": "vendor:V02",
+                "relationship": "SUPPLIES",
+                "target": "product:P05"
+              },
+              {
+                "source": "vendor:V02",
+                "relationship": "SUPPLIES",
+                "target": "product:P06"
+              },
+              {
+                "source": "vendor:V02",
+                "relationship": "SUPPLIES",
+                "target": "product:P10"
+              }
+            ]
+          },
+          {
+            "record_id": "R003",
+            "kind": "Vendor",
+            "fields": {
+              "id": "V03",
+              "name": "EverydayWholesale",
+              "product_count": 5,
+              "product_ids": [
+                "P02",
+                "P09",
+                "P10",
+                "P11",
+                "P12"
+              ]
+            },
+            "node_ids": [
+              "product:P02",
+              "product:P09",
+              "product:P10",
+              "product:P11",
+              "product:P12",
+              "vendor:V03"
+            ],
+            "edges": [
+              {
+                "source": "vendor:V03",
+                "relationship": "SUPPLIES",
+                "target": "product:P02"
+              },
+              {
+                "source": "vendor:V03",
+                "relationship": "SUPPLIES",
+                "target": "product:P09"
+              },
+              {
+                "source": "vendor:V03",
+                "relationship": "SUPPLIES",
+                "target": "product:P10"
+              },
+              {
+                "source": "vendor:V03",
+                "relationship": "SUPPLIES",
+                "target": "product:P11"
+              },
+              {
+                "source": "vendor:V03",
+                "relationship": "SUPPLIES",
+                "target": "product:P12"
+              }
+            ]
+          }
+        ],
+        "aggregates": {
+          "matching_count": 3
+        },
+        "nodes": {
+          "product:P01": {
+            "type": "Product",
+            "id": "P01",
+            "name": "Wireless Headphones",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 399900
+          },
+          "product:P02": {
+            "type": "Product",
+            "id": "P02",
+            "name": "Portable Speaker",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 249900
+          },
+          "product:P03": {
+            "type": "Product",
+            "id": "P03",
+            "name": "Smartwatch",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 599900
+          },
+          "product:P04": {
+            "type": "Product",
+            "id": "P04",
+            "name": "Hiking Backpack",
+            "brand_id": "B02",
+            "category_id": "C02",
+            "price_paise": 199900
+          },
+          "product:P05": {
+            "type": "Product",
+            "id": "P05",
+            "name": "Insulated Bottle",
+            "brand_id": "B02",
+            "category_id": "C02",
+            "price_paise": 79900
+          },
+          "product:P06": {
+            "type": "Product",
+            "id": "P06",
+            "name": "Camping Lantern",
+            "brand_id": "B02",
+            "category_id": "C02",
+            "price_paise": 129900
+          },
+          "product:P07": {
+            "type": "Product",
+            "id": "P07",
+            "name": "Electric Kettle",
+            "brand_id": "B03",
+            "category_id": "C03",
+            "price_paise": 149900
+          },
+          "product:P08": {
+            "type": "Product",
+            "id": "P08",
+            "name": "Desk Lamp",
+            "brand_id": "B03",
+            "category_id": "C03",
+            "price_paise": 99900
+          },
+          "product:P09": {
+            "type": "Product",
+            "id": "P09",
+            "name": "Storage Basket",
+            "brand_id": "B03",
+            "category_id": "C03",
+            "price_paise": 49900
+          },
+          "product:P10": {
+            "type": "Product",
+            "id": "P10",
+            "name": "Rolled Oats",
+            "brand_id": "B04",
+            "category_id": "C04",
+            "price_paise": 24900
+          },
+          "product:P11": {
+            "type": "Product",
+            "id": "P11",
+            "name": "Mixed Nuts",
+            "brand_id": "B04",
+            "category_id": "C04",
+            "price_paise": 39900
+          },
+          "product:P12": {
+            "type": "Product",
+            "id": "P12",
+            "name": "Herbal Tea",
+            "brand_id": "B04",
+            "category_id": "C04",
+            "price_paise": 19900
+          },
+          "vendor:V01": {
+            "type": "Vendor",
+            "id": "V01",
+            "name": "MetroSupply"
+          },
+          "vendor:V02": {
+            "type": "Vendor",
+            "id": "V02",
+            "name": "GreenRoute"
+          },
+          "vendor:V03": {
+            "type": "Vendor",
+            "id": "V03",
+            "name": "EverydayWholesale"
+          }
+        },
+        "edges": [
+          {
+            "source": "vendor:V01",
+            "relationship": "SUPPLIES",
+            "target": "product:P01"
+          },
+          {
+            "source": "vendor:V01",
+            "relationship": "SUPPLIES",
+            "target": "product:P02"
+          },
+          {
+            "source": "vendor:V01",
+            "relationship": "SUPPLIES",
+            "target": "product:P03"
+          },
+          {
+            "source": "vendor:V01",
+            "relationship": "SUPPLIES",
+            "target": "product:P07"
+          },
+          {
+            "source": "vendor:V01",
+            "relationship": "SUPPLIES",
+            "target": "product:P08"
+          },
+          {
+            "source": "vendor:V02",
+            "relationship": "SUPPLIES",
+            "target": "product:P04"
+          },
+          {
+            "source": "vendor:V02",
+            "relationship": "SUPPLIES",
+            "target": "product:P05"
+          },
+          {
+            "source": "vendor:V02",
+            "relationship": "SUPPLIES",
+            "target": "product:P06"
+          },
+          {
+            "source": "vendor:V02",
+            "relationship": "SUPPLIES",
+            "target": "product:P10"
+          },
+          {
+            "source": "vendor:V03",
+            "relationship": "SUPPLIES",
+            "target": "product:P02"
+          },
+          {
+            "source": "vendor:V03",
+            "relationship": "SUPPLIES",
+            "target": "product:P09"
+          },
+          {
+            "source": "vendor:V03",
+            "relationship": "SUPPLIES",
+            "target": "product:P10"
+          },
+          {
+            "source": "vendor:V03",
+            "relationship": "SUPPLIES",
+            "target": "product:P11"
+          },
+          {
+            "source": "vendor:V03",
+            "relationship": "SUPPLIES",
+            "target": "product:P12"
+          }
+        ],
+        "currency": "INR"
+      },
+      "answer": "Found 3 matching records in the sample graph.\nV01 · MetroSupply: 5 distinct supplied products\nV02 · GreenRoute: 4 distinct supplied products\nV03 · EverydayWholesale: 5 distinct supplied products",
+      "answer_plan": {
+        "template_id": "vendor_counts",
+        "record_ids": [
+          "R001",
+          "R002",
+          "R003"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "answer_presentation_source": "offline-fixture",
+      "stage_durations_seconds": {
+        "interpret": 0.0014147999900160357,
+        "retrieve": 0.0012890999933006242,
+        "present": 0.00020219999714754522
+      },
+      "token_usage": {
+        "query": null,
+        "answer": null
+      },
+      "error_code": null,
+      "raw_answer_plan": {
+        "template_id": "vendor_counts",
+        "record_ids": [
+          "R001",
+          "R002",
+          "R003"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "duration_seconds": 0.002961300007882528,
+      "example_id": "Q07",
+      "verification_errors": []
+    },
+    {
+      "question": "Find all graph markers whose value is banana and show their products.",
+      "mode": "offline",
+      "timestamp": "2026-10-01T17:10:18.258661+00:00",
+      "model": "offline-fixture",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "4",
+      "raw_plan": {
+        "decision": "query",
+        "operation": "lookup_value",
+        "parameters": {
+          "brand_name": null,
+          "vendor_name": null,
+          "category_name": null,
+          "customer_name": null,
+          "product_name": null,
+          "order_id": null,
+          "price_lt_inr": null,
+          "value": "banana",
+          "output_mode": "list",
+          "order_status": null
+        },
+        "clarification_code": null,
+        "unsupported_code": null
+      },
+      "resolved_plan": {
+        "operation": "lookup_value",
+        "value": "banana",
+        "output_mode": "list"
+      },
+      "status": "ok",
+      "evidence": {
+        "query": {
+          "operation": "lookup_value",
+          "brand_id": null,
+          "vendor_id": null,
+          "category_id": null,
+          "customer_id": null,
+          "product_id": null,
+          "order_id": null,
+          "price_lt_paise": null,
+          "value": "banana",
+          "output_mode": "list",
+          "order_status": null
+        },
+        "status": "ok",
+        "records": [
+          {
+            "record_id": "R001",
+            "kind": "Marker",
+            "fields": {
+              "id": "M01",
+              "value": "banana",
+              "product_id": "P01",
+              "product_name": "Wireless Headphones"
+            },
+            "node_ids": [
+              "marker:M01",
+              "product:P01"
+            ],
+            "edges": [
+              {
+                "source": "product:P01",
+                "relationship": "HAS_MARKER",
+                "target": "marker:M01"
+              }
+            ]
+          },
+          {
+            "record_id": "R002",
+            "kind": "Marker",
+            "fields": {
+              "id": "M02",
+              "value": "banana",
+              "product_id": "P04",
+              "product_name": "Hiking Backpack"
+            },
+            "node_ids": [
+              "marker:M02",
+              "product:P04"
+            ],
+            "edges": [
+              {
+                "source": "product:P04",
+                "relationship": "HAS_MARKER",
+                "target": "marker:M02"
+              }
+            ]
+          },
+          {
+            "record_id": "R003",
+            "kind": "Marker",
+            "fields": {
+              "id": "M03",
+              "value": "banana",
+              "product_id": "P07",
+              "product_name": "Electric Kettle"
+            },
+            "node_ids": [
+              "marker:M03",
+              "product:P07"
+            ],
+            "edges": [
+              {
+                "source": "product:P07",
+                "relationship": "HAS_MARKER",
+                "target": "marker:M03"
+              }
+            ]
+          },
+          {
+            "record_id": "R004",
+            "kind": "Marker",
+            "fields": {
+              "id": "M04",
+              "value": "banana",
+              "product_id": "P10",
+              "product_name": "Rolled Oats"
+            },
+            "node_ids": [
+              "marker:M04",
+              "product:P10"
+            ],
+            "edges": [
+              {
+                "source": "product:P10",
+                "relationship": "HAS_MARKER",
+                "target": "marker:M04"
+              }
+            ]
+          },
+          {
+            "record_id": "R005",
+            "kind": "Marker",
+            "fields": {
+              "id": "M05",
+              "value": "banana",
+              "product_id": "P12",
+              "product_name": "Herbal Tea"
+            },
+            "node_ids": [
+              "marker:M05",
+              "product:P12"
+            ],
+            "edges": [
+              {
+                "source": "product:P12",
+                "relationship": "HAS_MARKER",
+                "target": "marker:M05"
+              }
+            ]
+          }
+        ],
+        "aggregates": {
+          "matching_count": 5
+        },
+        "nodes": {
+          "marker:M01": {
+            "type": "Marker",
+            "id": "M01",
+            "value": "banana",
+            "product_id": "P01"
+          },
+          "marker:M02": {
+            "type": "Marker",
+            "id": "M02",
+            "value": "banana",
+            "product_id": "P04"
+          },
+          "marker:M03": {
+            "type": "Marker",
+            "id": "M03",
+            "value": "banana",
+            "product_id": "P07"
+          },
+          "marker:M04": {
+            "type": "Marker",
+            "id": "M04",
+            "value": "banana",
+            "product_id": "P10"
+          },
+          "marker:M05": {
+            "type": "Marker",
+            "id": "M05",
+            "value": "banana",
+            "product_id": "P12"
+          },
+          "product:P01": {
+            "type": "Product",
+            "id": "P01",
+            "name": "Wireless Headphones",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 399900
+          },
+          "product:P04": {
+            "type": "Product",
+            "id": "P04",
+            "name": "Hiking Backpack",
+            "brand_id": "B02",
+            "category_id": "C02",
+            "price_paise": 199900
+          },
+          "product:P07": {
+            "type": "Product",
+            "id": "P07",
+            "name": "Electric Kettle",
+            "brand_id": "B03",
+            "category_id": "C03",
+            "price_paise": 149900
+          },
+          "product:P10": {
+            "type": "Product",
+            "id": "P10",
+            "name": "Rolled Oats",
+            "brand_id": "B04",
+            "category_id": "C04",
+            "price_paise": 24900
+          },
+          "product:P12": {
+            "type": "Product",
+            "id": "P12",
+            "name": "Herbal Tea",
+            "brand_id": "B04",
+            "category_id": "C04",
+            "price_paise": 19900
+          }
+        },
+        "edges": [
+          {
+            "source": "product:P01",
+            "relationship": "HAS_MARKER",
+            "target": "marker:M01"
+          },
+          {
+            "source": "product:P04",
+            "relationship": "HAS_MARKER",
+            "target": "marker:M02"
+          },
+          {
+            "source": "product:P07",
+            "relationship": "HAS_MARKER",
+            "target": "marker:M03"
+          },
+          {
+            "source": "product:P10",
+            "relationship": "HAS_MARKER",
+            "target": "marker:M04"
+          },
+          {
+            "source": "product:P12",
+            "relationship": "HAS_MARKER",
+            "target": "marker:M05"
+          }
+        ],
+        "currency": "INR"
+      },
+      "answer": "Found 5 matching records in the sample graph. These are artificial assignment markers.\nM01 · value 'banana' → P01 · Wireless Headphones\nM02 · value 'banana' → P04 · Hiking Backpack\nM03 · value 'banana' → P07 · Electric Kettle\nM04 · value 'banana' → P10 · Rolled Oats\nM05 · value 'banana' → P12 · Herbal Tea",
+      "answer_plan": {
+        "template_id": "value_matches",
+        "record_ids": [
+          "R001",
+          "R002",
+          "R003",
+          "R004",
+          "R005"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "answer_presentation_source": "offline-fixture",
+      "stage_durations_seconds": {
+        "interpret": 0.0017070000030798838,
+        "retrieve": 0.0022910999978194013,
+        "present": 0.00038270000368356705
+      },
+      "token_usage": {
+        "query": null,
+        "answer": null
+      },
+      "error_code": null,
+      "raw_answer_plan": {
+        "template_id": "value_matches",
+        "record_ids": [
+          "R001",
+          "R002",
+          "R003",
+          "R004",
+          "R005"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "duration_seconds": 0.004456199996639043,
+      "example_id": "Q08",
+      "verification_errors": []
+    },
+    {
+      "question": "How many graph markers have the value banana?",
+      "mode": "offline",
+      "timestamp": "2026-10-01T17:10:18.263835+00:00",
+      "model": "offline-fixture",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "4",
+      "raw_plan": {
+        "decision": "query",
+        "operation": "lookup_value",
+        "parameters": {
+          "brand_name": null,
+          "vendor_name": null,
+          "category_name": null,
+          "customer_name": null,
+          "product_name": null,
+          "order_id": null,
+          "price_lt_inr": null,
+          "value": "banana",
+          "output_mode": "count",
+          "order_status": null
+        },
+        "clarification_code": null,
+        "unsupported_code": null
+      },
+      "resolved_plan": {
+        "operation": "lookup_value",
+        "value": "banana",
+        "output_mode": "count"
+      },
+      "status": "ok",
+      "evidence": {
+        "query": {
+          "operation": "lookup_value",
+          "brand_id": null,
+          "vendor_id": null,
+          "category_id": null,
+          "customer_id": null,
+          "product_id": null,
+          "order_id": null,
+          "price_lt_paise": null,
+          "value": "banana",
+          "output_mode": "count",
+          "order_status": null
+        },
+        "status": "ok",
+        "records": [
+          {
+            "record_id": "R001",
+            "kind": "Marker",
+            "fields": {
+              "id": "M01",
+              "value": "banana",
+              "product_id": "P01",
+              "product_name": "Wireless Headphones"
+            },
+            "node_ids": [
+              "marker:M01",
+              "product:P01"
+            ],
+            "edges": [
+              {
+                "source": "product:P01",
+                "relationship": "HAS_MARKER",
+                "target": "marker:M01"
+              }
+            ]
+          },
+          {
+            "record_id": "R002",
+            "kind": "Marker",
+            "fields": {
+              "id": "M02",
+              "value": "banana",
+              "product_id": "P04",
+              "product_name": "Hiking Backpack"
+            },
+            "node_ids": [
+              "marker:M02",
+              "product:P04"
+            ],
+            "edges": [
+              {
+                "source": "product:P04",
+                "relationship": "HAS_MARKER",
+                "target": "marker:M02"
+              }
+            ]
+          },
+          {
+            "record_id": "R003",
+            "kind": "Marker",
+            "fields": {
+              "id": "M03",
+              "value": "banana",
+              "product_id": "P07",
+              "product_name": "Electric Kettle"
+            },
+            "node_ids": [
+              "marker:M03",
+              "product:P07"
+            ],
+            "edges": [
+              {
+                "source": "product:P07",
+                "relationship": "HAS_MARKER",
+                "target": "marker:M03"
+              }
+            ]
+          },
+          {
+            "record_id": "R004",
+            "kind": "Marker",
+            "fields": {
+              "id": "M04",
+              "value": "banana",
+              "product_id": "P10",
+              "product_name": "Rolled Oats"
+            },
+            "node_ids": [
+              "marker:M04",
+              "product:P10"
+            ],
+            "edges": [
+              {
+                "source": "product:P10",
+                "relationship": "HAS_MARKER",
+                "target": "marker:M04"
+              }
+            ]
+          },
+          {
+            "record_id": "R005",
+            "kind": "Marker",
+            "fields": {
+              "id": "M05",
+              "value": "banana",
+              "product_id": "P12",
+              "product_name": "Herbal Tea"
+            },
+            "node_ids": [
+              "marker:M05",
+              "product:P12"
+            ],
+            "edges": [
+              {
+                "source": "product:P12",
+                "relationship": "HAS_MARKER",
+                "target": "marker:M05"
+              }
+            ]
+          }
+        ],
+        "aggregates": {
+          "matching_count": 5
+        },
+        "nodes": {
+          "marker:M01": {
+            "type": "Marker",
+            "id": "M01",
+            "value": "banana",
+            "product_id": "P01"
+          },
+          "marker:M02": {
+            "type": "Marker",
+            "id": "M02",
+            "value": "banana",
+            "product_id": "P04"
+          },
+          "marker:M03": {
+            "type": "Marker",
+            "id": "M03",
+            "value": "banana",
+            "product_id": "P07"
+          },
+          "marker:M04": {
+            "type": "Marker",
+            "id": "M04",
+            "value": "banana",
+            "product_id": "P10"
+          },
+          "marker:M05": {
+            "type": "Marker",
+            "id": "M05",
+            "value": "banana",
+            "product_id": "P12"
+          },
+          "product:P01": {
+            "type": "Product",
+            "id": "P01",
+            "name": "Wireless Headphones",
+            "brand_id": "B01",
+            "category_id": "C01",
+            "price_paise": 399900
+          },
+          "product:P04": {
+            "type": "Product",
+            "id": "P04",
+            "name": "Hiking Backpack",
+            "brand_id": "B02",
+            "category_id": "C02",
+            "price_paise": 199900
+          },
+          "product:P07": {
+            "type": "Product",
+            "id": "P07",
+            "name": "Electric Kettle",
+            "brand_id": "B03",
+            "category_id": "C03",
+            "price_paise": 149900
+          },
+          "product:P10": {
+            "type": "Product",
+            "id": "P10",
+            "name": "Rolled Oats",
+            "brand_id": "B04",
+            "category_id": "C04",
+            "price_paise": 24900
+          },
+          "product:P12": {
+            "type": "Product",
+            "id": "P12",
+            "name": "Herbal Tea",
+            "brand_id": "B04",
+            "category_id": "C04",
+            "price_paise": 19900
+          }
+        },
+        "edges": [
+          {
+            "source": "product:P01",
+            "relationship": "HAS_MARKER",
+            "target": "marker:M01"
+          },
+          {
+            "source": "product:P04",
+            "relationship": "HAS_MARKER",
+            "target": "marker:M02"
+          },
+          {
+            "source": "product:P07",
+            "relationship": "HAS_MARKER",
+            "target": "marker:M03"
+          },
+          {
+            "source": "product:P10",
+            "relationship": "HAS_MARKER",
+            "target": "marker:M04"
+          },
+          {
+            "source": "product:P12",
+            "relationship": "HAS_MARKER",
+            "target": "marker:M05"
+          }
+        ],
+        "currency": "INR"
+      },
+      "answer": "Found 5 matching graph markers in the sample graph.",
+      "answer_plan": {
+        "template_id": "value_count",
+        "record_ids": [
+          "R001",
+          "R002",
+          "R003",
+          "R004",
+          "R005"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "answer_presentation_source": "offline-fixture",
+      "stage_durations_seconds": {
+        "interpret": 0.001818400007323362,
+        "retrieve": 0.0012361999979475513,
+        "present": 0.0001731000083964318
+      },
+      "token_usage": {
+        "query": null,
+        "answer": null
+      },
+      "error_code": null,
+      "raw_answer_plan": {
+        "template_id": "value_count",
+        "record_ids": [
+          "R001",
+          "R002",
+          "R003",
+          "R004",
+          "R005"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "duration_seconds": 0.0032888999994611368,
+      "example_id": "Q09",
+      "verification_errors": []
+    },
+    {
+      "question": "Which HomeNest products are supplied by GreenRoute?",
+      "mode": "offline",
+      "timestamp": "2026-10-01T17:10:18.266826+00:00",
+      "model": "offline-fixture",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "4",
+      "raw_plan": {
+        "decision": "query",
+        "operation": "find_products",
+        "parameters": {
+          "brand_name": "HomeNest",
+          "vendor_name": "GreenRoute",
+          "category_name": null,
+          "customer_name": null,
+          "product_name": null,
+          "order_id": null,
+          "price_lt_inr": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "clarification_code": null,
+        "unsupported_code": null
+      },
+      "resolved_plan": {
+        "operation": "find_products",
+        "brand_id": "B03",
+        "vendor_id": "V02",
+        "output_mode": "list"
+      },
+      "status": "no_data",
+      "evidence": {
+        "query": {
+          "operation": "find_products",
+          "brand_id": "B03",
+          "vendor_id": "V02",
+          "category_id": null,
+          "customer_id": null,
+          "product_id": null,
+          "order_id": null,
+          "price_lt_paise": null,
+          "value": null,
+          "output_mode": "list",
+          "order_status": null
+        },
+        "status": "no_data",
+        "records": [],
+        "aggregates": {
+          "matching_count": 0
+        },
+        "nodes": {},
+        "edges": [],
+        "currency": "INR"
+      },
+      "answer": "No matching records in the sample graph for the interpreted filters.",
+      "answer_plan": {
+        "template_id": "no_data",
+        "record_ids": [],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "answer_presentation_source": "offline-fixture",
+      "stage_durations_seconds": {
+        "interpret": 0.001861500000813976,
+        "retrieve": 0.001336999994236976,
+        "present": 0.00014810000720899552
+      },
+      "token_usage": {
+        "query": null,
+        "answer": null
+      },
+      "error_code": null,
+      "raw_answer_plan": {
+        "template_id": "no_data",
+        "record_ids": [],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "duration_seconds": 0.003405899988138117,
+      "example_id": "Q10",
+      "verification_errors": []
+    },
+    {
+      "question": "Which products are from AcmeBrand?",
+      "mode": "offline",
+      "timestamp": "2026-10-01T17:10:18.270829+00:00",
+      "model": "offline-fixture",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "4",
+      "raw_plan": {
+        "decision": "query",
+        "operation": "find_products",
+        "parameters": {
+          "brand_name": "AcmeBrand",
+          "vendor_name": null,
+          "category_name": null,
+          "customer_name": null,
+          "product_name": null,
+          "order_id": null,
+          "price_lt_inr": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "clarification_code": null,
+        "unsupported_code": null
+      },
+      "resolved_plan": null,
+      "status": "entity_not_found",
+      "evidence": null,
+      "answer": "Brand 'AcmeBrand' was not found in the sample graph.",
+      "answer_plan": null,
+      "answer_presentation_source": null,
+      "stage_durations_seconds": {
+        "interpret": 0.001692300007562153
+      },
+      "token_usage": {
+        "query": null
+      },
+      "error_code": null,
+      "duration_seconds": 0.0018968999938806519,
+      "example_id": "Q11",
+      "verification_errors": []
+    },
+    {
+      "question": "What is the capital of France?",
+      "mode": "offline",
+      "timestamp": "2026-10-01T17:10:18.272825+00:00",
+      "model": "offline-fixture",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "4",
+      "raw_plan": {
+        "decision": "unsupported",
+        "operation": null,
+        "parameters": {
+          "brand_name": null,
+          "vendor_name": null,
+          "category_name": null,
+          "customer_name": null,
+          "product_name": null,
+          "order_id": null,
+          "price_lt_inr": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "clarification_code": null,
+        "unsupported_code": "out_of_scope"
+      },
+      "resolved_plan": null,
+      "status": "unsupported",
+      "evidence": null,
+      "answer": "This question is outside the sample commerce graph's supported scope.",
+      "answer_plan": null,
+      "answer_presentation_source": null,
+      "stage_durations_seconds": {
+        "interpret": 0.0013595999917015433
+      },
+      "token_usage": {
+        "query": null
+      },
+      "error_code": null,
+      "duration_seconds": 0.001411100005498156,
+      "example_id": "Q12",
+      "verification_errors": []
+    },
+    {
+      "question": "Which customers bought TrailWorks products?",
+      "mode": "offline",
+      "timestamp": "2026-10-01T17:10:18.273825+00:00",
+      "model": "offline-fixture",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "4",
+      "raw_plan": {
+        "decision": "query",
+        "operation": "customers_bought_brand",
+        "parameters": {
+          "brand_name": "TrailWorks",
+          "vendor_name": null,
+          "category_name": null,
+          "customer_name": null,
+          "product_name": null,
+          "order_id": null,
+          "price_lt_inr": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "clarification_code": null,
+        "unsupported_code": null
+      },
+      "resolved_plan": {
+        "operation": "customers_bought_brand",
+        "brand_id": "B02"
+      },
+      "status": "ok",
+      "evidence": {
+        "query": {
+          "operation": "customers_bought_brand",
+          "brand_id": "B02",
+          "vendor_id": null,
+          "category_id": null,
+          "customer_id": null,
+          "product_id": null,
+          "order_id": null,
+          "price_lt_paise": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "status": "ok",
+        "records": [
+          {
+            "record_id": "R001",
+            "kind": "Customer",
+            "fields": {
+              "id": "U01",
+              "name": "Asha Mehta",
+              "brand": "TrailWorks",
+              "delivered_order_ids": [
+                "O01"
+              ]
+            },
+            "node_ids": [
+              "brand:B02",
+              "customer:U01",
+              "order:O01",
+              "orderitem:L02",
+              "product:P05"
+            ],
+            "edges": [
+              {
+                "source": "customer:U01",
+                "relationship": "PLACED",
+                "target": "order:O01"
+              },
+              {
+                "source": "order:O01",
+                "relationship": "HAS_ITEM",
+                "target": "orderitem:L02"
+              },
+              {
+                "source": "orderitem:L02",
+                "relationship": "FOR_PRODUCT",
+                "target": "product:P05"
+              },
+              {
+                "source": "product:P05",
+                "relationship": "BELONGS_TO_BRAND",
+                "target": "brand:B02"
+              }
+            ]
+          },
+          {
+            "record_id": "R002",
+            "kind": "Customer",
+            "fields": {
+              "id": "U02",
+              "name": "Rohan Shah",
+              "brand": "TrailWorks",
+              "delivered_order_ids": [
+                "O02"
+              ]
+            },
+            "node_ids": [
+              "brand:B02",
+              "customer:U02",
+              "order:O02",
+              "orderitem:L03",
+              "orderitem:L04",
+              "product:P04",
+              "product:P06"
+            ],
+            "edges": [
+              {
+                "source": "customer:U02",
+                "relationship": "PLACED",
+                "target": "order:O02"
+              },
+              {
+                "source": "order:O02",
+                "relationship": "HAS_ITEM",
+                "target": "orderitem:L03"
+              },
+              {
+                "source": "order:O02",
+                "relationship": "HAS_ITEM",
+                "target": "orderitem:L04"
+              },
+              {
+                "source": "orderitem:L03",
+                "relationship": "FOR_PRODUCT",
+                "target": "product:P04"
+              },
+              {
+                "source": "orderitem:L04",
+                "relationship": "FOR_PRODUCT",
+                "target": "product:P06"
+              },
+              {
+                "source": "product:P04",
+                "relationship": "BELONGS_TO_BRAND",
+                "target": "brand:B02"
+              },
+              {
+                "source": "product:P06",
+                "relationship": "BELONGS_TO_BRAND",
+                "target": "brand:B02"
+              }
+            ]
+          }
+        ],
+        "aggregates": {
+          "matching_count": 2
+        },
+        "nodes": {
+          "brand:B02": {
+            "type": "Brand",
+            "id": "B02",
+            "name": "TrailWorks"
+          },
+          "customer:U01": {
+            "type": "Customer",
+            "id": "U01",
+            "name": "Asha Mehta"
+          },
+          "customer:U02": {
+            "type": "Customer",
+            "id": "U02",
+            "name": "Rohan Shah"
+          },
+          "order:O01": {
+            "type": "Order",
+            "id": "O01",
+            "customer_id": "U01",
+            "date": "2026-09-01",
+            "status": "delivered"
+          },
+          "order:O02": {
+            "type": "Order",
+            "id": "O02",
+            "customer_id": "U02",
+            "date": "2026-09-02",
+            "status": "delivered"
+          },
+          "orderitem:L02": {
+            "type": "OrderItem",
+            "id": "L02",
+            "order_id": "O01",
+            "product_id": "P05",
+            "quantity": 2,
+            "unit_price_paise": 74900
+          },
+          "orderitem:L03": {
+            "type": "OrderItem",
+            "id": "L03",
+            "order_id": "O02",
+            "product_id": "P04",
+            "quantity": 1,
+            "unit_price_paise": 199900
+          },
+          "orderitem:L04": {
+            "type": "OrderItem",
+            "id": "L04",
+            "order_id": "O02",
+            "product_id": "P06",
+            "quantity": 1,
+            "unit_price_paise": 129900
+          },
+          "product:P04": {
+            "type": "Product",
+            "id": "P04",
+            "name": "Hiking Backpack",
+            "brand_id": "B02",
+            "category_id": "C02",
+            "price_paise": 199900
+          },
+          "product:P05": {
+            "type": "Product",
+            "id": "P05",
+            "name": "Insulated Bottle",
+            "brand_id": "B02",
+            "category_id": "C02",
+            "price_paise": 79900
+          },
+          "product:P06": {
+            "type": "Product",
+            "id": "P06",
+            "name": "Camping Lantern",
+            "brand_id": "B02",
+            "category_id": "C02",
+            "price_paise": 129900
+          }
+        },
+        "edges": [
+          {
+            "source": "customer:U01",
+            "relationship": "PLACED",
+            "target": "order:O01"
+          },
+          {
+            "source": "customer:U02",
+            "relationship": "PLACED",
+            "target": "order:O02"
+          },
+          {
+            "source": "order:O01",
+            "relationship": "HAS_ITEM",
+            "target": "orderitem:L02"
+          },
+          {
+            "source": "order:O02",
+            "relationship": "HAS_ITEM",
+            "target": "orderitem:L03"
+          },
+          {
+            "source": "order:O02",
+            "relationship": "HAS_ITEM",
+            "target": "orderitem:L04"
+          },
+          {
+            "source": "orderitem:L02",
+            "relationship": "FOR_PRODUCT",
+            "target": "product:P05"
+          },
+          {
+            "source": "orderitem:L03",
+            "relationship": "FOR_PRODUCT",
+            "target": "product:P04"
+          },
+          {
+            "source": "orderitem:L04",
+            "relationship": "FOR_PRODUCT",
+            "target": "product:P06"
+          },
+          {
+            "source": "product:P04",
+            "relationship": "BELONGS_TO_BRAND",
+            "target": "brand:B02"
+          },
+          {
+            "source": "product:P05",
+            "relationship": "BELONGS_TO_BRAND",
+            "target": "brand:B02"
+          },
+          {
+            "source": "product:P06",
+            "relationship": "BELONGS_TO_BRAND",
+            "target": "brand:B02"
+          }
+        ],
+        "currency": "INR"
+      },
+      "answer": "Found 2 matching records in the sample graph. Purchases include delivered orders only.\nU01 · Asha Mehta — delivered orders: O01\nU02 · Rohan Shah — delivered orders: O02",
+      "answer_plan": {
+        "template_id": "customer_list",
+        "record_ids": [
+          "R001",
+          "R002"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "answer_presentation_source": "offline-fixture",
+      "stage_durations_seconds": {
+        "interpret": 0.0014129000046523288,
+        "retrieve": 0.0028214999911142513,
+        "present": 0.00020870000298600644
+      },
+      "token_usage": {
+        "query": null,
+        "answer": null
+      },
+      "error_code": null,
+      "raw_answer_plan": {
+        "template_id": "customer_list",
+        "record_ids": [
+          "R001",
+          "R002"
+        ],
+        "aggregate_keys": [
+          "matching_count"
+        ]
+      },
+      "duration_seconds": 0.004497900008573197,
+      "example_id": "Q13",
+      "verification_errors": []
+    },
+    {
+      "question": "What is the merchandise total for order O07?",
+      "mode": "offline",
+      "timestamp": "2026-10-01T17:10:18.279275+00:00",
+      "model": "offline-fixture",
+      "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+      "prompt_version": "4",
+      "raw_plan": {
+        "decision": "query",
+        "operation": "order_details",
+        "parameters": {
+          "brand_name": null,
+          "vendor_name": null,
+          "category_name": null,
+          "customer_name": null,
+          "product_name": null,
+          "order_id": "O07",
+          "price_lt_inr": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "clarification_code": null,
+        "unsupported_code": null
+      },
+      "resolved_plan": {
+        "operation": "order_details",
+        "order_id": "O07"
+      },
+      "status": "ok",
+      "evidence": {
+        "query": {
+          "operation": "order_details",
+          "brand_id": null,
+          "vendor_id": null,
+          "category_id": null,
+          "customer_id": null,
+          "product_id": null,
+          "order_id": "O07",
+          "price_lt_paise": null,
+          "value": null,
+          "output_mode": null,
+          "order_status": null
+        },
+        "status": "ok",
+        "records": [
+          {
+            "record_id": "R001",
+            "kind": "Order",
+            "fields": {
+              "id": "O07",
+              "date": "2026-09-07",
+              "status": "cancelled",
+              "customer_id": "U06",
+              "customer_name": "Arjun Nair",
+              "total_paise": 279800,
+              "items": [
+                {
+                  "item_id": "L13",
+                  "product_id": "P04",
+                  "product_name": "Hiking Backpack",
+                  "quantity": 1,
+                  "unit_price_paise": 199900,
+                  "line_total_paise": 199900
+                },
+                {
+                  "item_id": "L14",
+                  "product_id": "P05",
+                  "product_name": "Insulated Bottle",
+                  "quantity": 1,
+                  "unit_price_paise": 79900,
+                  "line_total_paise": 79900
+                }
+              ]
+            },
+            "node_ids": [
+              "customer:U06",
+              "order:O07",
+              "orderitem:L13",
+              "orderitem:L14",
+              "product:P04",
+              "product:P05"
+            ],
+            "edges": [
+              {
+                "source": "customer:U06",
+                "relationship": "PLACED",
+                "target": "order:O07"
+              },
+              {
+                "source": "order:O07",
+                "relationship": "HAS_ITEM",
+                "target": "orderitem:L13"
+              },
+              {
+                "source": "order:O07",
+                "relationship": "HAS_ITEM",
+                "target": "orderitem:L14"
+              },
+              {
+                "source": "orderitem:L13",
+                "relationship": "FOR_PRODUCT",
+                "target": "product:P04"
+              },
+              {
+                "source": "orderitem:L14",
+                "relationship": "FOR_PRODUCT",
+                "target": "product:P05"
+              }
+            ]
+          }
+        ],
+        "aggregates": {
+          "matching_count": 1,
+          "total_paise": 279800
+        },
+        "nodes": {
+          "customer:U06": {
+            "type": "Customer",
+            "id": "U06",
+            "name": "Arjun Nair"
+          },
+          "order:O07": {
+            "type": "Order",
+            "id": "O07",
+            "customer_id": "U06",
+            "date": "2026-09-07",
+            "status": "cancelled"
+          },
+          "orderitem:L13": {
+            "type": "OrderItem",
+            "id": "L13",
+            "order_id": "O07",
+            "product_id": "P04",
+            "quantity": 1,
+            "unit_price_paise": 199900
+          },
+          "orderitem:L14": {
+            "type": "OrderItem",
+            "id": "L14",
+            "order_id": "O07",
+            "product_id": "P05",
+            "quantity": 1,
+            "unit_price_paise": 79900
+          },
+          "product:P04": {
+            "type": "Product",
+            "id": "P04",
+            "name": "Hiking Backpack",
+            "brand_id": "B02",
+            "category_id": "C02",
+            "price_paise": 199900
+          },
+          "product:P05": {
+            "type": "Product",
+            "id": "P05",
+            "name": "Insulated Bottle",
+            "brand_id": "B02",
+            "category_id": "C02",
+            "price_paise": 79900
+          }
+        },
+        "edges": [
+          {
+            "source": "customer:U06",
+            "relationship": "PLACED",
+            "target": "order:O07"
+          },
+          {
+            "source": "order:O07",
+            "relationship": "HAS_ITEM",
+            "target": "orderitem:L13"
+          },
+          {
+            "source": "order:O07",
+            "relationship": "HAS_ITEM",
+            "target": "orderitem:L14"
+          },
+          {
+            "source": "orderitem:L13",
+            "relationship": "FOR_PRODUCT",
+            "target": "product:P04"
+          },
+          {
+            "source": "orderitem:L14",
+            "relationship": "FOR_PRODUCT",
+            "target": "product:P05"
+          }
+        ],
+        "currency": "INR"
+      },
+      "answer": "Found 1 matching record in the sample graph.\nO07 · cancelled · 2026-09-07 · Arjun Nair — merchandise total INR 2,798.00\n  L13 · Hiking Backpack: 1 × INR 1,999.00 = INR 1,999.00\n  L14 · Insulated Bottle: 1 × INR 799.00 = INR 799.00\nMerchandise total only; tax and shipping are not modeled.",
+      "answer_plan": {
+        "template_id": "order_details",
+        "record_ids": [
+          "R001"
+        ],
+        "aggregate_keys": [
+          "matching_count",
+          "total_paise"
+        ]
+      },
+      "answer_presentation_source": "offline-fixture",
+      "stage_durations_seconds": {
+        "interpret": 0.0016421000036643818,
+        "retrieve": 0.0007666000019526109,
+        "present": 0.00019720000273082405
+      },
+      "token_usage": {
+        "query": null,
+        "answer": null
+      },
+      "error_code": null,
+      "raw_answer_plan": {
+        "template_id": "order_details",
+        "record_ids": [
+          "R001"
+        ],
+        "aggregate_keys": [
+          "matching_count",
+          "total_paise"
+        ]
+      },
+      "duration_seconds": 0.0026676999987103045,
+      "example_id": "Q14",
+      "verification_errors": []
+    }
+  ]
+}

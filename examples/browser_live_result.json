@@ -1,0 +1,245 @@
+{
+  "question": "What is the merchandise total for order O01?",
+  "mode": "live",
+  "timestamp": "2026-10-01T17:15:53.137485+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "dataset_sha256": "f2f82fbcc7fd68d0365b16076ebad2764d4fc7f33fc41b910675c90053ed4fd3",
+  "prompt_version": "4",
+  "raw_plan": {
+    "decision": "query",
+    "operation": "order_details",
+    "parameters": {
+      "brand_name": null,
+      "vendor_name": null,
+      "category_name": null,
+      "customer_name": null,
+      "product_name": null,
+      "order_id": "O01",
+      "price_lt_inr": null,
+      "value": null,
+      "output_mode": null,
+      "order_status": null
+    },
+    "clarification_code": null,
+    "unsupported_code": null
+  },
+  "resolved_plan": {
+    "operation": "order_details",
+    "order_id": "O01"
+  },
+  "status": "ok",
+  "evidence": {
+    "query": {
+      "operation": "order_details",
+      "brand_id": null,
+      "vendor_id": null,
+      "category_id": null,
+      "customer_id": null,
+      "product_id": null,
+      "order_id": "O01",
+      "price_lt_paise": null,
+      "value": null,
+      "output_mode": null,
+      "order_status": null
+    },
+    "status": "ok",
+    "records": [
+      {
+        "record_id": "R001",
+        "kind": "Order",
+        "fields": {
+          "id": "O01",
+          "date": "2026-09-01",
+          "status": "delivered",
+          "customer_id": "U01",
+          "customer_name": "Asha Mehta",
+          "total_paise": 539700,
+          "items": [
+            {
+              "item_id": "L01",
+              "product_id": "P01",
+              "product_name": "Wireless Headphones",
+              "quantity": 1,
+              "unit_price_paise": 389900,
+              "line_total_paise": 389900
+            },
+            {
+              "item_id": "L02",
+              "product_id": "P05",
+              "product_name": "Insulated Bottle",
+              "quantity": 2,
+              "unit_price_paise": 74900,
+              "line_total_paise": 149800
+            }
+          ]
+        },
+        "node_ids": [
+          "customer:U01",
+          "order:O01",
+          "orderitem:L01",
+          "orderitem:L02",
+          "product:P01",
+          "product:P05"
+        ],
+        "edges": [
+          {
+            "source": "customer:U01",
+            "relationship": "PLACED",
+            "target": "order:O01"
+          },
+          {
+            "source": "order:O01",
+            "relationship": "HAS_ITEM",
+            "target": "orderitem:L01"
+          },
+          {
+            "source": "order:O01",
+            "relationship": "HAS_ITEM",
+            "target": "orderitem:L02"
+          },
+          {
+            "source": "orderitem:L01",
+            "relationship": "FOR_PRODUCT",
+            "target": "product:P01"
+          },
+          {
+            "source": "orderitem:L02",
+            "relationship": "FOR_PRODUCT",
+            "target": "product:P05"
+          }
+        ]
+      }
+    ],
+    "aggregates": {
+      "matching_count": 1,
+      "total_paise": 539700
+    },
+    "nodes": {
+      "customer:U01": {
+        "type": "Customer",
+        "id": "U01",
+        "name": "Asha Mehta"
+      },
+      "order:O01": {
+        "type": "Order",
+        "id": "O01",
+        "customer_id": "U01",
+        "date": "2026-09-01",
+        "status": "delivered"
+      },
+      "orderitem:L01": {
+        "type": "OrderItem",
+        "id": "L01",
+        "order_id": "O01",
+        "product_id": "P01",
+        "quantity": 1,
+        "unit_price_paise": 389900
+      },
+      "orderitem:L02": {
+        "type": "OrderItem",
+        "id": "L02",
+        "order_id": "O01",
+        "product_id": "P05",
+        "quantity": 2,
+        "unit_price_paise": 74900
+      },
+      "product:P01": {
+        "type": "Product",
+        "id": "P01",
+        "name": "Wireless Headphones",
+        "brand_id": "B01",
+        "category_id": "C01",
+        "price_paise": 399900
+      },
+      "product:P05": {
+        "type": "Product",
+        "id": "P05",
+        "name": "Insulated Bottle",
+        "brand_id": "B02",
+        "category_id": "C02",
+        "price_paise": 79900
+      }
+    },
+    "edges": [
+      {
+        "source": "customer:U01",
+        "relationship": "PLACED",
+        "target": "order:O01"
+      },
+      {
+        "source": "order:O01",
+        "relationship": "HAS_ITEM",
+        "target": "orderitem:L01"
+      },
+      {
+        "source": "order:O01",
+        "relationship": "HAS_ITEM",
+        "target": "orderitem:L02"
+      },
+      {
+        "source": "orderitem:L01",
+        "relationship": "FOR_PRODUCT",
+        "target": "product:P01"
+      },
+      {
+        "source": "orderitem:L02",
+        "relationship": "FOR_PRODUCT",
+        "target": "product:P05"
+      }
+    ],
+    "currency": "INR"
+  },
+  "answer": "Found 1 matching record in the sample graph.\nO01 · delivered · 2026-09-01 · Asha Mehta — merchandise total INR 5,397.00\n  L01 · Wireless Headphones: 1 × INR 3,899.00 = INR 3,899.00\n  L02 · Insulated Bottle: 2 × INR 749.00 = INR 1,498.00\nMerchandise total only; tax and shipping are not modeled.",
+  "answer_plan": {
+    "template_id": "order_details",
+    "record_ids": [
+      "R001"
+    ],
+    "aggregate_keys": [
+      "matching_count",
+      "total_paise"
+    ]
+  },
+  "answer_presentation_source": "gemini",
+  "stage_durations_seconds": {
+    "interpret": 2.7449212000065017,
+    "retrieve": 0.0017907000001287088,
+    "present": 1.7320500000059837
+  },
+  "token_usage": {
+    "query": {
+      "candidates_token_count": 142,
+      "prompt_token_count": 1620,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 1620
+        }
+      ],
+      "total_token_count": 1762
+    },
+    "answer": {
+      "candidates_token_count": 60,
+      "prompt_token_count": 446,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 446
+        }
+      ],
+      "total_token_count": 506
+    }
+  },
+  "error_code": null,
+  "raw_answer_plan": {
+    "template_id": "order_details",
+    "record_ids": [
+      "R001"
+    ],
+    "aggregate_keys": [
+      "matching_count",
+      "total_paise"
+    ]
+  },
+  "duration_seconds": 4.480695100006415
+}
