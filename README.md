@@ -2,6 +2,16 @@
 
 **Ask your commerce data. Inspect every answer.**
 
+## Live demo
+
+[Open CommerceGraph](https://commercegraph-utkarsh.streamlit.app/).
+
+The hosted app runs on Streamlit Community Cloud with Python 3.12. Its Gemini
+credential belongs in the app's encrypted Secrets settings. No credential is
+included in this repository or source archive. See the
+[cloud verification record](docs/cloud-deployment.md) for the actual deployment
+checks and any remaining setup.
+
 A local Python application that turns standalone e-commerce questions into
 validated graph traversals, retrieves supporting records, and presents grounded
 answers. Gemini is the only LLM provider. The same service powers the CLI and UI.
