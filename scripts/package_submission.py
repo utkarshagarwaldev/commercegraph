@@ -14,6 +14,7 @@ filenames = [
     "requirements.txt",
     ".env.example",
     ".gitignore",
+    ".vercelignore",
     "README.md",
 ]
 paths = [root / name for name in filenames]
